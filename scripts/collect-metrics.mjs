@@ -1,4 +1,24 @@
-#!/usr/bin/env node
+// Update contributors with GitHub info if we found matching users
+    for (const [login, data] of contributorsMap.entries()) {
+      if (data.email && data.pending_github_lookup) {
+        const githubUser = emailToGitHubUser.get(data.email.toLowerCase());
+        
+        if (githubUser) {
+          console.log(`Updating contributor "${login}" with GitHub info from email lookup: ${githubUser.login}`);
+          
+          // Update with GitHub info
+          data.github_login = githubUser.login;
+          data.avatar_url = githubUser.avatar_url;
+          data.html_url = githubUser.html_url;
+          
+          // Add a flag to indicate this was matched by email
+          data.matched_by_email = true;
+          
+          // Remove the pending flag
+          delete data.pending_github_lookup;
+        }
+      }
+    }#!/usr/bin/env node
 /**
  * GitHub Organization Metrics Collector (Enhanced Version)
  * 
@@ -833,8 +853,10 @@ async function collectMetrics() {
       }
     }
     
-    // Now check if any contributors with GitHub info match other contributors by email
-    // This helps with deduplication
+    // Enhanced deduplication to handle various cases
+    console.log("Starting enhanced contributor deduplication...");
+    
+    // Step 1: Deduplicate by email
     console.log("Looking for duplicate contributors based on email...");
     
     const loginMap = new Map(); // Maps emails to logins
@@ -851,40 +873,185 @@ async function collectMetrics() {
       }
     }
     
-    // Find duplicates
+    // Find duplicates by email
     for (const [email, logins] of loginMap.entries()) {
       if (logins.length > 1) {
         console.log(`Found duplicate contributors with email ${email}: ${logins.join(', ')}`);
         duplicates.push({
-          email,
+          type: 'email',
+          key: email,
           logins
         });
       }
     }
     
-    // Merge duplicates
-    for (const { email, logins } of duplicates) {
-      // Find the "best" login to keep
-      let primaryLogin = logins[0];
-      
-      // Prefer logins with GitHub info
-      for (const login of logins) {
-        const data = contributorsMap.get(login);
-        if (data.github_login || !data.pending_github_lookup) {
-          primaryLogin = login;
-          break;
+    // Step 2: Deduplicate by normalized GitHub username
+    console.log("Looking for duplicate contributors based on GitHub username...");
+    
+    const githubUserMap = new Map(); // Maps GitHub usernames to logins
+    
+    // Build a map of GitHub usernames to logins
+    for (const [login, data] of contributorsMap.entries()) {
+      if (data.github_login) {
+        const normalizedGithubLogin = data.github_login.toLowerCase();
+        if (!githubUserMap.has(normalizedGithubLogin)) {
+          githubUserMap.set(normalizedGithubLogin, []);
         }
+        githubUserMap.get(normalizedGithubLogin).push(login);
+      }
+    }
+    
+    // Find duplicates by GitHub username
+    for (const [githubLogin, logins] of githubUserMap.entries()) {
+      if (logins.length > 1) {
+        console.log(`Found duplicate contributors with GitHub username ${githubLogin}: ${logins.join(', ')}`);
+        duplicates.push({
+          type: 'github_login',
+          key: githubLogin,
+          logins
+        });
+      }
+    }
+    
+    // Step 3: Look for name similarity (display name vs username)
+    console.log("Looking for contributors with similar names...");
+    
+    // Normalize a name for comparison
+    function normalizeName(name) {
+      return name.toLowerCase()
+        .replace(/[^a-z0-9]/g, '') // Remove special characters
+        .trim();
+    }
+    
+    // Map normalized names to logins
+    const nameMap = new Map();
+    
+    for (const [login, data] of contributorsMap.entries()) {
+      // Try different variations of the name
+      const normalizedLogin = normalizeName(login);
+      const possibleNames = [normalizedLogin];
+      
+      // Add the login name without symbols
+      if (data.login) {
+        possibleNames.push(normalizeName(data.login));
       }
       
-      console.log(`Merging duplicates for ${email} into primary login: ${primaryLogin}`);
+      // Add GitHub login if available
+      if (data.github_login) {
+        possibleNames.push(normalizeName(data.github_login));
+      }
       
+      // Add email username if available
+      if (data.email && data.email.includes('@')) {
+        const emailUsername = data.email.split('@')[0];
+        possibleNames.push(normalizeName(emailUsername));
+      }
+      
+      // Add each normalized name to the map
+      for (const name of [...new Set(possibleNames)]) {
+        if (name.length > 2) { // Skip very short names
+          if (!nameMap.has(name)) {
+            nameMap.set(name, []);
+          }
+          nameMap.get(name).push(login);
+        }
+      }
+    }
+    
+    // Find similar names
+    for (const [name, logins] of nameMap.entries()) {
+      if (logins.length > 1) {
+        console.log(`Found potentially related contributors with similar name "${name}": ${logins.join(', ')}`);
+        
+        // Only add if not already found by email or GitHub username
+        const alreadyFound = duplicates.some(dup => 
+          dup.logins.length === logins.length && 
+          dup.logins.every(l => logins.includes(l))
+        );
+        
+        if (!alreadyFound) {
+          duplicates.push({
+            type: 'similar_name',
+            key: name,
+            logins
+          });
+        }
+      }
+    }
+    
+    // Merge duplicates with improved logic
+    console.log(`Found ${duplicates.length} sets of potential duplicates to merge`);
+    
+    // Track which logins have been merged
+    const mergedLogins = new Set();
+    
+    for (const { type, key, logins } of duplicates) {
+      // Skip if all these logins have already been merged
+      if (logins.every(login => mergedLogins.has(login) || !contributorsMap.has(login))) {
+        console.log(`Skipping already merged set: ${logins.join(', ')}`);
+        continue;
+      }
+      
+      // Filter out logins that no longer exist or have been merged
+      const validLogins = logins.filter(login => 
+        contributorsMap.has(login) && !mergedLogins.has(login)
+      );
+      
+      if (validLogins.length <= 1) {
+        console.log(`No duplicates left to merge in set: ${logins.join(', ')}`);
+        continue;
+      }
+      
+      // Score each login to find the best one to keep
+      const loginScores = validLogins.map(login => {
+        const data = contributorsMap.get(login);
+        let score = 0;
+        
+        // Prefer logins with more contributions
+        score += data.contributions * 0.1;
+        
+        // Prefer logins with GitHub info
+        if (data.github_login) score += 100;
+        
+        // Prefer logins that match their GitHub username
+        if (data.github_login && login.toLowerCase() === data.github_login.toLowerCase()) score += 50;
+        
+        // Prefer logins with avatar URLs from GitHub
+        if (data.avatar_url && data.avatar_url.includes('github')) score += 30;
+        
+        // Prefer logins with real names over auto-generated ones
+        if (!login.includes('contributor-')) score += 20;
+        
+        // Prefer logins that look like GitHub usernames (no spaces)
+        if (!login.includes(' ')) score += 5;
+        
+        return { login, score };
+      });
+      
+      // Sort by score descending
+      loginScores.sort((a, b) => b.score - a.score);
+      
+      const primaryLogin = loginScores[0].login;
       const primaryData = contributorsMap.get(primaryLogin);
       
+      console.log(`Merging duplicates for "${type}" "${key}" into primary login: ${primaryLogin} (score: ${loginScores[0].score})`);
+      
+      // Keep track of merged aliases for display
+      if (!primaryData.aliases) primaryData.aliases = [];
+      
       // Merge data from other logins
-      for (const login of logins) {
+      for (const login of validLogins) {
         if (login === primaryLogin) continue;
         
         const data = contributorsMap.get(login);
+        
+        // Add to aliases
+        primaryData.aliases.push({
+          login: login,
+          type: type,
+          contributions: data.contributions,
+          repositories: Array.from(data.repositories)
+        });
         
         // Merge contributions
         primaryData.contributions += data.contributions;
@@ -899,14 +1066,27 @@ async function collectMetrics() {
           primaryData.github_login = data.github_login;
           primaryData.avatar_url = data.avatar_url;
           primaryData.html_url = data.html_url;
-          primaryData.matched_by_email = true;
+          primaryData.matched_by_email = type === 'email';
+          primaryData.matched_by_name = type === 'similar_name';
         }
+        
+        // Always prefer GitHub avatar_url if available
+        if (data.avatar_url && data.avatar_url.includes('githubusercontent.com') && 
+            (!primaryData.avatar_url || !primaryData.avatar_url.includes('githubusercontent.com'))) {
+          primaryData.avatar_url = data.avatar_url;
+        }
+        
+        // Track that this login has been merged
+        mergedLogins.add(login);
         
         // Remove the duplicate
         contributorsMap.delete(login);
       }
       
       console.log(`After merging, ${primaryLogin} has ${primaryData.contributions} contributions in ${primaryData.repositories.size} repos`);
+      if (primaryData.aliases) {
+        console.log(`  Aliases: ${primaryData.aliases.map(a => a.login).join(', ')}`);
+      }
     }
     
     // Convert contributors map to array and sort by contributions
@@ -944,12 +1124,14 @@ async function collectMetrics() {
     console.log(`Total commits: ${metrics.stats.totalCommits}`);
     console.log(`Total lines of code: ${metrics.stats.linesOfCode}`);
     
-    // Add additional stats about GitHub user lookups
+    // Add additional stats about GitHub user lookups and deduplication
     metrics.stats.coauthor_processing = {
       total_coauthor_emails: coAuthorEmails.size,
       github_users_found: emailToGitHubUser.size,
       duplicates_merged: duplicates.length,
-      noreply_github_emails: [...coAuthorEmails].filter(email => email.endsWith('@users.noreply.github.com')).length
+      noreply_github_emails: [...coAuthorEmails].filter(email => email.endsWith('@users.noreply.github.com')).length,
+      display_names_found: usernameToDisplayName.size,
+      total_aliases_merged: mergedLogins.size
     };
     
     // Save metrics to file
