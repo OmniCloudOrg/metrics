@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-09T14:37:03.678Z",
+  "timestamp": "2025-03-09T14:42:03.059Z",
   "stats": {
     "repositories": 19,
     "stars": 15,
     "forks": 5,
     "watchers": 15,
     "openIssues": 15,
-    "totalCommits": 598,
-    "linesOfCode": 99335,
+    "totalCommits": 600,
+    "linesOfCode": 99414,
     "contributors": {
       "total": 11,
       "top": [
@@ -16,7 +16,7 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1120,
+          "contributions": 1119,
           "lines_contributed": 0,
           "repositories": [
             "metrics",
@@ -73,7 +73,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 12,
+          "contributions": 11,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -103,61 +103,66 @@
         },
         {
           "login": "Tristan Poland (Trident_For_U)",
-          "avatar_url": "https://github.com/identicons/tristanpolandtridentforu.png",
-          "html_url": "mailto:tristanpoland@users.noreply.github.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
+          "html_url": "https://github.com/tristanpoland",
           "contributions": 4,
           "lines_contributed": 0,
           "repositories": [
             "OmniForge",
             "OmniDirector",
             "Omni-CLI"
-          ]
+          ],
+          "github_login": "tristanpoland"
         },
         {
           "login": "Colin Leftwich",
-          "avatar_url": "https://github.com/identicons/colinleftwich.png",
-          "html_url": "mailto:95550945+colinleftwich@users.noreply.github.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/95550945?v=4",
+          "html_url": "https://github.com/ColinLeftwich",
           "contributions": 3,
           "lines_contributed": 0,
           "repositories": [
             "OmniDirector",
             "OmniOrchestrator"
-          ]
+          ],
+          "github_login": "colinleftwich"
         },
         {
           "login": "haywoodspartan",
-          "avatar_url": "https://github.com/identicons/haywoodspartan.png",
-          "html_url": "mailto:6591811+haywoodspartan@users.noreply.github.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6591811?v=4",
+          "html_url": "https://github.com/haywoodspartan",
           "contributions": 1,
           "lines_contributed": 0,
           "repositories": [
             "OmniDirector"
-          ]
+          ],
+          "github_login": "haywoodspartan"
         },
         {
           "login": "Thiago Goulart",
-          "avatar_url": "https://github.com/identicons/thiagogoulart.png",
-          "html_url": "mailto:92756806+tuafo@users.noreply.github.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/92756806?v=4",
+          "html_url": "https://github.com/Tuafo",
           "contributions": 1,
           "lines_contributed": 0,
           "repositories": [
             "OmniDirector"
-          ]
+          ],
+          "github_login": "tuafo"
         },
         {
           "login": "Tyler Poland",
-          "avatar_url": "https://github.com/identicons/tylerpoland.png",
-          "html_url": "mailto:3503+tpoland@users.noreply.github.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/3503?v=4",
+          "html_url": "https://github.com/tpoland",
           "contributions": 1,
           "lines_contributed": 0,
           "repositories": [
             "OmniDirector"
-          ]
+          ],
+          "github_login": "tpoland"
         }
       ]
     },
     "languages": {
-      "JavaScript": 1068743,
+      "JavaScript": 1070312,
       "TypeScript": 311091,
       "CSS": 9831,
       "Rust": 385286,
@@ -170,8 +175,9 @@
     },
     "coauthor_processing": {
       "total_coauthor_emails": 7,
-      "github_users_found": 1,
-      "duplicates_merged": 0
+      "github_users_found": 6,
+      "duplicates_merged": 0,
+      "noreply_github_emails": 6
     }
   },
   "repositories": [
@@ -184,10 +190,10 @@
       "watchers": 0,
       "openIssues": 0,
       "languages": {
-        "JavaScript": 34664
+        "JavaScript": 36233
       },
-      "linesOfCode": 1733,
-      "commits": 23,
+      "linesOfCode": 1812,
+      "commits": 25,
       "contributors": 2
     },
     {

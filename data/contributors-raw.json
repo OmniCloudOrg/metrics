@@ -3,7 +3,7 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1120,
+    "contributions": 1119,
     "lines_contributed": 0,
     "repositories": [
       "metrics",
@@ -64,7 +64,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 12,
+    "contributions": 11,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -99,8 +99,8 @@
   {
     "login": "Tristan Poland (Trident_For_U)",
     "email": "tristanpoland@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/tristanpolandtridentforu.png",
-    "html_url": "mailto:tristanpoland@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
+    "html_url": "https://github.com/tristanpoland",
     "contributions": 4,
     "lines_contributed": 0,
     "repositories": [
@@ -108,55 +108,60 @@
       "OmniDirector",
       "Omni-CLI"
     ],
-    "pending_github_lookup": true
+    "github_login": "tristanpoland",
+    "matched_by_email": true
   },
   {
     "login": "Colin Leftwich",
     "email": "95550945+colinleftwich@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/colinleftwich.png",
-    "html_url": "mailto:95550945+colinleftwich@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95550945?v=4",
+    "html_url": "https://github.com/ColinLeftwich",
     "contributions": 3,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector",
       "OmniOrchestrator"
     ],
-    "pending_github_lookup": true
+    "github_login": "colinleftwich",
+    "matched_by_email": true
   },
   {
     "login": "haywoodspartan",
     "email": "6591811+haywoodspartan@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/haywoodspartan.png",
-    "html_url": "mailto:6591811+haywoodspartan@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/6591811?v=4",
+    "html_url": "https://github.com/haywoodspartan",
     "contributions": 1,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
     ],
-    "pending_github_lookup": true
+    "github_login": "haywoodspartan",
+    "matched_by_email": true
   },
   {
     "login": "Thiago Goulart",
     "email": "92756806+tuafo@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/thiagogoulart.png",
-    "html_url": "mailto:92756806+tuafo@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/92756806?v=4",
+    "html_url": "https://github.com/Tuafo",
     "contributions": 1,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
     ],
-    "pending_github_lookup": true
+    "github_login": "tuafo",
+    "matched_by_email": true
   },
   {
     "login": "Tyler Poland",
     "email": "3503+tpoland@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/tylerpoland.png",
-    "html_url": "mailto:3503+tpoland@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/3503?v=4",
+    "html_url": "https://github.com/tpoland",
     "contributions": 1,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
     ],
-    "pending_github_lookup": true
+    "github_login": "tpoland",
+    "matched_by_email": true
   }
 ]
