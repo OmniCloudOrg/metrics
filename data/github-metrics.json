@@ -1,22 +1,22 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-09T14:42:03.059Z",
+  "timestamp": "2025-03-09T14:55:14.640Z",
   "stats": {
     "repositories": 19,
     "stars": 15,
     "forks": 5,
     "watchers": 15,
     "openIssues": 15,
-    "totalCommits": 600,
-    "linesOfCode": 99414,
+    "totalCommits": 603,
+    "linesOfCode": 99671,
     "contributors": {
-      "total": 11,
+      "total": 9,
       "top": [
         {
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1119,
+          "contributions": 1138,
           "lines_contributed": 0,
           "repositories": [
             "metrics",
@@ -38,13 +38,26 @@
             "OmniEditor",
             "Docker-Helices",
             "Omni-Cosmos"
-          ]
+          ],
+          "aliases": [
+            {
+              "login": "tristanpolandtridentforu",
+              "contributions": 4,
+              "repositories": [
+                "OmniForge",
+                "OmniDirector",
+                "Omni-CLI"
+              ]
+            }
+          ],
+          "display_name": "Tristan Poland (Trident_For_U)",
+          "github_login": "tristanpoland"
         },
         {
           "login": "Caznix",
           "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
           "html_url": "https://github.com/Caznix",
-          "contributions": 44,
+          "contributions": 59,
           "lines_contributed": 0,
           "repositories": [
             "OmniForge",
@@ -52,28 +65,29 @@
             "OmniOrchestrator",
             "Omni-CLI",
             "OmniCloud-Dashboard",
-            "LibOmni"
-          ]
-        },
-        {
-          "login": "Cazdotsys",
-          "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
-          "html_url": "https://github.com/Caznix",
-          "contributions": 15,
-          "lines_contributed": 0,
-          "repositories": [
-            "OmniForge",
-            "OmniDirector",
-            "OmniOrchestrator",
+            "LibOmni",
             "OmniCloud-Full"
           ],
+          "aliases": [
+            {
+              "login": "cazdotsys",
+              "contributions": 15,
+              "repositories": [
+                "OmniForge",
+                "OmniDirector",
+                "OmniOrchestrator",
+                "OmniCloud-Full"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
           "github_login": "Caznix"
         },
         {
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 11,
+          "contributions": 20,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -102,19 +116,6 @@
           ]
         },
         {
-          "login": "Tristan Poland (Trident_For_U)",
-          "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
-          "html_url": "https://github.com/tristanpoland",
-          "contributions": 4,
-          "lines_contributed": 0,
-          "repositories": [
-            "OmniForge",
-            "OmniDirector",
-            "Omni-CLI"
-          ],
-          "github_login": "tristanpoland"
-        },
-        {
           "login": "Colin Leftwich",
           "avatar_url": "https://avatars.githubusercontent.com/u/95550945?v=4",
           "html_url": "https://github.com/ColinLeftwich",
@@ -124,7 +125,8 @@
             "OmniDirector",
             "OmniOrchestrator"
           ],
-          "github_login": "colinleftwich"
+          "github_login": "colinleftwich",
+          "display_name": "Colin Leftwich"
         },
         {
           "login": "haywoodspartan",
@@ -146,7 +148,8 @@
           "repositories": [
             "OmniDirector"
           ],
-          "github_login": "tuafo"
+          "github_login": "tuafo",
+          "display_name": "Thiago Goulart"
         },
         {
           "login": "Tyler Poland",
@@ -157,12 +160,13 @@
           "repositories": [
             "OmniDirector"
           ],
-          "github_login": "tpoland"
+          "github_login": "tpoland",
+          "display_name": "Tyler Poland"
         }
       ]
     },
     "languages": {
-      "JavaScript": 1070312,
+      "JavaScript": 1075459,
       "TypeScript": 311091,
       "CSS": 9831,
       "Rust": 385286,
@@ -176,8 +180,10 @@
     "coauthor_processing": {
       "total_coauthor_emails": 7,
       "github_users_found": 6,
-      "duplicates_merged": 0,
-      "noreply_github_emails": 6
+      "duplicates_merged": 2,
+      "noreply_github_emails": 6,
+      "display_names_found": 5,
+      "total_aliases_merged": 2
     }
   },
   "repositories": [
@@ -190,10 +196,10 @@
       "watchers": 0,
       "openIssues": 0,
       "languages": {
-        "JavaScript": 36233
+        "JavaScript": 41380
       },
-      "linesOfCode": 1812,
-      "commits": 25,
+      "linesOfCode": 2069,
+      "commits": 28,
       "contributors": 2
     },
     {
