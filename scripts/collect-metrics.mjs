@@ -105,6 +105,20 @@ function extractCoAuthors(message) {
 
   const coauthors = [];
   
+  // NEW: Handle multiple co-authors on a single line
+  // This matches patterns like: 
+  // "Co-Authored-By: Name1 <email1> Co-Authored-By: Name2 <email2>"
+  const multipleCoAuthorRegex = /Co-Authored-By:([^<]+)<([^>]+)>/gi;
+  let match;
+  while ((match = multipleCoAuthorRegex.exec(message)) !== null) {
+    if (match.length > 2) {
+      coauthors.push({
+        name: match[1].trim(),
+        email: match[2].trim()
+      });
+    }
+  }
+  
   // Match various co-author formats with more permissive patterns
   const patterns = [
     // Standard GitHub format
@@ -154,7 +168,32 @@ function extractCoAuthors(message) {
     }
   }
   
-  return coauthors;
+  // Additional check: Try a different approach for multiple co-authors
+  if (message.includes("Co-Authored-By:")) {
+    // Split by Co-Authored-By: and process each part
+    const parts = message.split(/Co-Authored-By:/i).slice(1); // Skip first part (before first Co-Authored-By)
+    for (const part of parts) {
+      const emailMatch = part.match(/<([^>]+)>/);
+      if (emailMatch && emailMatch[1]) {
+        const email = emailMatch[1].trim();
+        // Get name: everything before the email bracket
+        const nameMatch = part.match(/^(.*?)</);
+        const name = nameMatch ? nameMatch[1].trim() : "";
+        
+        coauthors.push({ name, email });
+      }
+    }
+  }
+  
+  // Remove duplicates based on email
+  const uniqueEmails = new Set();
+  return coauthors.filter(author => {
+    if (!author.email || uniqueEmails.has(author.email)) {
+      return false;
+    }
+    uniqueEmails.add(author.email);
+    return true;
+  });
 }
 
 /**
