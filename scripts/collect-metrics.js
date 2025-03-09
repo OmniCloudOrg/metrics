@@ -1,6 +1,12 @@
-const { Octokit } = require('@octokit/rest');
-const fs = require('fs');
-const path = require('path');
+// Updated to use ES modules instead of CommonJS
+import { Octokit } from 'octokit';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+// Get current directory with ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Configuration
 const ORG_NAME = process.env.ORGANIZATION || 'OmniCloudOrg';
@@ -13,7 +19,6 @@ const HISTORY_FILE = path.join(OUTPUT_DIR, 'metrics-history.json');
 const octokit = new Octokit({
   auth: TOKEN,
   userAgent: 'GitHub-Metrics-Action',
-  timeZone: 'UTC',
 });
 
 // Language factors for estimating lines of code
@@ -143,28 +148,33 @@ async function getAllRepositories() {
   let hasMore = true;
   
   while (hasMore) {
-    const { data } = await octokit.repos.listForOrg({
-      org: ORG_NAME,
-      per_page: 100,
-      page: page,
-      sort: 'updated',
-      direction: 'desc'
-    });
-    
-    repos.push(...data);
-    
-    hasMore = data.length === 100;
-    page++;
-    
-    // Safety limit
-    if (page > 10) {
-      console.warn('Reached page limit (10), stopping repository fetch');
+    try {
+      const { data } = await octokit.rest.repos.listForOrg({
+        org: ORG_NAME,
+        per_page: 100,
+        page: page,
+        sort: 'updated',
+        direction: 'desc'
+      });
+      
+      repos.push(...data);
+      
+      hasMore = data.length === 100;
+      page++;
+      
+      // Safety limit
+      if (page > 10) {
+        console.warn('Reached page limit (10), stopping repository fetch');
+        hasMore = false;
+      }
+      
+      // Sleep to avoid rate limits
+      if (hasMore) {
+        await sleep(500);
+      }
+    } catch (error) {
+      console.error(`Error fetching repos page ${page}:`, error.message);
       hasMore = false;
-    }
-    
-    // Sleep to avoid rate limits
-    if (hasMore) {
-      await sleep(500);
     }
   }
   
@@ -237,14 +247,14 @@ async function getRepositoryMetrics(repo) {
 async function getCommitCount(repo) {
   try {
     // First try with a single commit to get pagination info
-    const { headers } = await octokit.repos.listCommits({
+    const response = await octokit.rest.repos.listCommits({
       owner: ORG_NAME,
       repo: repo,
       per_page: 1
     });
     
     // Check if there's a link header with last page info
-    const linkHeader = headers.link;
+    const linkHeader = response.headers.link;
     if (linkHeader && linkHeader.includes('rel="last"')) {
       const match = linkHeader.match(/page=(\d+)>; rel="last"/);
       if (match) {
@@ -253,7 +263,7 @@ async function getCommitCount(repo) {
     }
     
     // If no link header or no match, try to get all commits
-    const { data } = await octokit.repos.listCommits({
+    const { data } = await octokit.rest.repos.listCommits({
       owner: ORG_NAME,
       repo: repo,
       per_page: 100
@@ -272,7 +282,7 @@ async function getCommitCount(repo) {
 // Get contributor count for a repository
 async function getContributorCount(repo) {
   try {
-    const { data } = await octokit.repos.listContributors({
+    const response = await octokit.rest.repos.listContributors({
       owner: ORG_NAME,
       repo: repo,
       per_page: 1,
@@ -280,14 +290,7 @@ async function getContributorCount(repo) {
     });
     
     // Check if there's pagination
-    const { headers } = await octokit.repos.listContributors({
-      owner: ORG_NAME,
-      repo: repo,
-      per_page: 1
-    });
-    
-    // Check if there's a link header with last page info
-    const linkHeader = headers.link;
+    const linkHeader = response.headers.link;
     if (linkHeader && linkHeader.includes('rel="last"')) {
       const match = linkHeader.match(/page=(\d+)>; rel="last"/);
       if (match) {
@@ -296,7 +299,7 @@ async function getContributorCount(repo) {
     }
     
     // Otherwise try to count all contributors
-    const allContributors = await octokit.repos.listContributors({
+    const allContributors = await octokit.rest.repos.listContributors({
       owner: ORG_NAME,
       repo: repo,
       per_page: 100
@@ -314,12 +317,17 @@ async function getContributorCount(repo) {
 
 // Get language breakdown for a repository
 async function getLanguages(repo) {
-  const { data } = await octokit.repos.listLanguages({
-    owner: ORG_NAME,
-    repo: repo
-  });
-  
-  return data;
+  try {
+    const { data } = await octokit.rest.repos.listLanguages({
+      owner: ORG_NAME,
+      repo: repo
+    });
+    
+    return data;
+  } catch (error) {
+    console.warn(`Error getting languages for ${repo}:`, error.message);
+    return {};
+  }
 }
 
 // Calculate lines of code based on language bytes
@@ -344,14 +352,7 @@ async function getPullRequestCounts(repo) {
   
   // Get open PRs
   try {
-    const { data: openPRs } = await octokit.pulls.list({
-      owner: ORG_NAME,
-      repo: repo,
-      state: 'open',
-      per_page: 1
-    });
-    
-    const { headers } = await octokit.pulls.list({
+    const openResponse = await octokit.rest.pulls.list({
       owner: ORG_NAME,
       repo: repo,
       state: 'open',
@@ -359,14 +360,14 @@ async function getPullRequestCounts(repo) {
     });
     
     // Check for pagination
-    const linkHeader = headers.link;
+    const linkHeader = openResponse.headers.link;
     if (linkHeader && linkHeader.includes('rel="last"')) {
       const match = linkHeader.match(/page=(\d+)>; rel="last"/);
       if (match) {
         counts.open = parseInt(match[1], 10);
       }
     } else {
-      counts.open = openPRs.length;
+      counts.open = openResponse.data.length;
     }
   } catch (error) {
     console.warn(`Error getting open PRs for ${repo}:`, error.message);
@@ -374,14 +375,7 @@ async function getPullRequestCounts(repo) {
   
   // Get closed PRs
   try {
-    const { data: closedPRs } = await octokit.pulls.list({
-      owner: ORG_NAME,
-      repo: repo,
-      state: 'closed',
-      per_page: 1
-    });
-    
-    const { headers } = await octokit.pulls.list({
+    const closedResponse = await octokit.rest.pulls.list({
       owner: ORG_NAME,
       repo: repo,
       state: 'closed',
@@ -389,14 +383,14 @@ async function getPullRequestCounts(repo) {
     });
     
     // Check for pagination
-    const linkHeader = headers.link;
+    const linkHeader = closedResponse.headers.link;
     if (linkHeader && linkHeader.includes('rel="last"')) {
       const match = linkHeader.match(/page=(\d+)>; rel="last"/);
       if (match) {
         const totalClosed = parseInt(match[1], 10);
         
         // Sample a few closed PRs to estimate merge ratio
-        const { data: closedSample } = await octokit.pulls.list({
+        const { data: closedSample } = await octokit.rest.pulls.list({
           owner: ORG_NAME,
           repo: repo,
           state: 'closed',
@@ -404,15 +398,15 @@ async function getPullRequestCounts(repo) {
         });
         
         const mergedCount = closedSample.filter(pr => pr.merged_at !== null).length;
-        const mergeRatio = mergedCount / closedSample.length;
+        const mergeRatio = mergedCount / closedSample.length || 0;
         
         counts.merged = Math.round(totalClosed * mergeRatio);
         counts.closed = totalClosed - counts.merged;
       }
     } else {
-      const mergedCount = closedPRs.filter(pr => pr.merged_at !== null).length;
+      const mergedCount = closedResponse.data.filter(pr => pr.merged_at !== null).length;
       counts.merged = mergedCount;
-      counts.closed = closedPRs.length - mergedCount;
+      counts.closed = closedResponse.data.length - mergedCount;
     }
   } catch (error) {
     console.warn(`Error getting closed PRs for ${repo}:`, error.message);
@@ -438,7 +432,7 @@ async function getContributorMetrics(repositories) {
       
       try {
         // Get contributors for this repo
-        const { data: repoContributors } = await octokit.repos.listContributors({
+        const { data: repoContributors } = await octokit.rest.repos.listContributors({
           owner: ORG_NAME,
           repo: repo.name,
           per_page: 100
@@ -498,7 +492,7 @@ async function getContributorMetrics(repositories) {
 async function findCoAuthors(repo, contributorsMap) {
   try {
     // Get recent commits
-    const { data: commits } = await octokit.repos.listCommits({
+    const { data: commits } = await octokit.rest.repos.listCommits({
       owner: ORG_NAME,
       repo: repo,
       per_page: 30 // Get more commits to find co-authors
@@ -531,7 +525,7 @@ async function findCoAuthors(repo, contributorsMap) {
           
           // Get GitHub user info if possible
           try {
-            const { data: user } = await octokit.users.getByUsername({
+            const { data: user } = await octokit.rest.users.getByUsername({
               username: username
             });
             
