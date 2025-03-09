@@ -296,6 +296,46 @@ async function lookupUserByEmail(email) {
   try {
     console.log(`[Email Lookup] Attempting to find GitHub user for email: ${email}`);
     
+    // Check if this is a GitHub noreply email address
+    // Format 1: username@users.noreply.github.com
+    // Format 2: ID+username@users.noreply.github.com
+    if (email.endsWith('@users.noreply.github.com')) {
+      console.log(`[Email Lookup] Detected GitHub noreply email: ${email}`);
+      
+      let username;
+      
+      if (email.includes('+')) {
+        // Format 2: ID+username@users.noreply.github.com
+        username = email.split('+')[1].split('@')[0];
+      } else {
+        // Format 1: username@users.noreply.github.com
+        username = email.split('@')[0];
+      }
+      
+      console.log(`[Email Lookup] Extracted GitHub username: ${username} from noreply email`);
+      
+      try {
+        // Get user details directly by username
+        const userDetails = await apiRequest(octokit.rest.users.getByUsername, {
+          username: username
+        });
+        
+        console.log(`[Email Lookup] Found GitHub user: ${username} from noreply email`);
+        
+        return {
+          login: username,
+          avatar_url: userDetails.data.avatar_url,
+          html_url: userDetails.data.html_url,
+          name: userDetails.data.name || username,
+          found_by_email: false,
+          found_by_noreply: true
+        };
+      } catch (error) {
+        console.warn(`[Email Lookup] Error getting GitHub user ${username} from noreply email:`, error.message);
+        // Fall back to email search
+      }
+    }
+    
     // Use the search API to find users by email
     const searchResponse = await apiRequest(octokit.rest.search.users, {
       q: `${email} in:email`
@@ -908,7 +948,8 @@ async function collectMetrics() {
     metrics.stats.coauthor_processing = {
       total_coauthor_emails: coAuthorEmails.size,
       github_users_found: emailToGitHubUser.size,
-      duplicates_merged: duplicates.length
+      duplicates_merged: duplicates.length,
+      noreply_github_emails: [...coAuthorEmails].filter(email => email.endsWith('@users.noreply.github.com')).length
     };
     
     // Save metrics to file
