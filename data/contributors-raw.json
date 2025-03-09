@@ -3,7 +3,7 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1114,
+    "contributions": 1120,
     "lines_contributed": 0,
     "repositories": [
       "metrics",
@@ -47,8 +47,8 @@
   {
     "login": "Cazdotsys",
     "email": "Caznix01@gmail.com",
-    "avatar_url": "https://github.com/identicons/cazdotsys.png",
-    "html_url": "mailto:Caznix01@gmail.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
+    "html_url": "https://github.com/Caznix",
     "contributions": 15,
     "lines_contributed": 0,
     "repositories": [
@@ -56,13 +56,15 @@
       "OmniDirector",
       "OmniOrchestrator",
       "OmniCloud-Full"
-    ]
+    ],
+    "github_login": "Caznix",
+    "matched_by_email": true
   },
   {
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 8,
+    "contributions": 12,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -91,7 +93,8 @@
     "repositories": [
       "OmniDirector",
       "OmniCloud-Dashboard"
-    ]
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "Tristan Poland (Trident_For_U)",
@@ -104,7 +107,8 @@
       "OmniForge",
       "OmniDirector",
       "Omni-CLI"
-    ]
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "Colin Leftwich",
@@ -116,7 +120,8 @@
     "repositories": [
       "OmniDirector",
       "OmniOrchestrator"
-    ]
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "haywoodspartan",
@@ -127,7 +132,8 @@
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
-    ]
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "Thiago Goulart",
@@ -138,7 +144,8 @@
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
-    ]
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "Tyler Poland",
@@ -149,6 +156,7 @@
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector"
-    ]
+    ],
+    "pending_github_lookup": true
   }
 ]

@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-09T14:28:08.209Z",
+  "timestamp": "2025-03-09T14:37:03.678Z",
   "stats": {
     "repositories": 19,
     "stars": 15,
     "forks": 5,
     "watchers": 15,
     "openIssues": 15,
-    "totalCommits": 596,
-    "linesOfCode": 98961,
+    "totalCommits": 598,
+    "linesOfCode": 99335,
     "contributors": {
       "total": 11,
       "top": [
@@ -16,7 +16,7 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1114,
+          "contributions": 1120,
           "lines_contributed": 0,
           "repositories": [
             "metrics",
@@ -57,8 +57,8 @@
         },
         {
           "login": "Cazdotsys",
-          "avatar_url": "https://github.com/identicons/cazdotsys.png",
-          "html_url": "mailto:Caznix01@gmail.com",
+          "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
+          "html_url": "https://github.com/Caznix",
           "contributions": 15,
           "lines_contributed": 0,
           "repositories": [
@@ -66,13 +66,14 @@
             "OmniDirector",
             "OmniOrchestrator",
             "OmniCloud-Full"
-          ]
+          ],
+          "github_login": "Caznix"
         },
         {
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 8,
+          "contributions": 12,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -156,7 +157,7 @@
       ]
     },
     "languages": {
-      "JavaScript": 1061250,
+      "JavaScript": 1068743,
       "TypeScript": 311091,
       "CSS": 9831,
       "Rust": 385286,
@@ -166,6 +167,11 @@
       "Batchfile": 3317,
       "HTML": 3393,
       "Svelte": 149745
+    },
+    "coauthor_processing": {
+      "total_coauthor_emails": 7,
+      "github_users_found": 1,
+      "duplicates_merged": 0
     }
   },
   "repositories": [
@@ -178,10 +184,10 @@
       "watchers": 0,
       "openIssues": 0,
       "languages": {
-        "JavaScript": 27171
+        "JavaScript": 34664
       },
-      "linesOfCode": 1359,
-      "commits": 21,
+      "linesOfCode": 1733,
+      "commits": 23,
       "contributors": 2
     },
     {
