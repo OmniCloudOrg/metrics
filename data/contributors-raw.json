@@ -7,8 +7,8 @@
     "lines_contributed": 0,
     "repositories": [
       "metrics",
-      "Lodestone",
       "OmniCloudOrg.github.io",
+      "Lodestone",
       "OmniForge",
       "OmniAgent",
       "OmniDirector",
@@ -62,7 +62,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 10,
+    "contributions": 8,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
