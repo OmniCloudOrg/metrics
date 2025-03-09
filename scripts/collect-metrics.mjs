@@ -105,21 +105,63 @@ function extractCoAuthors(message) {
 
   const coauthors = [];
   
-  // NEW: Handle multiple co-authors on a single line
-  // This matches patterns like: 
-  // "Co-Authored-By: Name1 <email1> Co-Authored-By: Name2 <email2>"
-  const multipleCoAuthorRegex = /Co-Authored-By:([^<]+)<([^>]+)>/gi;
-  let match;
-  while ((match = multipleCoAuthorRegex.exec(message)) !== null) {
-    if (match.length > 2) {
-      coauthors.push({
-        name: match[1].trim(),
-        email: match[2].trim()
-      });
+  // STEP 1: Split and process approach - handles both single line and multiline formats
+  // This is the most reliable method for both formats
+  if (message.includes("Co-Authored-By:") || message.includes("Co-authored-by:")) {
+    // First, normalize newlines
+    const normalizedMessage = message.replace(/\r\n/g, '\n');
+    
+    // Split the commit message into lines
+    const lines = normalizedMessage.split('\n');
+    
+    // Iterate through each line
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i].trim();
+      
+      // Check if this line has "Co-Authored-By:" or variations
+      if (/Co-[aA]uthored-[bB]y:/i.test(line)) {
+        // Extract the email
+        const emailMatch = line.match(/<([^>]+)>/);
+        if (emailMatch && emailMatch[1]) {
+          const email = emailMatch[1].trim();
+          
+          // Extract the name: everything before the email bracket
+          const nameMatch = line.match(/Co-[aA]uthored-[bB]y:([^<]+)</);
+          const name = nameMatch ? nameMatch[1].trim() : "";
+          
+          coauthors.push({ name, email });
+        }
+      }
     }
   }
   
-  // Match various co-author formats with more permissive patterns
+  // STEP 2: Handle the case where multiple co-authors are on a single line
+  // This helps when co-authors are not separated by newlines
+  const multiCoAuthorPattern = /Co-[aA]uthored-[bB]y:[^<]*<([^>]+)>/g;
+  let match;
+  let lastIndex = 0;
+  
+  while ((match = multiCoAuthorPattern.exec(message)) !== null) {
+    // Get the position where this match ends
+    const matchEnd = multiCoAuthorPattern.lastIndex;
+    
+    // Get the entire matched substring
+    const fullMatch = message.substring(match.index, matchEnd);
+    
+    // Extract the email
+    const email = match[1].trim();
+    
+    // Extract the name: everything between "Co-Authored-By:" and "<email>"
+    const nameMatch = fullMatch.match(/Co-[aA]uthored-[bB]y:([^<]+)</i);
+    const name = nameMatch ? nameMatch[1].trim() : "";
+    
+    coauthors.push({ name, email });
+    
+    // Update last position
+    lastIndex = matchEnd;
+  }
+  
+  // STEP 3: Also try the traditional regex patterns for other formats
   const patterns = [
     // Standard GitHub format
     /co[\-\s]authored[\-\s]by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
@@ -156,7 +198,7 @@ function extractCoAuthors(message) {
     }
   }
   
-  // Special case: look for GitHub usernames in commit message
+  // STEP 4: Special case for GitHub username mentions
   const usernamePattern = /@([a-zA-Z0-9\-]+)/g;
   const usernameMatches = [...message.matchAll(usernamePattern)];
   for (const match of usernameMatches) {
@@ -168,24 +210,7 @@ function extractCoAuthors(message) {
     }
   }
   
-  // Additional check: Try a different approach for multiple co-authors
-  if (message.includes("Co-Authored-By:")) {
-    // Split by Co-Authored-By: and process each part
-    const parts = message.split(/Co-Authored-By:/i).slice(1); // Skip first part (before first Co-Authored-By)
-    for (const part of parts) {
-      const emailMatch = part.match(/<([^>]+)>/);
-      if (emailMatch && emailMatch[1]) {
-        const email = emailMatch[1].trim();
-        // Get name: everything before the email bracket
-        const nameMatch = part.match(/^(.*?)</);
-        const name = nameMatch ? nameMatch[1].trim() : "";
-        
-        coauthors.push({ name, email });
-      }
-    }
-  }
-  
-  // Remove duplicates based on email
+  // STEP 5: Remove duplicates based on email
   const uniqueEmails = new Set();
   return coauthors.filter(author => {
     if (!author.email || uniqueEmails.has(author.email)) {
