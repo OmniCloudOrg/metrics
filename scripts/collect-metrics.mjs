@@ -103,11 +103,22 @@ async function getAllItems(method, params = {}) {
 function extractCoAuthors(message) {
   if (!message) return [];
 
+  // Enable debug mode for diagnostic output
+  const debug = process.env.DEBUG_COAUTHORS === 'true';
+  
+  if (debug) {
+    console.log("Analyzing commit message:", message);
+  }
+
   const coauthors = [];
   
   // STEP 1: Split and process approach - handles both single line and multiline formats
   // This is the most reliable method for both formats
-  if (message.includes("Co-Authored-By:") || message.includes("Co-authored-by:")) {
+  if (message.includes("Co-Authored-By:") || message.includes("Co-authored-by:") || 
+      message.includes("co-authored-by:") || message.includes("CO-AUTHORED-BY:")) {
+    
+    if (debug) console.log("Found Co-Authored-By format");
+    
     // First, normalize newlines
     const normalizedMessage = message.replace(/\r\n/g, '\n');
     
@@ -118,6 +129,10 @@ function extractCoAuthors(message) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i].trim();
       
+      if (debug && line.toLowerCase().includes("co-authored-by")) {
+        console.log("Processing line:", line);
+      }
+      
       // Check if this line has "Co-Authored-By:" or variations
       if (/Co-[aA]uthored-[bB]y:/i.test(line)) {
         // Extract the email
@@ -126,8 +141,10 @@ function extractCoAuthors(message) {
           const email = emailMatch[1].trim();
           
           // Extract the name: everything before the email bracket
-          const nameMatch = line.match(/Co-[aA]uthored-[bB]y:([^<]+)</);
+          const nameMatch = line.match(/Co-[aA]uthored-[bB]y:([^<]+)</i);
           const name = nameMatch ? nameMatch[1].trim() : "";
+          
+          if (debug) console.log("Found co-author:", name, email);
           
           coauthors.push({ name, email });
         }
@@ -139,7 +156,8 @@ function extractCoAuthors(message) {
   // This helps when co-authors are not separated by newlines
   const multiCoAuthorPattern = /Co-[aA]uthored-[bB]y:[^<]*<([^>]+)>/g;
   let match;
-  let lastIndex = 0;
+  
+  if (debug) console.log("Checking for multiple co-authors on a single line");
   
   while ((match = multiCoAuthorPattern.exec(message)) !== null) {
     // Get the position where this match ends
@@ -155,15 +173,14 @@ function extractCoAuthors(message) {
     const nameMatch = fullMatch.match(/Co-[aA]uthored-[bB]y:([^<]+)</i);
     const name = nameMatch ? nameMatch[1].trim() : "";
     
-    coauthors.push({ name, email });
+    if (debug) console.log("Found co-author in single line:", name, email);
     
-    // Update last position
-    lastIndex = matchEnd;
+    coauthors.push({ name, email });
   }
   
   // STEP 3: Also try the traditional regex patterns for other formats
   const patterns = [
-    // Standard GitHub format
+    // Standard GitHub format (case insensitive)
     /co[\-\s]authored[\-\s]by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
     // Alternate format
     /co-author:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
@@ -176,23 +193,38 @@ function extractCoAuthors(message) {
     // Credits format (less common)
     /credits:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
     // with format
-    /with:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi
+    /with:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+    // Signed-off-by format (often used in Git commits)
+    /signed[\-\s]off[\-\s]by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+    // Author format
+    /author:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi
   ];
+  
+  if (debug) console.log("Trying traditional regex patterns");
   
   for (const pattern of patterns) {
     const matches = [...message.matchAll(pattern)];
     for (const match of matches) {
       // Check if we have name and email or just email
       if (match.length > 2) {
+        const name = match[1].trim();
+        const email = match[2].trim();
+        
+        if (debug) console.log("Found co-author from pattern:", name, email);
+        
         coauthors.push({
-          name: match[1].trim(),
-          email: match[2].trim()
+          name,
+          email
         });
       } else if (match.length > 1) {
         // Just email format
+        const email = match[1].trim();
+        
+        if (debug) console.log("Found co-author email-only:", email);
+        
         coauthors.push({
           name: "",
-          email: match[1].trim()
+          email
         });
       }
     }
@@ -201,24 +233,80 @@ function extractCoAuthors(message) {
   // STEP 4: Special case for GitHub username mentions
   const usernamePattern = /@([a-zA-Z0-9\-]+)/g;
   const usernameMatches = [...message.matchAll(usernamePattern)];
+  
+  if (debug) console.log("Checking for GitHub username mentions");
+  
   for (const match of usernameMatches) {
     if (match[1] && match[1].length > 2) {
+      const username = match[1];
+      
+      if (debug) console.log("Found GitHub username mention:", username);
+      
       coauthors.push({
-        name: match[1],
-        email: `${match[1]}@users.noreply.github.com`
+        name: username,
+        email: `${username}@users.noreply.github.com`
       });
     }
   }
   
-  // STEP 5: Remove duplicates based on email
+  // STEP 5: Look for any email addresses in the commit message as fallback
+  const emailPattern = /\b([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})\b/g;
+  const emailMatches = [...message.matchAll(emailPattern)];
+  
+  if (debug) console.log("Checking for general email addresses");
+  
+  for (const match of emailMatches) {
+    if (match[1]) {
+      const email = match[1];
+      
+      if (debug) console.log("Found email address:", email);
+      
+      coauthors.push({
+        name: "",
+        email
+      });
+    }
+  }
+  
+  // STEP 6: Finally, try a desperate approach for multi-line multi-author format
+  // This is specifically for your format example
+  const lines = message.split('\n');
+  const joinedMessage = lines.join(' ');
+  const complexPattern = /Co-Authored-By:[^<]+<[^>]+>/gi;
+  const complexMatches = [...joinedMessage.matchAll(complexPattern)];
+  
+  if (debug) console.log(`Trying desperate approach, found ${complexMatches.length} matches`);
+  
+  for (const complexMatch of complexMatches) {
+    const matchText = complexMatch[0];
+    const emailMatch = matchText.match(/<([^>]+)>/);
+    if (emailMatch && emailMatch[1]) {
+      const email = emailMatch[1].trim();
+      const nameMatch = matchText.match(/Co-Authored-By:([^<]+)</i);
+      const name = nameMatch ? nameMatch[1].trim() : "";
+      
+      if (debug) console.log("Found co-author from complex pattern:", name, email);
+      
+      coauthors.push({ name, email });
+    }
+  }
+  
+  // STEP 7: Remove duplicates based on email
   const uniqueEmails = new Set();
-  return coauthors.filter(author => {
-    if (!author.email || uniqueEmails.has(author.email)) {
+  const uniqueCoauthors = coauthors.filter(author => {
+    if (!author.email || uniqueEmails.has(author.email.toLowerCase())) {
       return false;
     }
-    uniqueEmails.add(author.email);
+    uniqueEmails.add(author.email.toLowerCase());
     return true;
   });
+  
+  if (debug) {
+    console.log(`Found ${coauthors.length} co-authors, ${uniqueCoauthors.length} unique`);
+    console.log("Final co-authors list:", uniqueCoauthors);
+  }
+  
+  return uniqueCoauthors;
 }
 
 /**
