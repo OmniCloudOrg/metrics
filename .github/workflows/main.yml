@@ -75,25 +75,30 @@ jobs:
             const items = [];
             let page = 1;
             let hasNextPage = true;
+            const maxPages = params.maxPages || 10; // Default page limit
+            
+            // Remove custom params before passing to GitHub API
+            const apiParams = {...params};
+            delete apiParams.maxPages;
 
             while (hasNextPage) {
               try {
                 const response = await method({
-                  ...params,
+                  ...apiParams,
                   page,
-                  per_page: 100
+                  per_page: params.per_page || 100
                 });
 
                 const data = response.data;
                 items.push(...data);
 
                 // Check if there are more pages
-                hasNextPage = data.length === 100;
+                hasNextPage = data.length === (params.per_page || 100);
                 page++;
 
                 // Safety limit to prevent infinite loops
-                if (page > 10) {
-                  console.warn('Reached pagination limit (10 pages), some data may be incomplete');
+                if (page > maxPages) {
+                  console.warn(`Reached pagination limit (${maxPages} pages), some data may be incomplete`);
                   break;
                 }
 
@@ -116,18 +121,51 @@ jobs:
 
             const coauthors = [];
             
-            // Match various co-author formats
+            // Match various co-author formats with more permissive patterns
             const patterns = [
+              // Standard GitHub format
               /co[\-\s]authored[\-\s]by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
-              /co-author:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi
+              // Alternate format
+              /co-author:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+              // Format with no spaces
+              /coauthored[\-\s]?by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+              // Potential typos or variations
+              /co[\-\s]?auth?ored[\-\s]?by:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+              // Handle format with just email
+              /co[\-\s]authored[\-\s]by:[\s\n]*<([^>\n]+)>/gi,
+              // Credits format (less common)
+              /credits:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi,
+              // with format
+              /with:[\s\n]+([^<\n]+?)[\s\n]*<([^>\n]+)>/gi
             ];
             
             for (const pattern of patterns) {
               const matches = [...message.matchAll(pattern)];
               for (const match of matches) {
+                // Check if we have name and email or just email
+                if (match.length > 2) {
+                  coauthors.push({
+                    name: match[1].trim(),
+                    email: match[2].trim()
+                  });
+                } else if (match.length > 1) {
+                  // Just email format
+                  coauthors.push({
+                    name: "",
+                    email: match[1].trim()
+                  });
+                }
+              }
+            }
+            
+            // Special case: look for GitHub usernames in commit message
+            const usernamePattern = /@([a-zA-Z0-9\-]+)/g;
+            const usernameMatches = [...message.matchAll(usernamePattern)];
+            for (const match of usernameMatches) {
+              if (match[1] && match[1].length > 2) {
                 coauthors.push({
-                  name: match[1].trim(),
-                  email: match[2].trim()
+                  name: match[1],
+                  email: `${match[1]}@users.noreply.github.com`
                 });
               }
             }
@@ -137,12 +175,37 @@ jobs:
 
           // Extract username from GitHub email
           function getUsernameFromEmail(email, name) {
+            if (!email && !name) return null;
+            
+            // Clean the inputs
+            email = email || '';
+            name = name || '';
+            
+            // Try to extract from clear GitHub username mentions
+            if (name.includes('@')) {
+              const usernameMatch = name.match(/@([a-zA-Z0-9\-]+)/);
+              if (usernameMatch && usernameMatch[1]) {
+                return usernameMatch[1];
+              }
+            }
+            
             // Handle GitHub noreply email format: ID+username@users.noreply.github.com
             const githubNoReplyRegex = /^(\d+)\+(.+)@users\.noreply\.github\.com$/i;
             const githubMatch = email.match(githubNoReplyRegex);
             
             if (githubMatch && githubMatch[2]) {
               return githubMatch[2];
+            }
+            
+            // Check for typical GitHub team member format
+            if (email.includes('+')) {
+              const parts = email.split('+');
+              if (parts.length > 1 && parts[1].includes('@')) {
+                const username = parts[1].split('@')[0];
+                if (username && username.length > 2) {
+                  return username;
+                }
+              }
             }
             
             // Check other GitHub email formats
@@ -155,11 +218,18 @@ jobs:
               return email.split('@')[0];
             }
             
-            // Check if name contains a GitHub username format
+            // Look for GitHub username in name (without @ symbol)
             if (name) {
-              const usernameInName = name.match(/@([a-zA-Z0-9\-]+)/);
-              if (usernameInName && usernameInName[1]) {
-                return usernameInName[1];
+              // Check if name looks like a GitHub username
+              if (/^[a-zA-Z0-9\-]+$/.test(name) && name.length > 2 && name.length < 40) {
+                return name;
+              }
+              
+              // Try to extract a GitHub username from the name
+              // Often names are formatted as "Real Name (username)"
+              const parenthesesMatch = name.match(/\(([a-zA-Z0-9\-]+)\)/);
+              if (parenthesesMatch && parenthesesMatch[1]) {
+                return parenthesesMatch[1];
               }
             }
             
@@ -171,7 +241,19 @@ jobs:
             
             // Use cleaned name as fallback
             if (name) {
+              // Try to get just the first word of the name as username
+              const firstWord = name.split(/\s+/)[0];
+              if (firstWord && firstWord.length > 2) {
+                return firstWord.toLowerCase().replace(/[^a-z0-9]/g, '');
+              }
+              
               return name.toLowerCase().replace(/[^a-z0-9]/g, '');
+            }
+            
+            // Last resort: use a placeholder with email hash
+            if (email) {
+              const hash = email.split('').reduce((a, b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0);
+              return `contributor-${Math.abs(hash)}`;
             }
             
             return null;
@@ -225,8 +307,24 @@ jobs:
               console.log('Processing repositories...');
               const MAX_BATCH_SIZE = 3; // Process repos in batches to avoid rate limits
               
-              for (let i = 0; i < allRepos.length; i += MAX_BATCH_SIZE) {
-                const batch = allRepos.slice(i, i + MAX_BATCH_SIZE);
+              // First process the most important repos - the main repo and recently updated ones
+              const primaryRepos = allRepos.filter(repo => 
+                repo.name === 'OmniCloud-Full' || // Main repo (adjust name if needed)
+                repo.pushed_at && new Date(repo.pushed_at) > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000) // Recently updated
+              );
+              
+              console.log(`Processing ${primaryRepos.length} primary/recent repositories first...`);
+              
+              // Split into primary repos and remaining repos
+              const remainingRepos = allRepos.filter(repo => 
+                !primaryRepos.some(p => p.name === repo.name)
+              );
+              
+              // Process repos in order: primary first, then others
+              const allReposInProcessOrder = [...primaryRepos, ...remainingRepos];
+              
+              for (let i = 0; i < allReposInProcessOrder.length; i += MAX_BATCH_SIZE) {
+                const batch = allReposInProcessOrder.slice(i, i + MAX_BATCH_SIZE);
                 
                 await Promise.all(batch.map(async (repo) => {
                   console.log(`Processing ${repo.name}...`);
@@ -294,16 +392,27 @@ jobs:
                         metrics.stats.totalCommits += totalCommits;
                       }
                     } else {
-                      // Otherwise, fetch all commits
+                      // For primary repositories, look at more commits
+                      const isMainRepo = repo.name === 'OmniCloud-Full'; // Adjust name if needed
+                      const commitLimit = isMainRepo ? 500 : 100;
+                      
+                      console.log(`  Fetching up to ${commitLimit} commits for ${repo.name}...`);
                       const allCommits = await getAllItems(
                         octokit.rest.repos.listCommits,
-                        { owner: ORG_NAME, repo: repo.name }
+                        { 
+                          owner: ORG_NAME, 
+                          repo: repo.name,
+                          per_page: 100, // GitHub max per page
+                          // Use a larger limit only for primary repos
+                          maxPages: isMainRepo ? 5 : 1 
+                        }
                       );
                       repoMetrics.commits = allCommits.length;
                       metrics.stats.totalCommits += allCommits.length;
                       
                       // Process commits for co-authors
                       console.log(`  Checking ${allCommits.length} commits for co-authors...`);
+                      let coAuthorCount = 0;
                       for (const commit of allCommits) {
                         if (!commit.commit?.message) continue;
                         
@@ -329,6 +438,7 @@ jobs:
                         // Process co-authors in commit message
                         const coAuthors = extractCoAuthors(commit.commit.message);
                         for (const { name, email } of coAuthors) {
+                          coAuthorCount++;
                           const username = getUsernameFromEmail(email, name);
                           if (!username) continue;
                           
@@ -348,6 +458,9 @@ jobs:
                           contributor.contributions += 1;
                           contributor.repositories.add(repo.name);
                         }
+                      }
+                      
+                      console.log(`  Found ${coAuthorCount} co-author mentions in ${repo.name}`);
                       }
                     }
                     
@@ -393,7 +506,7 @@ jobs:
                 }));
                 
                 // Add small delay between batches
-                if (i + MAX_BATCH_SIZE < allRepos.length) {
+                if (i + MAX_BATCH_SIZE < allReposInProcessOrder.length) {
                   await new Promise(resolve => setTimeout(resolve, 1000));
                 }
               }
