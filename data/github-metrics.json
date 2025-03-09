@@ -1,129 +1,398 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-09T13:45:18.535Z",
+  "timestamp": "2025-03-09T13:48:42.349Z",
   "stats": {
     "repositories": 19,
     "stars": 15,
     "forks": 5,
-    "totalCommits": 0,
+    "watchers": 15,
+    "openIssues": 15,
+    "totalCommits": 578,
+    "linesOfCode": 99143,
     "contributors": {
-      "top": []
+      "total": 4,
+      "top": [
+        {
+          "login": "tristanpoland",
+          "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
+          "html_url": "https://github.com/tristanpoland",
+          "contributions": 551,
+          "lines_contributed": 95659,
+          "repositories": [
+            "Lodestone",
+            "OmniCloudOrg.github.io",
+            "metrics",
+            "OmniDirector",
+            "OmniForge",
+            "OmniAgent",
+            "Omni-CLI",
+            "get",
+            "OmniOrchestrator",
+            "OmniCloud-Dashboard",
+            "OmniSchema",
+            "OmniCloud-Full",
+            "LibOmni",
+            "OmniMicro",
+            ".github",
+            "Docker-Helices",
+            "OmniTesting",
+            "OmniEditor",
+            "Omni-Cosmos"
+          ]
+        },
+        {
+          "login": "Caznix",
+          "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
+          "html_url": "https://github.com/Caznix",
+          "contributions": 22,
+          "lines_contributed": 3210,
+          "repositories": [
+            "OmniDirector",
+            "OmniForge",
+            "Omni-CLI",
+            "OmniOrchestrator",
+            "OmniCloud-Dashboard",
+            "LibOmni"
+          ]
+        },
+        {
+          "login": "meowesque",
+          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
+          "html_url": "https://github.com/meowesque",
+          "contributions": 4,
+          "lines_contributed": 138,
+          "repositories": [
+            "Lodestone",
+            "Omni-CLI"
+          ]
+        },
+        {
+          "login": "actions-user",
+          "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+          "html_url": "https://github.com/actions-user",
+          "contributions": 1,
+          "lines_contributed": 136,
+          "repositories": [
+            "metrics"
+          ]
+        }
+      ]
+    },
+    "languages": {
+      "JavaScript": 1053095,
+      "Rust": 385286,
+      "TypeScript": 298972,
+      "CSS": 9831,
+      "HCL": 7855,
+      "Dockerfile": 17557,
+      "Shell": 29851,
+      "Batchfile": 3317,
+      "HTML": 3393,
+      "Svelte": 149745
     }
   },
   "repositories": [
     {
-      "name": "OmniCloudOrg.github.io",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniCloudOrg.github.io"
-    },
-    {
-      "name": "OmniForge",
-      "stars": 3,
-      "forks": 1,
-      "url": "https://github.com/OmniCloudOrg/OmniForge"
-    },
-    {
-      "name": "OmniAgent",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniAgent"
-    },
-    {
-      "name": "OmniMicro",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniMicro"
-    },
-    {
-      "name": "Omni-Cosmos",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/Omni-Cosmos"
-    },
-    {
-      "name": "OmniDirector",
-      "stars": 1,
-      "forks": 1,
-      "url": "https://github.com/OmniCloudOrg/OmniDirector"
-    },
-    {
-      "name": "Omni-CLI",
-      "stars": 0,
-      "forks": 1,
-      "url": "https://github.com/OmniCloudOrg/Omni-CLI"
-    },
-    {
-      "name": "LibOmni",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/LibOmni"
-    },
-    {
-      "name": "OmniCloud-Full",
-      "stars": 3,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full"
-    },
-    {
-      "name": "Docker-Helices",
-      "stars": 1,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/Docker-Helices"
-    },
-    {
-      "name": "OmniCloud-Dashboard",
-      "stars": 2,
-      "forks": 1,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard"
-    },
-    {
-      "name": "OmniOrchestrator",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator"
-    },
-    {
-      "name": "OmniEditor",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniEditor"
-    },
-    {
-      "name": "OmniSchema",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniSchema"
-    },
-    {
-      "name": ".github",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/.github"
-    },
-    {
       "name": "Lodestone",
+      "description": "A rust-based service discovery, and registry with a built in load balancer and proxy",
+      "url": "https://github.com/OmniCloudOrg/Lodestone",
       "stars": 2,
       "forks": 1,
-      "url": "https://github.com/OmniCloudOrg/Lodestone"
+      "watchers": 2,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 27734
+      },
+      "linesOfCode": 1387,
+      "commits": 48,
+      "contributors": 2
     },
     {
-      "name": "OmniTesting",
-      "stars": 0,
+      "name": "OmniCloudOrg.github.io",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloudOrg.github.io",
+      "stars": 1,
       "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/OmniTesting"
-    },
-    {
-      "name": "get",
-      "stars": 0,
-      "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/get"
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "TypeScript": 160312,
+        "CSS": 6487,
+        "JavaScript": 135
+      },
+      "linesOfCode": 8218,
+      "commits": 73,
+      "contributors": 1
     },
     {
       "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
       "stars": 0,
       "forks": 0,
-      "url": "https://github.com/OmniCloudOrg/metrics"
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 19016
+      },
+      "linesOfCode": 951,
+      "commits": 7,
+      "contributors": 2
+    },
+    {
+      "name": "OmniDirector",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniDirector",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 2,
+      "languages": {
+        "Rust": 74519,
+        "Shell": 10039,
+        "Dockerfile": 2995,
+        "Batchfile": 2400
+      },
+      "linesOfCode": 5000,
+      "commits": 67,
+      "contributors": 2
+    },
+    {
+      "name": "OmniForge",
+      "description": "Deploy any app, anywhere",
+      "url": "https://github.com/OmniCloudOrg/OmniForge",
+      "stars": 3,
+      "forks": 1,
+      "watchers": 3,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 75840,
+        "HCL": 3849,
+        "Dockerfile": 2791
+      },
+      "linesOfCode": 4124,
+      "commits": 44,
+      "contributors": 2
+    },
+    {
+      "name": "OmniAgent",
+      "description": "The OmniAgent lifecycle manages containerized applications in the cloud",
+      "url": "https://github.com/OmniCloudOrg/OmniAgent",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 17533,
+        "Dockerfile": 1023
+      },
+      "linesOfCode": 928,
+      "commits": 21,
+      "contributors": 1
+    },
+    {
+      "name": "Omni-CLI",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 65790
+      },
+      "linesOfCode": 3290,
+      "commits": 65,
+      "contributors": 3
+    },
+    {
+      "name": "get",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/get",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Shell": 10608,
+        "HTML": 2911
+      },
+      "linesOfCode": 1119,
+      "commits": 13,
+      "contributors": 1
+    },
+    {
+      "name": "OmniOrchestrator",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 11,
+      "languages": {
+        "Rust": 92484,
+        "Shell": 8877,
+        "Dockerfile": 3151,
+        "Batchfile": 917
+      },
+      "linesOfCode": 5716,
+      "commits": 68,
+      "contributors": 2
+    },
+    {
+      "name": "OmniCloud-Dashboard",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
+      "stars": 2,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 651724,
+        "TypeScript": 98166,
+        "Dockerfile": 2616,
+        "CSS": 2320
+      },
+      "linesOfCode": 37695,
+      "commits": 40,
+      "contributors": 2
+    },
+    {
+      "name": "OmniSchema",
+      "description": "Just the database Schema for the Omni SQLite Database backend",
+      "url": "https://github.com/OmniCloudOrg/OmniSchema",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {},
+      "linesOfCode": 0,
+      "commits": 3,
+      "contributors": 1
+    },
+    {
+      "name": "OmniCloud-Full",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
+      "stars": 3,
+      "forks": 0,
+      "watchers": 3,
+      "openIssues": 0,
+      "languages": {
+        "Shell": 327
+      },
+      "linesOfCode": 33,
+      "commits": 96,
+      "contributors": 1
+    },
+    {
+      "name": "LibOmni",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/LibOmni",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 28676
+      },
+      "linesOfCode": 1434,
+      "commits": 3,
+      "contributors": 2
+    },
+    {
+      "name": "OmniMicro",
+      "description": "Deploy OmniCloud locally for testing and small, single node envs",
+      "url": "https://github.com/OmniCloudOrg/OmniMicro",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {},
+      "linesOfCode": 0,
+      "commits": 9,
+      "contributors": 1
+    },
+    {
+      "name": ".github",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/.github",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {},
+      "linesOfCode": 0,
+      "commits": 5,
+      "contributors": 1
+    },
+    {
+      "name": "Docker-Helices",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Docker-Helices",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "HCL": 4006
+      },
+      "linesOfCode": 200,
+      "commits": 4,
+      "contributors": 1
+    },
+    {
+      "name": "OmniTesting",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniTesting",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 2710
+      },
+      "linesOfCode": 136,
+      "commits": 2,
+      "contributors": 1
+    },
+    {
+      "name": "OmniEditor",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniEditor",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "TypeScript": 34603,
+        "JavaScript": 14641,
+        "Dockerfile": 2477,
+        "CSS": 345
+      },
+      "linesOfCode": 2596,
+      "commits": 6,
+      "contributors": 1
+    },
+    {
+      "name": "Omni-Cosmos",
+      "description": "The Official WebUI for OmniForge",
+      "url": "https://github.com/OmniCloudOrg/Omni-Cosmos",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 367579,
+        "Svelte": 149745,
+        "TypeScript": 5891,
+        "Dockerfile": 2504,
+        "CSS": 679,
+        "HTML": 482
+      },
+      "linesOfCode": 26316,
+      "commits": 4,
+      "contributors": 1
     }
   ]
 }
