@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
- * GitHub Organization Metrics Collector (Debug Version)
+ * GitHub Organization Metrics Collector (Enhanced Version)
  * 
- * This enhanced debugging version logs more information about API calls and contributor detection
+ * This enhanced version includes GitHub user lookup for co-authors by email
+ * and improved deduplication of contributors
  */
 
 import { Octokit } from 'octokit';
@@ -286,6 +287,86 @@ function extractCoAuthors(message, repoName) {
 }
 
 /**
+ * Function to look up GitHub user by email
+ * This will help deduplicate contributors and retrieve better profile pictures
+ */
+async function lookupUserByEmail(email) {
+  if (!email) return null;
+  
+  try {
+    console.log(`[Email Lookup] Attempting to find GitHub user for email: ${email}`);
+    
+    // Use the search API to find users by email
+    const searchResponse = await apiRequest(octokit.rest.search.users, {
+      q: `${email} in:email`
+    });
+    
+    if (searchResponse.data.items && searchResponse.data.items.length > 0) {
+      const user = searchResponse.data.items[0];
+      console.log(`[Email Lookup] Found GitHub user: ${user.login} for email: ${email}`);
+      
+      // Get additional user details
+      const userDetails = await apiRequest(octokit.rest.users.getByUsername, {
+        username: user.login
+      });
+      
+      return {
+        login: user.login,
+        avatar_url: user.avatar_url,
+        html_url: user.html_url,
+        name: userDetails.data.name || user.login,
+        found_by_email: true
+      };
+    }
+    
+    console.log(`[Email Lookup] No GitHub user found for email: ${email}`);
+    return null;
+  } catch (error) {
+    console.warn(`[Email Lookup] Error looking up user by email ${email}:`, error.message);
+    return null;
+  }
+}
+
+/**
+ * Function to lookup users in a batch to avoid rate limits
+ */
+async function batchLookupUsersByEmail(emails) {
+  const results = new Map();
+  const uniqueEmails = [...new Set(emails)];
+  
+  console.log(`[Batch Email Lookup] Processing ${uniqueEmails.length} unique emails`);
+  
+  // Process in small batches to avoid hitting rate limits
+  const BATCH_SIZE = 5;
+  for (let i = 0; i < uniqueEmails.length; i += BATCH_SIZE) {
+    const batch = uniqueEmails.slice(i, i + BATCH_SIZE);
+    console.log(`[Batch Email Lookup] Processing batch ${Math.floor(i/BATCH_SIZE) + 1} of ${Math.ceil(uniqueEmails.length/BATCH_SIZE)}`);
+    
+    // Process each email in the batch with some delay between requests
+    for (const email of batch) {
+      if (!results.has(email)) {
+        const user = await lookupUserByEmail(email);
+        if (user) {
+          results.set(email, user);
+        }
+        
+        // Small delay between requests
+        await new Promise(resolve => setTimeout(resolve, 1000));
+      }
+    }
+    
+    // Larger delay between batches
+    if (i + BATCH_SIZE < uniqueEmails.length) {
+      console.log(`[Batch Email Lookup] Pausing between batches to avoid rate limits`);
+      await new Promise(resolve => setTimeout(resolve, 3000));
+    }
+  }
+  
+  console.log(`[Batch Email Lookup] Found ${results.size} GitHub users from ${uniqueEmails.length} emails`);
+  return results;
+}
+
+/**
  * Main function to collect all GitHub metrics
  */
 async function collectMetrics() {
@@ -348,6 +429,9 @@ async function collectMetrics() {
     
     // Track contributors across all repos
     const contributorsMap = new Map();
+    
+    // Track all co-author emails to look up GitHub users later
+    const coAuthorEmails = new Set();
     
     // Create a file to store all co-authors we find for debugging
     const coauthorLogPath = path.join(process.cwd(), 'coauthor-debug.json');
@@ -561,6 +645,11 @@ async function collectMetrics() {
               coAuthorCount++;
               console.log(`Co-author: ${name} <${email}> (from ${source})`);
               
+              // Collect email for later GitHub user lookup
+              if (email && email.includes('@')) {
+                coAuthorEmails.add(email.toLowerCase());
+              }
+              
               // Normalize email for lookup
               const normalizedEmail = email.toLowerCase();
               
@@ -606,7 +695,8 @@ async function collectMetrics() {
                   html_url: `mailto:${email}`,
                   contributions: 1,
                   lines_contributed: 0,
-                  repositories: new Set([repo.name])
+                  repositories: new Set([repo.name]),
+                  pending_github_lookup: true  // Mark for GitHub lookup
                 });
                 
                 console.log(`Added new co-author as contributor: ${finalUsername}`);
@@ -672,6 +762,113 @@ async function collectMetrics() {
     // Log repository stats
     console.log(`Repository stats: ${repoStats.processed}/${repoStats.total} processed, ${repoStats.withContributors} with contributors, ${repoStats.withCoAuthors} with co-authors`);
     
+    // Now look up GitHub users by email
+    console.log(`Found ${coAuthorEmails.size} unique co-author emails to look up`);
+    console.log(`Starting GitHub user lookup for co-author emails...`);
+    
+    // Lookup GitHub users by email in batches
+    const emailToGitHubUser = await batchLookupUsersByEmail([...coAuthorEmails]);
+    
+    console.log(`Successfully looked up ${emailToGitHubUser.size} GitHub users by email`);
+    
+    // Update contributors with GitHub info if we found matching users
+    for (const [login, data] of contributorsMap.entries()) {
+      if (data.email && data.pending_github_lookup) {
+        const githubUser = emailToGitHubUser.get(data.email.toLowerCase());
+        
+        if (githubUser) {
+          console.log(`Updating contributor "${login}" with GitHub info from email lookup: ${githubUser.login}`);
+          
+          // Update with GitHub info
+          data.github_login = githubUser.login;
+          data.avatar_url = githubUser.avatar_url;
+          data.html_url = githubUser.html_url;
+          
+          // Add a flag to indicate this was matched by email
+          data.matched_by_email = true;
+          
+          // Remove the pending flag
+          delete data.pending_github_lookup;
+        }
+      }
+    }
+    
+    // Now check if any contributors with GitHub info match other contributors by email
+    // This helps with deduplication
+    console.log("Looking for duplicate contributors based on email...");
+    
+    const loginMap = new Map(); // Maps emails to logins
+    const duplicates = [];
+    
+    // First, build a map of emails to logins
+    for (const [login, data] of contributorsMap.entries()) {
+      if (data.email) {
+        const normalizedEmail = data.email.toLowerCase();
+        if (!loginMap.has(normalizedEmail)) {
+          loginMap.set(normalizedEmail, []);
+        }
+        loginMap.get(normalizedEmail).push(login);
+      }
+    }
+    
+    // Find duplicates
+    for (const [email, logins] of loginMap.entries()) {
+      if (logins.length > 1) {
+        console.log(`Found duplicate contributors with email ${email}: ${logins.join(', ')}`);
+        duplicates.push({
+          email,
+          logins
+        });
+      }
+    }
+    
+    // Merge duplicates
+    for (const { email, logins } of duplicates) {
+      // Find the "best" login to keep
+      let primaryLogin = logins[0];
+      
+      // Prefer logins with GitHub info
+      for (const login of logins) {
+        const data = contributorsMap.get(login);
+        if (data.github_login || !data.pending_github_lookup) {
+          primaryLogin = login;
+          break;
+        }
+      }
+      
+      console.log(`Merging duplicates for ${email} into primary login: ${primaryLogin}`);
+      
+      const primaryData = contributorsMap.get(primaryLogin);
+      
+      // Merge data from other logins
+      for (const login of logins) {
+        if (login === primaryLogin) continue;
+        
+        const data = contributorsMap.get(login);
+        
+        // Merge contributions
+        primaryData.contributions += data.contributions;
+        
+        // Merge repositories
+        for (const repo of data.repositories) {
+          primaryData.repositories.add(repo);
+        }
+        
+        // Prefer GitHub info if available
+        if (data.github_login && !primaryData.github_login) {
+          primaryData.github_login = data.github_login;
+          primaryData.avatar_url = data.avatar_url;
+          primaryData.html_url = data.html_url;
+          primaryData.matched_by_email = true;
+        }
+        
+        // Remove the duplicate
+        contributorsMap.delete(login);
+      }
+      
+      console.log(`After merging, ${primaryLogin} has ${primaryData.contributions} contributions in ${primaryData.repositories.size} repos`);
+    }
+    
     // Convert contributors map to array and sort by contributions
     const allContributors = Array.from(contributorsMap.values())
       .map(c => ({
@@ -682,24 +879,37 @@ async function collectMetrics() {
       .sort((a, b) => b.contributions - a.contributions);
     
     // Log all contributors for debugging
-    console.log("All contributors:");
+    console.log("All contributors after deduplication:");
     allContributors.forEach((c, i) => {
       console.log(`${i+1}. ${c.login}: ${c.contributions} contributions in ${c.repositories.length} repos`);
+      if (c.github_login) {
+        console.log(`   GitHub: ${c.github_login}`);
+      }
       if (c.email) {
         console.log(`   Email: ${c.email}`);
       }
     });
     
+    // Save deduplication info for debugging
+    fs.writeFileSync(path.join(OUTPUT_DIR, 'deduplication-info.json'), JSON.stringify(duplicates, null, 2));
+    
     metrics.stats.contributors.total = allContributors.length;
     metrics.stats.contributors.top = allContributors.slice(0, 20).map(c => {
-      // Remove email from final output
-      const { email, ...rest } = c;
+      // Remove email and internal fields from final output
+      const { email, pending_github_lookup, matched_by_email, ...rest } = c;
       return rest;
     });
     
-    console.log(`Found ${allContributors.length} unique contributors`);
+    console.log(`Found ${allContributors.length} unique contributors after deduplication`);
     console.log(`Total commits: ${metrics.stats.totalCommits}`);
     console.log(`Total lines of code: ${metrics.stats.linesOfCode}`);
+    
+    // Add additional stats about GitHub user lookups
+    metrics.stats.coauthor_processing = {
+      total_coauthor_emails: coAuthorEmails.size,
+      github_users_found: emailToGitHubUser.size,
+      duplicates_merged: duplicates.length
+    };
     
     // Save metrics to file
     console.log(`Saving metrics to ${OUTPUT_FILE}...`);
