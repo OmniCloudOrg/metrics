@@ -25,13 +25,129 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install @octokit/rest axios fs path
+        run: npm install octokit
+
+      - name: Create data directory
+        run: mkdir -p data
+
+      - name: Rename script to use .mjs extension
+        run: |
+          if [ -f "scripts/collect-metrics.js" ]; then
+            mv scripts/collect-metrics.js scripts/collect-metrics.mjs
+          fi
+          
+          # If the file doesn't exist yet, we'll create it in the next step
+          mkdir -p scripts
+        
+      - name: Create metrics collection script
+        run: |
+          cat > scripts/collect-metrics.mjs << 'EOF'
+          import { Octokit } from 'octokit';
+          import * as fs from 'fs';
+          import * as path from 'path';
+          import { fileURLToPath } from 'url';
+
+          // Get current directory with ES modules
+          const __filename = fileURLToPath(import.meta.url);
+          const __dirname = path.dirname(__filename);
+
+          // Configuration
+          const ORG_NAME = process.env.ORGANIZATION || 'OmniCloudOrg';
+          const TOKEN = process.env.GITHUB_TOKEN;
+          const OUTPUT_DIR = path.join(process.cwd(), 'data');
+          const OUTPUT_FILE = path.join(OUTPUT_DIR, 'github-metrics.json');
+          const HISTORY_FILE = path.join(OUTPUT_DIR, 'metrics-history.json');
+
+          // Initialize GitHub client with auth token
+          const octokit = new Octokit({
+            auth: TOKEN,
+          });
+
+          console.log(`Starting metrics collection for ${ORG_NAME}...`);
+          
+          // Simple metrics collection to test functionality
+          async function collectBasicMetrics() {
+            try {
+              // Create output directory if it doesn't exist
+              if (!fs.existsSync(OUTPUT_DIR)) {
+                fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+              }
+
+              // Get organization info
+              const { data: org } = await octokit.rest.orgs.get({
+                org: ORG_NAME
+              });
+              
+              console.log(`Found organization: ${org.name || org.login}`);
+              
+              // Get first page of repos
+              const { data: repos } = await octokit.rest.repos.listForOrg({
+                org: ORG_NAME,
+                per_page: 30
+              });
+              
+              console.log(`Found ${repos.length} repositories`);
+              
+              // Create basic metrics object
+              const metrics = {
+                organization: ORG_NAME,
+                timestamp: new Date().toISOString(),
+                stats: {
+                  repositories: repos.length,
+                  stars: repos.reduce((sum, repo) => sum + (repo.stargazers_count || 0), 0),
+                  forks: repos.reduce((sum, repo) => sum + (repo.forks_count || 0), 0),
+                  totalCommits: 0,
+                  contributors: {
+                    top: []
+                  }
+                },
+                repositories: repos.map(repo => ({
+                  name: repo.name,
+                  stars: repo.stargazers_count,
+                  forks: repo.forks_count,
+                  url: repo.html_url
+                }))
+              };
+              
+              // Save metrics
+              fs.writeFileSync(OUTPUT_FILE, JSON.stringify(metrics, null, 2));
+              console.log(`Saved metrics to ${OUTPUT_FILE}`);
+              
+              // Initialize history if needed
+              if (!fs.existsSync(HISTORY_FILE)) {
+                fs.writeFileSync(HISTORY_FILE, JSON.stringify([], null, 2));
+              }
+              
+              // Save historical entry
+              try {
+                const history = JSON.parse(fs.readFileSync(HISTORY_FILE, 'utf8'));
+                history.push({
+                  timestamp: metrics.timestamp,
+                  repositories: metrics.stats.repositories,
+                  stars: metrics.stats.stars,
+                  forks: metrics.stats.forks
+                });
+                fs.writeFileSync(HISTORY_FILE, JSON.stringify(history, null, 2));
+                console.log(`Updated history in ${HISTORY_FILE}`);
+              } catch (error) {
+                console.error('Error updating history:', error);
+              }
+              
+            } catch (error) {
+              console.error('Error collecting metrics:', error);
+              process.exit(1);
+            }
+          }
+
+          // Run the metrics collection
+          collectBasicMetrics();
+          EOF
 
       - name: Collect GitHub Metrics
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: 'OmniCloudOrg'  # Replace with your organization name
-        run: node ./scripts/collect-metrics.js
+        run: node ./scripts/collect-metrics.mjs
 
       - name: Commit and push if changed
         run: |
