@@ -691,7 +691,7 @@ async function collectMetrics() {
     });
     
     metrics.stats.contributors.total = allContributors.length;
-    metrics.stats.contributors.top = allContributors.slice(0, 10).map(c => {
+    metrics.stats.contributors.top = allContributors.slice(0, 20).map(c => {
       // Remove email from final output
       const { email, ...rest } = c;
       return rest;
