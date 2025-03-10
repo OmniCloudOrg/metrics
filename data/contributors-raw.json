@@ -3,12 +3,13 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1138,
+    "contributions": 1144,
     "lines_contributed": 0,
     "repositories": [
+      ".github",
+      "Lodestone",
       "metrics",
       "OmniCloudOrg.github.io",
-      "Lodestone",
       "OmniForge",
       "OmniAgent",
       "OmniDirector",
@@ -20,11 +21,10 @@
       "OmniSchema",
       "LibOmni",
       "OmniMicro",
-      ".github",
       "OmniTesting",
+      "Omni-Cosmos",
       "OmniEditor",
-      "Docker-Helices",
-      "Omni-Cosmos"
+      "Docker-Helices"
     ],
     "aliases": [
       {
@@ -76,7 +76,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 20,
+    "contributions": 22,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
