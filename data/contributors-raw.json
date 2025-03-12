@@ -3,18 +3,19 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1146,
+    "contributions": 1180,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
       "metrics",
+      "OmniOrchestrator",
+      "OmniCloud-Full",
+      "demo",
+      "OmniCloudOrg.github.io",
       ".github",
       "Lodestone",
-      "OmniCloudOrg.github.io",
       "OmniForge",
       "OmniAgent",
       "OmniDirector",
-      "OmniOrchestrator",
       "Omni-CLI",
       "get",
       "OmniCloud-Dashboard",
@@ -43,29 +44,40 @@
   },
   {
     "login": "Caznix",
-    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 59,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
+      "OmniOrchestrator",
       "OmniForge",
       "OmniDirector",
-      "OmniOrchestrator",
       "Omni-CLI",
       "OmniCloud-Dashboard",
-      "LibOmni"
+      "LibOmni",
+      "OmniCloud-Full"
     ],
+    "aliases": [
+      {
+        "login": "caznix-1",
+        "contributions": 15,
+        "repositories": [
+          "OmniOrchestrator",
+          "OmniCloud-Full",
+          "OmniForge",
+          "OmniDirector"
+        ]
+      }
+    ],
+    "display_name": "Caznix",
     "github_login": "Caznix",
-    "matched_by_email": true,
-    "display_name": "Caznix"
+    "email": null
   },
   {
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 24,
+    "contributions": 26,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -105,8 +117,8 @@
     "contributions": 3,
     "lines_contributed": 0,
     "repositories": [
-      "OmniDirector",
-      "OmniOrchestrator"
+      "OmniOrchestrator",
+      "OmniDirector"
     ],
     "github_login": "colinleftwich",
     "matched_by_email": true,
