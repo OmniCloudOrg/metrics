@@ -1,34 +1,35 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-13T01:47:07.277Z",
+  "timestamp": "2025-03-13T18:28:18.807Z",
   "stats": {
-    "repositories": 20,
-    "stars": 18,
+    "repositories": 21,
+    "stars": 19,
     "forks": 5,
-    "watchers": 18,
+    "watchers": 19,
     "openIssues": 15,
-    "totalCommits": 633,
-    "linesOfCode": 137773,
+    "totalCommits": 638,
+    "linesOfCode": 138023,
     "contributors": {
-      "total": 9,
+      "total": 10,
       "top": [
         {
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1190,
+          "contributions": 1196,
           "lines_contributed": 0,
           "repositories": [
+            "MegaTrix",
+            "OmniDirector",
+            "metrics",
             "OmniAgent",
             "OmniCloud-Full",
-            "metrics",
             "OmniOrchestrator",
             "demo",
             "OmniCloudOrg.github.io",
             ".github",
             "Lodestone",
             "OmniForge",
-            "OmniDirector",
             "Omni-CLI",
             "get",
             "OmniCloud-Dashboard",
@@ -45,8 +46,8 @@
               "login": "tristanpolandtridentforu",
               "contributions": 4,
               "repositories": [
-                "OmniForge",
                 "OmniDirector",
+                "OmniForge",
                 "Omni-CLI"
               ]
             }
@@ -61,22 +62,34 @@
           "contributions": 59,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
+            "OmniDirector",
             "OmniOrchestrator",
             "OmniForge",
-            "OmniDirector",
             "Omni-CLI",
             "OmniCloud-Dashboard",
-            "LibOmni"
+            "LibOmni",
+            "OmniCloud-Full"
           ],
-          "github_login": "Caznix",
-          "display_name": "Caznix"
+          "aliases": [
+            {
+              "login": "caznix-1",
+              "contributions": 15,
+              "repositories": [
+                "OmniDirector",
+                "OmniCloud-Full",
+                "OmniOrchestrator",
+                "OmniForge"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
+          "github_login": "Caznix"
         },
         {
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 28,
+          "contributions": 30,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -111,11 +124,21 @@
           "contributions": 3,
           "lines_contributed": 0,
           "repositories": [
-            "OmniOrchestrator",
-            "OmniDirector"
+            "OmniDirector",
+            "OmniOrchestrator"
           ],
           "github_login": "colinleftwich",
           "display_name": "Colin Leftwich"
+        },
+        {
+          "login": "AbleTheAbove",
+          "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
+          "html_url": "https://github.com/AbleTheAbove",
+          "contributions": 2,
+          "lines_contributed": 0,
+          "repositories": [
+            "MegaTrix"
+          ]
         },
         {
           "login": "haywoodspartan",
@@ -155,11 +178,13 @@
       ]
     },
     "languages": {
-      "Rust": 380045,
-      "Dockerfile": 20173,
+      "Elixir": 2443,
+      "Rust": 380765,
       "Shell": 29851,
+      "Batchfile": 4893,
+      "Dockerfile": 20173,
+      "Python": 267,
       "JavaScript": 1756874,
-      "Batchfile": 3317,
       "TypeScript": 392013,
       "CSS": 12151,
       "HCL": 7855,
@@ -169,13 +194,63 @@
     "coauthor_processing": {
       "total_coauthor_emails": 7,
       "github_users_found": 6,
-      "duplicates_merged": 1,
+      "duplicates_merged": 2,
       "noreply_github_emails": 6,
       "display_names_found": 5,
-      "total_aliases_merged": 1
+      "total_aliases_merged": 2
     }
   },
   "repositories": [
+    {
+      "name": "MegaTrix",
+      "description": "A high-performance flexible metrics aggregation service",
+      "url": "https://github.com/OmniCloudOrg/MegaTrix",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Elixir": 2443,
+        "Rust": 96
+      },
+      "linesOfCode": 127,
+      "commits": 2,
+      "contributors": 2
+    },
+    {
+      "name": "OmniDirector",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniDirector",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 2,
+      "languages": {
+        "Rust": 75143,
+        "Shell": 10039,
+        "Batchfile": 3976,
+        "Dockerfile": 2995,
+        "Python": 267
+      },
+      "linesOfCode": 4621,
+      "commits": 69,
+      "contributors": 2
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 34,
+      "contributors": 2
+    },
     {
       "name": "OmniAgent",
       "description": "The OmniAgent lifecycle manages containerized applications in the cloud",
@@ -206,21 +281,6 @@
       "linesOfCode": 16,
       "commits": 99,
       "contributors": 1
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 33,
-      "contributors": 2
     },
     {
       "name": "OmniOrchestrator",
@@ -318,24 +378,6 @@
       },
       "linesOfCode": 4124,
       "commits": 44,
-      "contributors": 2
-    },
-    {
-      "name": "OmniDirector",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniDirector",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 2,
-      "languages": {
-        "Rust": 74519,
-        "Shell": 10039,
-        "Dockerfile": 2995,
-        "Batchfile": 2400
-      },
-      "linesOfCode": 4498,
-      "commits": 67,
       "contributors": 2
     },
     {
