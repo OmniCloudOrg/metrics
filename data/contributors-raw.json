@@ -3,16 +3,16 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1224,
+    "contributions": 1234,
     "lines_contributed": 0,
     "repositories": [
+      "OmniOrchestrator",
+      "MegaTrix",
+      "metrics",
       "OmniCloud-Dashboard",
       "OmniDirector",
-      "MegaTrix",
       "OmniCloud-Full",
-      "metrics",
       "OmniAgent",
-      "OmniOrchestrator",
       "demo",
       "OmniCloudOrg.github.io",
       ".github",
@@ -50,9 +50,9 @@
     "contributions": 60,
     "lines_contributed": 0,
     "repositories": [
+      "OmniOrchestrator",
       "OmniCloud-Dashboard",
       "OmniDirector",
-      "OmniOrchestrator",
       "OmniForge",
       "Omni-CLI",
       "LibOmni",
@@ -63,9 +63,9 @@
         "login": "caznix-1",
         "contributions": 16,
         "repositories": [
+          "OmniOrchestrator",
           "OmniDirector",
           "OmniCloud-Full",
-          "OmniOrchestrator",
           "OmniForge"
         ]
       }
@@ -78,11 +78,34 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 32,
+    "contributions": 34,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
     ],
+    "email": null
+  },
+  {
+    "login": "AbleTheAbove",
+    "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
+    "html_url": "https://github.com/AbleTheAbove",
+    "contributions": 9,
+    "lines_contributed": 0,
+    "repositories": [
+      "MegaTrix",
+      "OmniDirector"
+    ],
+    "aliases": [
+      {
+        "login": "able",
+        "contributions": 1,
+        "repositories": [
+          "OmniDirector"
+        ]
+      }
+    ],
+    "display_name": "Able",
+    "github_login": "abletheabove",
     "email": null
   },
   {
@@ -130,35 +153,12 @@
     "contributions": 3,
     "lines_contributed": 0,
     "repositories": [
-      "OmniDirector",
-      "OmniOrchestrator"
+      "OmniOrchestrator",
+      "OmniDirector"
     ],
     "github_login": "colinleftwich",
     "matched_by_email": true,
     "display_name": "Colin Leftwich"
-  },
-  {
-    "login": "AbleTheAbove",
-    "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
-    "html_url": "https://github.com/AbleTheAbove",
-    "contributions": 3,
-    "lines_contributed": 0,
-    "repositories": [
-      "MegaTrix",
-      "OmniDirector"
-    ],
-    "aliases": [
-      {
-        "login": "able",
-        "contributions": 1,
-        "repositories": [
-          "OmniDirector"
-        ]
-      }
-    ],
-    "display_name": "Able",
-    "github_login": "abletheabove",
-    "email": null
   },
   {
     "login": "haywoodspartan",
