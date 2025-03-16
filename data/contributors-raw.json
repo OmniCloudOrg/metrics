@@ -3,7 +3,7 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1234,
+    "contributions": 1244,
     "lines_contributed": 0,
     "repositories": [
       "OmniOrchestrator",
@@ -78,7 +78,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 34,
+    "contributions": 36,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -112,24 +112,12 @@
     "login": "meowesque",
     "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
     "html_url": "https://github.com/meowesque",
-    "contributions": 9,
+    "contributions": 8,
     "lines_contributed": 0,
     "repositories": [
       "Lodestone",
-      "Omni-CLI",
-      "OmniDirector"
+      "Omni-CLI"
     ],
-    "aliases": [
-      {
-        "login": "maxinedeandrade-1",
-        "contributions": 1,
-        "repositories": [
-          "OmniDirector"
-        ]
-      }
-    ],
-    "display_name": "Maxine DeAndrade",
-    "github_login": "meowesque",
     "email": null
   },
   {
@@ -159,6 +147,18 @@
     "github_login": "colinleftwich",
     "matched_by_email": true,
     "display_name": "Colin Leftwich"
+  },
+  {
+    "login": "Maxine DeAndrade",
+    "email": "md@meow.esq",
+    "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+    "html_url": "mailto:md@meow.esq",
+    "contributions": 1,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniDirector"
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "haywoodspartan",

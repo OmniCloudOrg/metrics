@@ -1,22 +1,22 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-15T01:44:15.412Z",
+  "timestamp": "2025-03-16T01:52:30.396Z",
   "stats": {
     "repositories": 21,
     "stars": 19,
     "forks": 5,
     "watchers": 19,
-    "openIssues": 16,
-    "totalCommits": 662,
-    "linesOfCode": 139633,
+    "openIssues": 18,
+    "totalCommits": 668,
+    "linesOfCode": 140504,
     "contributors": {
-      "total": 10,
+      "total": 11,
       "top": [
         {
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1234,
+          "contributions": 1244,
           "lines_contributed": 0,
           "repositories": [
             "OmniOrchestrator",
@@ -89,7 +89,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 34,
+          "contributions": 36,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -121,24 +121,12 @@
           "login": "meowesque",
           "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
           "html_url": "https://github.com/meowesque",
-          "contributions": 9,
+          "contributions": 8,
           "lines_contributed": 0,
           "repositories": [
             "Lodestone",
-            "Omni-CLI",
-            "OmniDirector"
-          ],
-          "aliases": [
-            {
-              "login": "maxinedeandrade-1",
-              "contributions": 1,
-              "repositories": [
-                "OmniDirector"
-              ]
-            }
-          ],
-          "display_name": "Maxine DeAndrade",
-          "github_login": "meowesque"
+            "Omni-CLI"
+          ]
         },
         {
           "login": "Maxine DeAndrade",
@@ -163,6 +151,16 @@
           ],
           "github_login": "colinleftwich",
           "display_name": "Colin Leftwich"
+        },
+        {
+          "login": "Maxine DeAndrade",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+          "html_url": "mailto:md@meow.esq",
+          "contributions": 1,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniDirector"
+          ]
         },
         {
           "login": "haywoodspartan",
@@ -202,7 +200,7 @@
       ]
     },
     "languages": {
-      "Rust": 382056,
+      "Rust": 399487,
       "Shell": 29851,
       "Dockerfile": 20173,
       "Batchfile": 4893,
@@ -217,11 +215,11 @@
     },
     "coauthor_processing": {
       "total_coauthor_emails": 9,
-      "github_users_found": 8,
-      "duplicates_merged": 4,
+      "github_users_found": 7,
+      "duplicates_merged": 3,
       "noreply_github_emails": 7,
-      "display_names_found": 7,
-      "total_aliases_merged": 4
+      "display_names_found": 6,
+      "total_aliases_merged": 3
     }
   },
   "repositories": [
@@ -234,13 +232,13 @@
       "watchers": 1,
       "openIssues": 11,
       "languages": {
-        "Rust": 97893,
+        "Rust": 115324,
         "Shell": 8877,
         "Dockerfile": 3151,
         "Batchfile": 917
       },
-      "linesOfCode": 5543,
-      "commits": 77,
+      "linesOfCode": 6414,
+      "commits": 82,
       "contributors": 2
     },
     {
@@ -250,7 +248,7 @@
       "stars": 1,
       "forks": 0,
       "watchers": 1,
-      "openIssues": 0,
+      "openIssues": 2,
       "languages": {
         "Elixir": 3725,
         "Rust": 386
@@ -271,7 +269,7 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 36,
+      "commits": 37,
       "contributors": 2
     },
     {
