@@ -3,16 +3,16 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1244,
+    "contributions": 1337,
     "lines_contributed": 0,
     "repositories": [
       "OmniOrchestrator",
-      "MegaTrix",
-      "metrics",
-      "OmniCloud-Dashboard",
-      "OmniDirector",
       "OmniCloud-Full",
       "OmniAgent",
+      "OmniCloud-Dashboard",
+      "metrics",
+      "MegaTrix",
+      "OmniDirector",
       "demo",
       "OmniCloudOrg.github.io",
       ".github",
@@ -47,7 +47,7 @@
     "login": "Caznix",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
-    "contributions": 60,
+    "contributions": 58,
     "lines_contributed": 0,
     "repositories": [
       "OmniOrchestrator",
@@ -61,11 +61,11 @@
     "aliases": [
       {
         "login": "caznix-1",
-        "contributions": 16,
+        "contributions": 15,
         "repositories": [
           "OmniOrchestrator",
-          "OmniDirector",
           "OmniCloud-Full",
+          "OmniDirector",
           "OmniForge"
         ]
       }
@@ -78,7 +78,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 36,
+    "contributions": 38,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -134,21 +134,6 @@
     "pending_github_lookup": true
   },
   {
-    "login": "Colin Leftwich",
-    "email": "95550945+colinleftwich@users.noreply.github.com",
-    "avatar_url": "https://avatars.githubusercontent.com/u/95550945?v=4",
-    "html_url": "https://github.com/ColinLeftwich",
-    "contributions": 3,
-    "lines_contributed": 0,
-    "repositories": [
-      "OmniOrchestrator",
-      "OmniDirector"
-    ],
-    "github_login": "colinleftwich",
-    "matched_by_email": true,
-    "display_name": "Colin Leftwich"
-  },
-  {
     "login": "Maxine DeAndrade",
     "email": "md@meow.esq",
     "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
@@ -200,5 +185,19 @@
     "github_login": "tpoland",
     "matched_by_email": true,
     "display_name": "Tyler Poland"
+  },
+  {
+    "login": "Colin Leftwich",
+    "email": "95550945+colinleftwich@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/95550945?v=4",
+    "html_url": "https://github.com/ColinLeftwich",
+    "contributions": 1,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniDirector"
+    ],
+    "github_login": "colinleftwich",
+    "matched_by_email": true,
+    "display_name": "Colin Leftwich"
   }
 ]
