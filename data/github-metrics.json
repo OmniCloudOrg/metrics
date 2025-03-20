@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-19T01:47:28.006Z",
+  "timestamp": "2025-03-20T01:46:38.060Z",
   "stats": {
     "repositories": 21,
     "stars": 19,
     "forks": 5,
     "watchers": 19,
     "openIssues": 18,
-    "totalCommits": 819,
-    "linesOfCode": 147779,
+    "totalCommits": 823,
+    "linesOfCode": 147844,
     "contributors": {
       "total": 11,
       "top": [
@@ -16,18 +16,18 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1490,
+          "contributions": 1492,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
+            "MegaTrix",
             "OmniDirector",
+            "metrics",
+            "OmniCloud-Full",
             "OmniForge",
             "LibOmni",
-            "MegaTrix",
             "Omni-CLI",
             "OmniAgent",
             "OmniOrchestrator",
-            "metrics",
             "OmniCloud-Dashboard",
             "demo",
             "OmniCloudOrg.github.io",
@@ -62,22 +62,34 @@
           "contributions": 58,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
             "OmniDirector",
             "OmniForge",
             "LibOmni",
             "Omni-CLI",
             "OmniOrchestrator",
-            "OmniCloud-Dashboard"
+            "OmniCloud-Dashboard",
+            "OmniCloud-Full"
           ],
-          "github_login": "Caznix",
-          "display_name": "Caznix"
+          "aliases": [
+            {
+              "login": "caznix-1",
+              "contributions": 15,
+              "repositories": [
+                "OmniDirector",
+                "OmniCloud-Full",
+                "OmniForge",
+                "OmniOrchestrator"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
+          "github_login": "Caznix"
         },
         {
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 42,
+          "contributions": 44,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -87,7 +99,7 @@
           "login": "AbleTheAbove",
           "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
           "html_url": "https://github.com/AbleTheAbove",
-          "contributions": 9,
+          "contributions": 13,
           "lines_contributed": 0,
           "repositories": [
             "MegaTrix",
@@ -187,14 +199,14 @@
       ]
     },
     "languages": {
+      "Elixir": 4130,
+      "Rust": 545842,
       "Shell": 29851,
-      "Rust": 544978,
       "Batchfile": 4893,
       "Dockerfile": 20173,
       "Python": 267,
-      "HCL": 7855,
-      "Elixir": 3725,
       "JavaScript": 1811906,
+      "HCL": 7855,
       "TypeScript": 366607,
       "CSS": 12151,
       "HTML": 3393,
@@ -203,27 +215,28 @@
     "coauthor_processing": {
       "total_coauthor_emails": 9,
       "github_users_found": 7,
-      "duplicates_merged": 2,
+      "duplicates_merged": 3,
       "noreply_github_emails": 7,
       "display_names_found": 6,
-      "total_aliases_merged": 2
+      "total_aliases_merged": 3
     }
   },
   "repositories": [
     {
-      "name": "OmniCloud-Full",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
-      "stars": 3,
+      "name": "MegaTrix",
+      "description": "A high-performance flexible metrics collection and aggregation service stack",
+      "url": "https://github.com/OmniCloudOrg/MegaTrix",
+      "stars": 1,
       "forks": 0,
-      "watchers": 3,
-      "openIssues": 1,
+      "watchers": 1,
+      "openIssues": 2,
       "languages": {
-        "Shell": 327
+        "Elixir": 4130,
+        "Rust": 1250
       },
-      "linesOfCode": 16,
-      "commits": 153,
-      "contributors": 1
+      "linesOfCode": 270,
+      "commits": 17,
+      "contributors": 2
     },
     {
       "name": "OmniDirector",
@@ -241,8 +254,38 @@
         "Python": 267
       },
       "linesOfCode": 6506,
-      "commits": 90,
+      "commits": 91,
       "contributors": 2
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 41,
+      "contributors": 2
+    },
+    {
+      "name": "OmniCloud-Full",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
+      "stars": 3,
+      "forks": 0,
+      "watchers": 3,
+      "openIssues": 1,
+      "languages": {
+        "Shell": 327
+      },
+      "linesOfCode": 16,
+      "commits": 153,
+      "contributors": 1
     },
     {
       "name": "OmniForge",
@@ -274,22 +317,6 @@
       },
       "linesOfCode": 1434,
       "commits": 4,
-      "contributors": 2
-    },
-    {
-      "name": "MegaTrix",
-      "description": "A high-performance flexible metrics collection and aggregation service stack",
-      "url": "https://github.com/OmniCloudOrg/MegaTrix",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 2,
-      "languages": {
-        "Elixir": 3725,
-        "Rust": 386
-      },
-      "linesOfCode": 205,
-      "commits": 15,
       "contributors": 2
     },
     {
@@ -339,21 +366,6 @@
       },
       "linesOfCode": 11777,
       "commits": 151,
-      "contributors": 2
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 40,
       "contributors": 2
     },
     {
