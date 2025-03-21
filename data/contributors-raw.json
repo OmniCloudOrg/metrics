@@ -3,13 +3,14 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1492,
+    "contributions": 1520,
     "lines_contributed": 0,
     "repositories": [
-      "MegaTrix",
       "OmniDirector",
-      "metrics",
       "OmniCloud-Full",
+      "Linguist-RS",
+      "metrics",
+      "MegaTrix",
       "OmniForge",
       "LibOmni",
       "Omni-CLI",
@@ -47,7 +48,7 @@
     "login": "Caznix",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
-    "contributions": 58,
+    "contributions": 61,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector",
@@ -61,7 +62,7 @@
     "aliases": [
       {
         "login": "caznix-1",
-        "contributions": 15,
+        "contributions": 18,
         "repositories": [
           "OmniDirector",
           "OmniCloud-Full",
@@ -78,7 +79,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 44,
+    "contributions": 46,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
