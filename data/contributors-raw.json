@@ -3,13 +3,13 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1520,
+    "contributions": 1545,
     "lines_contributed": 0,
     "repositories": [
       "OmniDirector",
       "OmniCloud-Full",
-      "Linguist-RS",
       "metrics",
+      "Linguist-RS",
       "MegaTrix",
       "OmniForge",
       "LibOmni",
@@ -32,9 +32,8 @@
     "aliases": [
       {
         "login": "tristanpolandtridentforu",
-        "contributions": 4,
+        "contributions": 3,
         "repositories": [
-          "OmniDirector",
           "OmniForge",
           "Omni-CLI"
         ]
@@ -62,7 +61,7 @@
     "aliases": [
       {
         "login": "caznix-1",
-        "contributions": 18,
+        "contributions": 19,
         "repositories": [
           "OmniDirector",
           "OmniCloud-Full",
@@ -79,7 +78,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 46,
+    "contributions": 48,
     "lines_contributed": 0,
     "repositories": [
       "metrics"

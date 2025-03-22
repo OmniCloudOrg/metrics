@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-21T01:48:32.879Z",
+  "timestamp": "2025-03-22T01:45:34.708Z",
   "stats": {
     "repositories": 22,
     "stars": 20,
     "forks": 5,
     "watchers": 20,
     "openIssues": 51,
-    "totalCommits": 838,
-    "linesOfCode": 155880,
+    "totalCommits": 853,
+    "linesOfCode": 155844,
     "contributors": {
       "total": 11,
       "top": [
@@ -16,13 +16,13 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1520,
+          "contributions": 1545,
           "lines_contributed": 0,
           "repositories": [
             "OmniDirector",
             "OmniCloud-Full",
-            "Linguist-RS",
             "metrics",
+            "Linguist-RS",
             "MegaTrix",
             "OmniForge",
             "LibOmni",
@@ -45,9 +45,8 @@
           "aliases": [
             {
               "login": "tristanpolandtridentforu",
-              "contributions": 4,
+              "contributions": 3,
               "repositories": [
-                "OmniDirector",
                 "OmniForge",
                 "Omni-CLI"
               ]
@@ -74,7 +73,7 @@
           "aliases": [
             {
               "login": "caznix-1",
-              "contributions": 18,
+              "contributions": 19,
               "repositories": [
                 "OmniDirector",
                 "OmniCloud-Full",
@@ -90,7 +89,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 46,
+          "contributions": 48,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -200,7 +199,7 @@
       ]
     },
     "languages": {
-      "Rust": 706554,
+      "Rust": 705845,
       "Shell": 29851,
       "Batchfile": 4891,
       "Dockerfile": 20173,
@@ -232,14 +231,14 @@
       "watchers": 1,
       "openIssues": 2,
       "languages": {
-        "Rust": 118611,
+        "Rust": 117902,
         "Shell": 10039,
         "Batchfile": 3974,
         "Dockerfile": 2995,
         "Python": 267
       },
-      "linesOfCode": 6795,
-      "commits": 97,
+      "linesOfCode": 6759,
+      "commits": 103,
       "contributors": 2
     },
     {
@@ -254,8 +253,23 @@
         "Shell": 327
       },
       "linesOfCode": 16,
-      "commits": 155,
+      "commits": 163,
       "contributors": 1
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 43,
+      "contributors": 2
     },
     {
       "name": "Linguist-RS",
@@ -271,21 +285,6 @@
       "linesOfCode": 7747,
       "commits": 6,
       "contributors": 1
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 42,
-      "contributors": 2
     },
     {
       "name": "MegaTrix",
