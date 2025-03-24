@@ -3,14 +3,14 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1604,
+    "contributions": 1626,
     "lines_contributed": 0,
     "repositories": [
-      "Linguist-RS",
       "OmniCloud-Full",
+      "Linguist-RS",
+      "metrics",
       "OmniDirector",
       "Isotope",
-      "metrics",
       "MegaTrix",
       "OmniForge",
       "LibOmni",
@@ -68,7 +68,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 50,
+    "contributions": 52,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
