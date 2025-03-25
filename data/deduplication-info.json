@@ -1,15 +1,5 @@
 [
   {
-    "display_name": "Able",
-    "github_usernames": [
-      "abletheabove"
-    ],
-    "logins": [
-      "able",
-      "abletheabove"
-    ]
-  },
-  {
     "display_name": "Tristan Poland (Trident_For_U)",
     "github_usernames": [
       "tristanpoland"
@@ -17,6 +7,16 @@
     "logins": [
       "tristanpoland",
       "tristanpolandtridentforu"
+    ]
+  },
+  {
+    "display_name": "Able",
+    "github_usernames": [
+      "abletheabove"
+    ],
+    "logins": [
+      "able",
+      "abletheabove"
     ]
   }
 ]
