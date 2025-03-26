@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-03-25T01:48:53.617Z",
+  "timestamp": "2025-03-26T01:48:09.767Z",
   "stats": {
     "repositories": 23,
     "stars": 24,
     "forks": 6,
     "watchers": 24,
     "openIssues": 16,
-    "totalCommits": 914,
-    "linesOfCode": 163669,
+    "totalCommits": 925,
+    "linesOfCode": 164038,
     "contributors": {
       "total": 11,
       "top": [
@@ -16,17 +16,17 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 1656,
+          "contributions": 1672,
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
+            "OmniDirector",
             "OmniForge",
             "OmniAgent",
             "Lodestone",
+            "OmniOrchestrator",
             "metrics",
             "Linguist-RS",
-            "OmniDirector",
             "Isotope",
             "MegaTrix",
             "LibOmni",
@@ -60,13 +60,13 @@
           "login": "Caznix",
           "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
           "html_url": "https://github.com/Caznix",
-          "contributions": 59,
+          "contributions": 64,
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
-            "OmniForge",
             "OmniDirector",
+            "OmniForge",
+            "OmniOrchestrator",
             "LibOmni",
             "Omni-CLI",
             "OmniCloud-Dashboard"
@@ -78,7 +78,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 54,
+          "contributions": 56,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -190,12 +190,12 @@
     "languages": {
       "Makefile": 12944,
       "Shell": 29851,
-      "Rust": 849891,
-      "Dockerfile": 19716,
+      "Rust": 857260,
       "Batchfile": 4891,
+      "Dockerfile": 19716,
+      "Python": 267,
       "HCL": 7855,
       "JavaScript": 1811906,
-      "Python": 267,
       "Elixir": 4130,
       "TypeScript": 366607,
       "CSS": 12151,
@@ -225,25 +225,26 @@
         "Shell": 327
       },
       "linesOfCode": 663,
-      "commits": 187,
+      "commits": 189,
       "contributors": 1
     },
     {
-      "name": "OmniOrchestrator",
+      "name": "OmniDirector",
       "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "url": "https://github.com/OmniCloudOrg/OmniDirector",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "watchers": 1,
-      "openIssues": 11,
+      "openIssues": 0,
       "languages": {
-        "Rust": 239345,
-        "Shell": 8877,
-        "Dockerfile": 2052,
-        "Batchfile": 917
+        "Rust": 125200,
+        "Shell": 10039,
+        "Batchfile": 3974,
+        "Dockerfile": 2031,
+        "Python": 267
       },
-      "linesOfCode": 12560,
-      "commits": 153,
+      "linesOfCode": 7076,
+      "commits": 110,
       "contributors": 2
     },
     {
@@ -255,12 +256,12 @@
       "watchers": 3,
       "openIssues": 0,
       "languages": {
-        "Rust": 75840,
+        "Rust": 75845,
         "HCL": 3849,
         "Dockerfile": 1807
       },
       "linesOfCode": 4074,
-      "commits": 46,
+      "commits": 47,
       "contributors": 2
     },
     {
@@ -276,7 +277,7 @@
         "Dockerfile": 1807
       },
       "linesOfCode": 511,
-      "commits": 29,
+      "commits": 30,
       "contributors": 1
     },
     {
@@ -288,11 +289,29 @@
       "watchers": 2,
       "openIssues": 1,
       "languages": {
-        "Rust": 27734,
+        "Rust": 27738,
         "Dockerfile": 1806
       },
       "linesOfCode": 1477,
-      "commits": 50,
+      "commits": 51,
+      "contributors": 2
+    },
+    {
+      "name": "OmniOrchestrator",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 11,
+      "languages": {
+        "Rust": 239353,
+        "Shell": 8877,
+        "Dockerfile": 2052,
+        "Batchfile": 917
+      },
+      "linesOfCode": 12561,
+      "commits": 154,
       "contributors": 2
     },
     {
@@ -307,7 +326,7 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 46,
+      "commits": 47,
       "contributors": 2
     },
     {
@@ -324,25 +343,6 @@
       "linesOfCode": 7706,
       "commits": 20,
       "contributors": 1
-    },
-    {
-      "name": "OmniDirector",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniDirector",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 117848,
-        "Shell": 10039,
-        "Batchfile": 3974,
-        "Dockerfile": 2031,
-        "Python": 267
-      },
-      "linesOfCode": 6708,
-      "commits": 106,
-      "contributors": 2
     },
     {
       "name": "Isotope",
