@@ -3,13 +3,14 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1673,
+    "contributions": 1679,
     "lines_contributed": 0,
     "repositories": [
-      "OmniOrchestrator",
-      "metrics",
       "OmniCloud-Full",
       "OmniDirector",
+      "OmniCloud-Dashboard",
+      "metrics",
+      "OmniOrchestrator",
       "OmniForge",
       "OmniAgent",
       "Lodestone",
@@ -18,7 +19,6 @@
       "MegaTrix",
       "LibOmni",
       "Omni-CLI",
-      "OmniCloud-Dashboard",
       "demo",
       "OmniCloudOrg.github.io",
       ".github",
@@ -46,40 +46,29 @@
   },
   {
     "login": "Caznix",
+    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 64,
     "lines_contributed": 0,
     "repositories": [
-      "OmniOrchestrator",
+      "OmniCloud-Full",
       "OmniDirector",
+      "OmniCloud-Dashboard",
+      "OmniOrchestrator",
       "OmniForge",
       "LibOmni",
-      "Omni-CLI",
-      "OmniCloud-Dashboard",
-      "OmniCloud-Full"
+      "Omni-CLI"
     ],
-    "aliases": [
-      {
-        "login": "caznix-1",
-        "contributions": 23,
-        "repositories": [
-          "OmniOrchestrator",
-          "OmniCloud-Full",
-          "OmniDirector",
-          "OmniForge"
-        ]
-      }
-    ],
-    "display_name": "Caznix",
     "github_login": "Caznix",
-    "email": null
+    "matched_by_email": true,
+    "display_name": "Caznix"
   },
   {
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 58,
+    "contributions": 60,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
