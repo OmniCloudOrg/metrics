@@ -3,15 +3,15 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1701,
+    "contributions": 1720,
     "lines_contributed": 0,
     "repositories": [
-      "Omni-CLI",
-      "OmniOrchestrator",
       "OmniCloud-Full",
-      "Lodestone",
-      "metrics",
+      "OmniOrchestrator",
       "OmniDirector",
+      "Omni-CLI",
+      "metrics",
+      "Lodestone",
       "OmniCloud-Dashboard",
       "OmniForge",
       "OmniAgent",
@@ -46,40 +46,29 @@
   },
   {
     "login": "Caznix",
+    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
-    "contributions": 64,
+    "contributions": 65,
     "lines_contributed": 0,
     "repositories": [
-      "Omni-CLI",
+      "OmniCloud-Full",
       "OmniOrchestrator",
       "OmniDirector",
+      "Omni-CLI",
       "OmniCloud-Dashboard",
       "OmniForge",
-      "LibOmni",
-      "OmniCloud-Full"
+      "LibOmni"
     ],
-    "aliases": [
-      {
-        "login": "caznix-1",
-        "contributions": 23,
-        "repositories": [
-          "OmniOrchestrator",
-          "OmniCloud-Full",
-          "OmniDirector",
-          "OmniForge"
-        ]
-      }
-    ],
-    "display_name": "Caznix",
     "github_login": "Caznix",
-    "email": null
+    "matched_by_email": true,
+    "display_name": "Caznix"
   },
   {
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 62,
+    "contributions": 64,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -122,6 +111,20 @@
     "email": null
   },
   {
+    "login": "GhostedGaming",
+    "email": "180805056+GhostedGaming@users.noreply.github.com",
+    "avatar_url": "https://avatars.githubusercontent.com/u/180805056?v=4",
+    "html_url": "https://github.com/GhostedGaming",
+    "contributions": 5,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniOrchestrator",
+      "Lodestone"
+    ],
+    "github_login": "ghostedgaming",
+    "matched_by_email": true
+  },
+  {
     "login": "Maxine DeAndrade",
     "email": "163779298+maxinedeandrade@users.noreply.github.com",
     "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
@@ -133,17 +136,6 @@
       "OmniCloud-Dashboard"
     ],
     "pending_github_lookup": true
-  },
-  {
-    "login": "GhostedGaming",
-    "avatar_url": "https://avatars.githubusercontent.com/u/180805056?v=4",
-    "html_url": "https://github.com/GhostedGaming",
-    "contributions": 4,
-    "lines_contributed": 0,
-    "repositories": [
-      "Lodestone"
-    ],
-    "email": null
   },
   {
     "login": "Maxine DeAndrade",
