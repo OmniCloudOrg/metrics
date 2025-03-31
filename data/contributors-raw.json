@@ -3,14 +3,14 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1720,
+    "contributions": 1724,
     "lines_contributed": 0,
     "repositories": [
       "OmniCloud-Full",
+      "metrics",
       "OmniOrchestrator",
       "OmniDirector",
       "Omni-CLI",
-      "metrics",
       "Lodestone",
       "OmniCloud-Dashboard",
       "OmniForge",
@@ -45,6 +45,17 @@
     "email": null
   },
   {
+    "login": "actions-user",
+    "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
+    "html_url": "https://github.com/actions-user",
+    "contributions": 66,
+    "lines_contributed": 0,
+    "repositories": [
+      "metrics"
+    ],
+    "email": null
+  },
+  {
     "login": "Caznix",
     "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
@@ -63,17 +74,6 @@
     "github_login": "Caznix",
     "matched_by_email": true,
     "display_name": "Caznix"
-  },
-  {
-    "login": "actions-user",
-    "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
-    "html_url": "https://github.com/actions-user",
-    "contributions": 64,
-    "lines_contributed": 0,
-    "repositories": [
-      "metrics"
-    ],
-    "email": null
   },
   {
     "login": "AbleTheAbove",
