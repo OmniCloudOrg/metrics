@@ -3,14 +3,14 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1847,
+    "contributions": 1855,
     "lines_contributed": 0,
     "repositories": [
-      "OmniOrchestrator",
-      "OmniDirector",
       "OmniCloud-Full",
-      "Harbr-Router",
+      "OmniOrchestrator",
       "metrics",
+      "OmniDirector",
+      "Harbr-Router",
       "OmniAgent",
       "Docker-Helices",
       "LibOmni",
@@ -49,7 +49,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 74,
+    "contributions": 76,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -58,53 +58,43 @@
   },
   {
     "login": "Caznix",
+    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 67,
     "lines_contributed": 0,
     "repositories": [
+      "OmniCloud-Full",
       "OmniOrchestrator",
       "OmniDirector",
+      "Harbr-Router",
       "LibOmni",
       "Omni-CLI",
       "OmniCloud-Dashboard",
-      "OmniForge",
-      "OmniCloud-Full",
-      "Harbr-Router"
+      "OmniForge"
     ],
-    "aliases": [
-      {
-        "login": "caznix-1",
-        "contributions": 26,
-        "repositories": [
-          "OmniOrchestrator",
-          "OmniDirector",
-          "OmniCloud-Full",
-          "Harbr-Router",
-          "OmniForge"
-        ]
-      }
-    ],
-    "display_name": "Caznix",
     "github_login": "Caznix",
-    "email": null
+    "matched_by_email": true,
+    "display_name": "Caznix"
   },
   {
     "login": "AbleTheAbove",
     "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
     "html_url": "https://github.com/AbleTheAbove",
-    "contributions": 14,
+    "contributions": 15,
     "lines_contributed": 0,
     "repositories": [
       "MegaTrix",
+      "OmniOrchestrator",
       "OmniDirector",
       "Harbr-Router"
     ],
     "aliases": [
       {
         "login": "able",
-        "contributions": 2,
+        "contributions": 3,
         "repositories": [
+          "OmniOrchestrator",
           "OmniDirector",
           "Harbr-Router"
         ]
@@ -119,9 +109,10 @@
     "email": "163779298+meowesque@users.noreply.github.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
     "html_url": "https://github.com/meowesque",
-    "contributions": 12,
+    "contributions": 13,
     "lines_contributed": 0,
     "repositories": [
+      "OmniOrchestrator",
       "OmniDirector",
       "Harbr-Router",
       "Omni-CLI",
