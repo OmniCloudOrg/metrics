@@ -3,11 +3,11 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 1889,
+    "contributions": 1894,
     "lines_contributed": 0,
     "repositories": [
-      "OmniOrchestrator",
       "OmniCloud-Full",
+      "OmniOrchestrator",
       "metrics",
       "abuelo",
       "Harbr-Router",
@@ -25,8 +25,8 @@
       "demo",
       "OmniCloudOrg.github.io",
       ".github",
-      "get",
       "Omni-Cosmos",
+      "get",
       "OmniSchema",
       "OmniMicro",
       "OmniTesting",
@@ -50,7 +50,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 80,
+    "contributions": 82,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -59,36 +59,24 @@
   },
   {
     "login": "Caznix",
+    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 68,
     "lines_contributed": 0,
     "repositories": [
+      "OmniCloud-Full",
       "OmniOrchestrator",
+      "Harbr-Router",
       "OmniDirector",
       "LibOmni",
       "Omni-CLI",
       "OmniCloud-Dashboard",
-      "OmniForge",
-      "OmniCloud-Full",
-      "Harbr-Router"
+      "OmniForge"
     ],
-    "aliases": [
-      {
-        "login": "caznix-1",
-        "contributions": 27,
-        "repositories": [
-          "OmniOrchestrator",
-          "OmniCloud-Full",
-          "Harbr-Router",
-          "OmniDirector",
-          "OmniForge"
-        ]
-      }
-    ],
-    "display_name": "Caznix",
     "github_login": "Caznix",
-    "email": null
+    "matched_by_email": true,
+    "display_name": "Caznix"
   },
   {
     "login": "AbleTheAbove",
@@ -133,7 +121,8 @@
       "Lodestone"
     ],
     "github_login": "meowesque",
-    "matched_by_email": true
+    "matched_by_email": true,
+    "display_name": "Maxine DeAndrade"
   },
   {
     "login": "Gamer-Kold",
