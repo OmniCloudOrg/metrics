@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-04-15T01:53:13.033Z",
+  "timestamp": "2025-04-16T01:52:48.445Z",
   "stats": {
     "repositories": 26,
     "stars": 30,
     "forks": 7,
     "watchers": 30,
-    "openIssues": 16,
-    "totalCommits": 1170,
-    "linesOfCode": 217231,
+    "openIssues": 19,
+    "totalCommits": 1187,
+    "linesOfCode": 217911,
     "contributors": {
       "total": 15,
       "top": [
@@ -16,23 +16,23 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2024,
+          "contributions": 2054,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
             "OmniCloud-Dashboard",
+            "OmniCloud-Full",
             "OmniOrchestrator",
-            "metrics",
-            "demo",
-            "Lodestone",
+            "OmniForge",
             "OmniDirector",
             "Omni-CLI",
+            "OmniAgent",
+            "Lodestone",
             "LibOmni",
+            "metrics",
+            "demo",
             "abuelo",
             "Harbr-Router",
-            "OmniAgent",
             "Docker-Helices",
-            "OmniForge",
             "Linguist-RS",
             "Isotope",
             "MegaTrix",
@@ -50,8 +50,8 @@
               "login": "tristanpolandtridentforu",
               "contributions": 3,
               "repositories": [
-                "Omni-CLI",
-                "OmniForge"
+                "OmniForge",
+                "Omni-CLI"
               ]
             }
           ],
@@ -62,7 +62,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 96,
+          "contributions": 98,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -72,21 +72,35 @@
           "login": "Caznix",
           "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
           "html_url": "https://github.com/Caznix",
-          "contributions": 71,
+          "contributions": 70,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
             "OmniCloud-Dashboard",
             "OmniOrchestrator",
-            "Lodestone",
+            "OmniForge",
             "OmniDirector",
             "Omni-CLI",
             "LibOmni",
-            "Harbr-Router",
-            "OmniForge"
+            "OmniCloud-Full",
+            "Lodestone",
+            "Harbr-Router"
           ],
-          "github_login": "Caznix",
-          "display_name": "Caznix"
+          "aliases": [
+            {
+              "login": "caznix-1",
+              "contributions": 31,
+              "repositories": [
+                "OmniCloud-Full",
+                "OmniOrchestrator",
+                "OmniForge",
+                "OmniDirector",
+                "Lodestone",
+                "Harbr-Router"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
+          "github_login": "Caznix"
         },
         {
           "login": "AbleTheAbove",
@@ -135,8 +149,8 @@
           "contributions": 10,
           "lines_contributed": 0,
           "repositories": [
-            "Lodestone",
             "Omni-CLI",
+            "Lodestone",
             "Harbr-Router"
           ]
         },
@@ -149,9 +163,9 @@
           "repositories": [
             "OmniCloud-Full",
             "OmniOrchestrator",
-            "Lodestone",
             "OmniDirector",
-            "Omni-CLI"
+            "Omni-CLI",
+            "Lodestone"
           ],
           "github_login": "ghostedgaming"
         },
@@ -164,15 +178,15 @@
           "repositories": [
             "OmniCloud-Full",
             "OmniOrchestrator",
-            "Lodestone",
             "OmniDirector",
+            "Lodestone",
             "Harbr-Router"
           ],
           "github_login": "meowesque"
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
           "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
           "contributions": 5,
           "lines_contributed": 0,
@@ -256,17 +270,17 @@
       ]
     },
     "languages": {
+      "JavaScript": 2322265,
+      "TypeScript": 368079,
+      "Dockerfile": 21175,
+      "CSS": 12243,
       "Makefile": 13189,
       "Shell": 34724,
-      "JavaScript": 2302920,
-      "TypeScript": 368079,
-      "Dockerfile": 21115,
-      "CSS": 12243,
-      "Rust": 1408789,
+      "Rust": 1402985,
       "Batchfile": 5098,
+      "HCL": 19638,
       "Python": 267,
       "Nix": 1276,
-      "HCL": 19638,
       "Elixir": 4130,
       "Svelte": 149745,
       "HTML": 3393
@@ -274,13 +288,31 @@
     "coauthor_processing": {
       "total_coauthor_emails": 12,
       "github_users_found": 9,
-      "duplicates_merged": 2,
+      "duplicates_merged": 3,
       "noreply_github_emails": 10,
       "display_names_found": 6,
-      "total_aliases_merged": 2
+      "total_aliases_merged": 3
     }
   },
   "repositories": [
+    {
+      "name": "OmniCloud-Dashboard",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
+      "stars": 3,
+      "forks": 1,
+      "watchers": 3,
+      "openIssues": 3,
+      "languages": {
+        "JavaScript": 951896,
+        "TypeScript": 71198,
+        "Dockerfile": 2676,
+        "CSS": 2366
+      },
+      "linesOfCode": 51407,
+      "commits": 51,
+      "contributors": 2
+    },
     {
       "name": "OmniCloud-Full",
       "description": null,
@@ -294,26 +326,8 @@
         "Shell": 327
       },
       "linesOfCode": 669,
-      "commits": 250,
+      "commits": 253,
       "contributors": 1
-    },
-    {
-      "name": "OmniCloud-Dashboard",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
-      "stars": 3,
-      "forks": 1,
-      "watchers": 3,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 932551,
-        "TypeScript": 71198,
-        "Dockerfile": 2616,
-        "CSS": 2366
-      },
-      "linesOfCode": 50437,
-      "commits": 48,
-      "contributors": 2
     },
     {
       "name": "OmniOrchestrator",
@@ -324,13 +338,126 @@
       "watchers": 1,
       "openIssues": 11,
       "languages": {
-        "Rust": 565008,
+        "Rust": 567397,
         "Shell": 8877,
         "Dockerfile": 1951,
         "Batchfile": 917
       },
-      "linesOfCode": 28838,
-      "commits": 201,
+      "linesOfCode": 28958,
+      "commits": 203,
+      "contributors": 2
+    },
+    {
+      "name": "OmniForge",
+      "description": "Deploy any app, anywhere",
+      "url": "https://github.com/OmniCloudOrg/OmniForge",
+      "stars": 3,
+      "forks": 1,
+      "watchers": 3,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 67617,
+        "HCL": 3849,
+        "Dockerfile": 1807
+      },
+      "linesOfCode": 3663,
+      "commits": 49,
+      "contributors": 2
+    },
+    {
+      "name": "OmniDirector",
+      "description": "OmniDirector is the OmniCloud service that is responsible from managing VMs across any number of cloud providers",
+      "url": "https://github.com/OmniCloudOrg/OmniDirector",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 139239,
+        "Shell": 10083,
+        "Batchfile": 4022,
+        "Dockerfile": 2533,
+        "Python": 267
+      },
+      "linesOfCode": 7807,
+      "commits": 125,
+      "contributors": 2
+    },
+    {
+      "name": "Omni-CLI",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 98700
+      },
+      "linesOfCode": 4935,
+      "commits": 73,
+      "contributors": 3
+    },
+    {
+      "name": "OmniAgent",
+      "description": "The OmniAgent lifecycle manages containerized applications in the cloud",
+      "url": "https://github.com/OmniCloudOrg/OmniAgent",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 43726,
+        "Dockerfile": 1807
+      },
+      "linesOfCode": 2276,
+      "commits": 35,
+      "contributors": 1
+    },
+    {
+      "name": "Lodestone",
+      "description": "A rust-based service discovery, and registry with a built in load balancer and proxy",
+      "url": "https://github.com/OmniCloudOrg/Lodestone",
+      "stars": 2,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 117767,
+        "Dockerfile": 1806
+      },
+      "linesOfCode": 5978,
+      "commits": 59,
+      "contributors": 3
+    },
+    {
+      "name": "LibOmni",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/LibOmni",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 22448
+      },
+      "linesOfCode": 1122,
+      "commits": 13,
+      "contributors": 2
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 68,
       "contributors": 2
     },
     {
@@ -345,21 +472,6 @@
       "linesOfCode": 0,
       "commits": 1,
       "contributors": 1
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 67,
-      "contributors": 2
     },
     {
       "name": "demo",
@@ -378,71 +490,6 @@
       "linesOfCode": 51146,
       "commits": 20,
       "contributors": 1
-    },
-    {
-      "name": "Lodestone",
-      "description": "A rust-based service discovery, and registry with a built in load balancer and proxy",
-      "url": "https://github.com/OmniCloudOrg/Lodestone",
-      "stars": 2,
-      "forks": 1,
-      "watchers": 2,
-      "openIssues": 1,
-      "languages": {
-        "Rust": 117767,
-        "Dockerfile": 1806
-      },
-      "linesOfCode": 5978,
-      "commits": 58,
-      "contributors": 3
-    },
-    {
-      "name": "OmniDirector",
-      "description": "OmniDirector is the OmniCloud service that is responsible from managing VMs across any number of cloud providers",
-      "url": "https://github.com/OmniCloudOrg/OmniDirector",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 139239,
-        "Shell": 10083,
-        "Batchfile": 4022,
-        "Dockerfile": 2533,
-        "Python": 267
-      },
-      "linesOfCode": 7807,
-      "commits": 124,
-      "contributors": 2
-    },
-    {
-      "name": "Omni-CLI",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 1,
-      "languages": {
-        "Rust": 98700
-      },
-      "linesOfCode": 4935,
-      "commits": 72,
-      "contributors": 3
-    },
-    {
-      "name": "LibOmni",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/LibOmni",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 22413
-      },
-      "linesOfCode": 1121,
-      "commits": 11,
-      "contributors": 2
     },
     {
       "name": "abuelo",
@@ -478,22 +525,6 @@
       "contributors": 2
     },
     {
-      "name": "OmniAgent",
-      "description": "The OmniAgent lifecycle manages containerized applications in the cloud",
-      "url": "https://github.com/OmniCloudOrg/OmniAgent",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 43726,
-        "Dockerfile": 1807
-      },
-      "linesOfCode": 2276,
-      "commits": 34,
-      "contributors": 1
-    },
-    {
       "name": "Docker-Helices",
       "description": null,
       "url": "https://github.com/OmniCloudOrg/Docker-Helices",
@@ -510,23 +541,6 @@
       "linesOfCode": 811,
       "commits": 17,
       "contributors": 1
-    },
-    {
-      "name": "OmniForge",
-      "description": "Deploy any app, anywhere",
-      "url": "https://github.com/OmniCloudOrg/OmniForge",
-      "stars": 3,
-      "forks": 1,
-      "watchers": 3,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 75845,
-        "HCL": 3849,
-        "Dockerfile": 1807
-      },
-      "linesOfCode": 4074,
-      "commits": 47,
-      "contributors": 2
     },
     {
       "name": "Linguist-RS",
