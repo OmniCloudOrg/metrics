@@ -3,11 +3,12 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2054,
+    "contributions": 2064,
     "lines_contributed": 0,
     "repositories": [
       "OmniCloud-Dashboard",
       "OmniCloud-Full",
+      "metrics",
       "OmniOrchestrator",
       "OmniForge",
       "OmniDirector",
@@ -15,7 +16,6 @@
       "OmniAgent",
       "Lodestone",
       "LibOmni",
-      "metrics",
       "demo",
       "abuelo",
       "Harbr-Router",
@@ -50,7 +50,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 98,
+    "contributions": 100,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
