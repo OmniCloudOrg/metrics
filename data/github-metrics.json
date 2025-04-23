@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-04-22T01:51:58.021Z",
+  "timestamp": "2025-04-23T01:52:22.672Z",
   "stats": {
     "repositories": 26,
     "stars": 30,
     "forks": 7,
     "watchers": 30,
     "openIssues": 19,
-    "totalCommits": 1244,
-    "linesOfCode": 222688,
+    "totalCommits": 1248,
+    "linesOfCode": 224038,
     "contributors": {
       "total": 15,
       "top": [
@@ -16,13 +16,14 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2138,
+          "contributions": 2144,
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
             "OmniCloud-Dashboard",
+            "OmniCloudOrg.github.io",
             "metrics",
+            "OmniOrchestrator",
             "OmniForge",
             "OmniDirector",
             "Omni-CLI",
@@ -37,7 +38,6 @@
             "Linguist-RS",
             "Isotope",
             "MegaTrix",
-            "OmniCloudOrg.github.io",
             ".github",
             "Omni-Cosmos",
             "get",
@@ -62,7 +62,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 110,
+          "contributions": 112,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -76,8 +76,8 @@
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
             "OmniCloud-Dashboard",
+            "OmniOrchestrator",
             "OmniForge",
             "OmniDirector",
             "Omni-CLI",
@@ -258,12 +258,12 @@
     "languages": {
       "Makefile": 13189,
       "Shell": 34724,
-      "Rust": 1418152,
+      "JavaScript": 2388308,
+      "TypeScript": 409141,
       "Dockerfile": 21175,
-      "Batchfile": 5098,
-      "JavaScript": 2383533,
-      "TypeScript": 386923,
       "CSS": 12515,
+      "Rust": 1418152,
+      "Batchfile": 5098,
       "HCL": 19638,
       "Python": 267,
       "Nix": 1276,
@@ -294,8 +294,58 @@
         "Shell": 327
       },
       "linesOfCode": 669,
-      "commits": 270,
+      "commits": 271,
       "contributors": 1
+    },
+    {
+      "name": "OmniCloud-Dashboard",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
+      "stars": 3,
+      "forks": 1,
+      "watchers": 3,
+      "openIssues": 3,
+      "languages": {
+        "JavaScript": 1013164,
+        "TypeScript": 112164,
+        "Dockerfile": 2676,
+        "CSS": 2638
+      },
+      "linesOfCode": 56532,
+      "commits": 68,
+      "contributors": 2
+    },
+    {
+      "name": "OmniCloudOrg.github.io",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloudOrg.github.io",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "TypeScript": 185178,
+        "CSS": 6487,
+        "JavaScript": 4910
+      },
+      "linesOfCode": 9829,
+      "commits": 81,
+      "contributors": 1
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 75,
+      "contributors": 2
     },
     {
       "name": "OmniOrchestrator",
@@ -313,39 +363,6 @@
       },
       "linesOfCode": 29716,
       "commits": 221,
-      "contributors": 2
-    },
-    {
-      "name": "OmniCloud-Dashboard",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
-      "stars": 3,
-      "forks": 1,
-      "watchers": 3,
-      "openIssues": 3,
-      "languages": {
-        "JavaScript": 1013164,
-        "TypeScript": 90042,
-        "Dockerfile": 2676,
-        "CSS": 2638
-      },
-      "linesOfCode": 55426,
-      "commits": 67,
-      "contributors": 2
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 74,
       "contributors": 2
     },
     {
@@ -591,23 +608,6 @@
       "linesOfCode": 270,
       "commits": 17,
       "contributors": 2
-    },
-    {
-      "name": "OmniCloudOrg.github.io",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloudOrg.github.io",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "TypeScript": 185082,
-        "CSS": 6487,
-        "JavaScript": 135
-      },
-      "linesOfCode": 9585,
-      "commits": 80,
-      "contributors": 1
     },
     {
       "name": ".github",
