@@ -3,13 +3,13 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2144,
+    "contributions": 2150,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
       "OmniCloud-Dashboard",
-      "OmniCloudOrg.github.io",
       "metrics",
+      "OmniCloud-Full",
+      "OmniCloudOrg.github.io",
       "OmniOrchestrator",
       "OmniForge",
       "OmniDirector",
@@ -50,7 +50,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 112,
+    "contributions": 114,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -59,25 +59,38 @@
   },
   {
     "login": "Caznix",
-    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 70,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
       "OmniCloud-Dashboard",
       "OmniOrchestrator",
       "OmniForge",
       "OmniDirector",
       "Omni-CLI",
-      "Lodestone",
       "LibOmni",
+      "OmniCloud-Full",
+      "Lodestone",
       "Harbr-Router"
     ],
+    "aliases": [
+      {
+        "login": "caznix-1",
+        "contributions": 31,
+        "repositories": [
+          "OmniCloud-Full",
+          "OmniOrchestrator",
+          "OmniForge",
+          "OmniDirector",
+          "Lodestone",
+          "Harbr-Router"
+        ]
+      }
+    ],
+    "display_name": "Caznix",
     "github_login": "Caznix",
-    "matched_by_email": true,
-    "display_name": "Caznix"
+    "email": null
   },
   {
     "login": "AbleTheAbove",
@@ -171,7 +184,7 @@
   {
     "login": "Maxine DeAndrade",
     "email": "163779298+maxinedeandrade@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+    "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
     "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
     "contributions": 5,
     "lines_contributed": 0,
