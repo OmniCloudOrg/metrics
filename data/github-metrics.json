@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-04-24T01:53:00.248Z",
+  "timestamp": "2025-04-25T01:53:37.442Z",
   "stats": {
     "repositories": 26,
     "stars": 30,
     "forks": 7,
     "watchers": 30,
     "openIssues": 19,
-    "totalCommits": 1252,
-    "linesOfCode": 224035,
+    "totalCommits": 1261,
+    "linesOfCode": 224481,
     "contributors": {
       "total": 15,
       "top": [
@@ -16,14 +16,14 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2150,
+          "contributions": 2163,
           "lines_contributed": 0,
           "repositories": [
+            "OmniCloud-Full",
+            "OmniOrchestrator",
             "OmniCloud-Dashboard",
             "metrics",
-            "OmniCloud-Full",
             "OmniCloudOrg.github.io",
-            "OmniOrchestrator",
             "OmniForge",
             "OmniDirector",
             "Omni-CLI",
@@ -62,7 +62,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 114,
+          "contributions": 116,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -75,32 +75,18 @@
           "contributions": 70,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Dashboard",
+            "OmniCloud-Full",
             "OmniOrchestrator",
+            "OmniCloud-Dashboard",
             "OmniForge",
             "OmniDirector",
             "Omni-CLI",
-            "LibOmni",
-            "OmniCloud-Full",
             "Lodestone",
+            "LibOmni",
             "Harbr-Router"
           ],
-          "aliases": [
-            {
-              "login": "caznix-1",
-              "contributions": 31,
-              "repositories": [
-                "OmniCloud-Full",
-                "OmniOrchestrator",
-                "OmniForge",
-                "OmniDirector",
-                "Lodestone",
-                "Harbr-Router"
-              ]
-            }
-          ],
-          "display_name": "Caznix",
-          "github_login": "Caznix"
+          "github_login": "Caznix",
+          "display_name": "Caznix"
         },
         {
           "login": "AbleTheAbove",
@@ -186,7 +172,7 @@
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
           "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
           "contributions": 5,
           "lines_contributed": 0,
@@ -270,14 +256,14 @@
       ]
     },
     "languages": {
-      "JavaScript": 2388251,
-      "TypeScript": 409141,
-      "Dockerfile": 21175,
-      "CSS": 12515,
       "Makefile": 13189,
       "Shell": 34724,
-      "Rust": 1418152,
+      "Rust": 1422658,
+      "Dockerfile": 21175,
       "Batchfile": 5098,
+      "JavaScript": 2392634,
+      "TypeScript": 409141,
+      "CSS": 12515,
       "HCL": 19638,
       "Python": 267,
       "Nix": 1276,
@@ -288,13 +274,47 @@
     "coauthor_processing": {
       "total_coauthor_emails": 12,
       "github_users_found": 9,
-      "duplicates_merged": 3,
+      "duplicates_merged": 2,
       "noreply_github_emails": 10,
       "display_names_found": 6,
-      "total_aliases_merged": 3
+      "total_aliases_merged": 2
     }
   },
   "repositories": [
+    {
+      "name": "OmniCloud-Full",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
+      "stars": 5,
+      "forks": 1,
+      "watchers": 5,
+      "openIssues": 1,
+      "languages": {
+        "Makefile": 13053,
+        "Shell": 327
+      },
+      "linesOfCode": 669,
+      "commits": 275,
+      "contributors": 1
+    },
+    {
+      "name": "OmniOrchestrator",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 11,
+      "languages": {
+        "Rust": 587070,
+        "Shell": 8877,
+        "Dockerfile": 1951,
+        "Batchfile": 917
+      },
+      "linesOfCode": 29942,
+      "commits": 224,
+      "contributors": 2
+    },
     {
       "name": "OmniCloud-Dashboard",
       "description": null,
@@ -304,13 +324,13 @@
       "watchers": 3,
       "openIssues": 3,
       "languages": {
-        "JavaScript": 1013107,
+        "JavaScript": 1017490,
         "TypeScript": 112164,
         "Dockerfile": 2676,
         "CSS": 2638
       },
-      "linesOfCode": 56529,
-      "commits": 71,
+      "linesOfCode": 56749,
+      "commits": 72,
       "contributors": 2
     },
     {
@@ -325,24 +345,8 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 76,
+      "commits": 77,
       "contributors": 2
-    },
-    {
-      "name": "OmniCloud-Full",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
-      "stars": 5,
-      "forks": 1,
-      "watchers": 5,
-      "openIssues": 1,
-      "languages": {
-        "Makefile": 13053,
-        "Shell": 327
-      },
-      "linesOfCode": 669,
-      "commits": 271,
-      "contributors": 1
     },
     {
       "name": "OmniCloudOrg.github.io",
@@ -360,24 +364,6 @@
       "linesOfCode": 9829,
       "commits": 81,
       "contributors": 1
-    },
-    {
-      "name": "OmniOrchestrator",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 11,
-      "languages": {
-        "Rust": 582564,
-        "Shell": 8877,
-        "Dockerfile": 1951,
-        "Batchfile": 917
-      },
-      "linesOfCode": 29716,
-      "commits": 221,
-      "contributors": 2
     },
     {
       "name": "OmniForge",
