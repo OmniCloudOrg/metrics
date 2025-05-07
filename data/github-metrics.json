@@ -1,29 +1,29 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-05-06T01:55:11.926Z",
+  "timestamp": "2025-05-07T01:55:40.483Z",
   "stats": {
     "repositories": 26,
-    "stars": 31,
+    "stars": 32,
     "forks": 7,
-    "watchers": 31,
+    "watchers": 32,
     "openIssues": 19,
-    "totalCommits": 1379,
-    "linesOfCode": 250093,
+    "totalCommits": 1396,
+    "linesOfCode": 249528,
     "contributors": {
-      "total": 15,
+      "total": 14,
       "top": [
         {
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2340,
+          "contributions": 2359,
           "lines_contributed": 0,
           "repositories": [
-            "metrics",
-            "OmniCloud-Full",
             "OmniOrchestrator",
-            "Omni-CLI",
+            "OmniCloud-Full",
             "OmniDirector",
+            "metrics",
+            "Omni-CLI",
             "Lodestone",
             "OmniCloud-Dashboard",
             "OmniForge",
@@ -32,10 +32,10 @@
             "OmniAgent",
             "LibOmni",
             "demo",
+            "Linguist-RS",
             "OmniEditor",
             "abuelo",
             "Docker-Helices",
-            "Linguist-RS",
             "Isotope",
             "MegaTrix",
             ".github",
@@ -62,7 +62,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 138,
+          "contributions": 140,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -72,44 +72,58 @@
           "login": "Caznix",
           "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
           "html_url": "https://github.com/Caznix",
-          "contributions": 67,
+          "contributions": 65,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
             "OmniOrchestrator",
-            "Omni-CLI",
             "OmniDirector",
-            "Lodestone",
+            "Omni-CLI",
             "OmniCloud-Dashboard",
             "OmniForge",
-            "Harbr-Router",
-            "LibOmni"
+            "LibOmni",
+            "OmniCloud-Full",
+            "Lodestone",
+            "Harbr-Router"
           ],
-          "github_login": "Caznix",
-          "display_name": "Caznix"
+          "aliases": [
+            {
+              "login": "caznix-1",
+              "contributions": 28,
+              "repositories": [
+                "OmniOrchestrator",
+                "OmniCloud-Full",
+                "OmniDirector",
+                "Lodestone",
+                "OmniForge",
+                "Harbr-Router"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
+          "github_login": "Caznix"
         },
         {
           "login": "AbleTheAbove",
           "avatar_url": "https://avatars.githubusercontent.com/u/75036841?v=4",
           "html_url": "https://github.com/AbleTheAbove",
-          "contributions": 35,
+          "contributions": 34,
           "lines_contributed": 0,
           "repositories": [
             "Raxos",
             "abuelo",
             "MegaTrix",
-            "OmniCloud-Full",
             "OmniOrchestrator",
+            "OmniCloud-Full",
             "OmniDirector",
             "Harbr-Router"
           ],
           "aliases": [
             {
               "login": "able",
-              "contributions": 5,
+              "contributions": 4,
               "repositories": [
-                "OmniCloud-Full",
                 "OmniOrchestrator",
+                "OmniCloud-Full",
                 "OmniDirector",
                 "Harbr-Router"
               ]
@@ -117,6 +131,23 @@
           ],
           "display_name": "Able",
           "github_login": "abletheabove"
+        },
+        {
+          "login": "meowesque",
+          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
+          "html_url": "https://github.com/meowesque",
+          "contributions": 16,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniOrchestrator",
+            "OmniCloud-Full",
+            "OmniDirector",
+            "Omni-CLI",
+            "Lodestone",
+            "Harbr-Router"
+          ],
+          "github_login": "meowesque",
+          "display_name": "Maxine DeAndrade"
         },
         {
           "login": "Gamer-Kold",
@@ -129,50 +160,22 @@
           ]
         },
         {
-          "login": "meowesque",
-          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
-          "html_url": "https://github.com/meowesque",
-          "contributions": 10,
-          "lines_contributed": 0,
-          "repositories": [
-            "Omni-CLI",
-            "Lodestone",
-            "Harbr-Router"
-          ]
-        },
-        {
           "login": "GhostedGaming",
           "avatar_url": "https://avatars.githubusercontent.com/u/180805056?v=4",
           "html_url": "https://github.com/GhostedGaming",
-          "contributions": 9,
+          "contributions": 7,
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
-            "Omni-CLI",
             "OmniDirector",
+            "Omni-CLI",
             "Lodestone"
           ],
           "github_login": "ghostedgaming"
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
-          "html_url": "https://github.com/meowesque",
-          "contributions": 8,
-          "lines_contributed": 0,
-          "repositories": [
-            "OmniCloud-Full",
-            "OmniOrchestrator",
-            "OmniDirector",
-            "Lodestone",
-            "Harbr-Router"
-          ],
-          "github_login": "meowesque"
-        },
-        {
-          "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade-2.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
           "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
           "contributions": 5,
           "lines_contributed": 0,
@@ -180,20 +183,6 @@
             "OmniDirector",
             "OmniCloud-Dashboard"
           ]
-        },
-        {
-          "login": "Tyler Poland",
-          "avatar_url": "https://avatars.githubusercontent.com/u/3503?v=4",
-          "html_url": "https://github.com/tpoland",
-          "contributions": 4,
-          "lines_contributed": 0,
-          "repositories": [
-            "OmniCloud-Full",
-            "OmniOrchestrator",
-            "OmniDirector"
-          ],
-          "github_login": "tpoland",
-          "display_name": "Tyler Poland"
         },
         {
           "login": "Copilot",
@@ -207,21 +196,33 @@
           ]
         },
         {
-          "login": "haywoodspartan",
-          "avatar_url": "https://avatars.githubusercontent.com/u/6591811?v=4",
-          "html_url": "https://github.com/haywoodspartan",
+          "login": "Tyler Poland",
+          "avatar_url": "https://avatars.githubusercontent.com/u/3503?v=4",
+          "html_url": "https://github.com/tpoland",
           "contributions": 3,
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
-            "OmniOrchestrator",
+            "OmniDirector"
+          ],
+          "github_login": "tpoland",
+          "display_name": "Tyler Poland"
+        },
+        {
+          "login": "haywoodspartan",
+          "avatar_url": "https://avatars.githubusercontent.com/u/6591811?v=4",
+          "html_url": "https://github.com/haywoodspartan",
+          "contributions": 2,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniCloud-Full",
             "OmniDirector"
           ],
           "github_login": "haywoodspartan"
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
           "html_url": "mailto:md@meow.esq",
           "contributions": 1,
           "lines_contributed": 0,
@@ -256,13 +257,13 @@
       ]
     },
     "languages": {
-      "JavaScript": 2519103,
+      "Rust": 1746553,
+      "Batchfile": 9648,
+      "Dockerfile": 21197,
       "Makefile": 13189,
-      "Shell": 34724,
-      "Rust": 1748072,
-      "Batchfile": 10565,
-      "Dockerfile": 21175,
+      "Shell": 25847,
       "Python": 267,
+      "JavaScript": 2519103,
       "TypeScript": 464054,
       "CSS": 12515,
       "HCL": 19638,
@@ -274,26 +275,28 @@
     "coauthor_processing": {
       "total_coauthor_emails": 12,
       "github_users_found": 9,
-      "duplicates_merged": 2,
+      "duplicates_merged": 3,
       "noreply_github_emails": 10,
-      "display_names_found": 6,
-      "total_aliases_merged": 2
+      "display_names_found": 7,
+      "total_aliases_merged": 3
     }
   },
   "repositories": [
     {
-      "name": "metrics",
+      "name": "OmniOrchestrator",
       "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
+      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "stars": 1,
       "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
+      "watchers": 1,
+      "openIssues": 11,
       "languages": {
-        "JavaScript": 41380
+        "Rust": 842332,
+        "Batchfile": 5467,
+        "Dockerfile": 1973
       },
-      "linesOfCode": 2069,
-      "commits": 88,
+      "linesOfCode": 42489,
+      "commits": 269,
       "contributors": 2
     },
     {
@@ -309,41 +312,8 @@
         "Shell": 327
       },
       "linesOfCode": 669,
-      "commits": 304,
+      "commits": 307,
       "contributors": 1
-    },
-    {
-      "name": "OmniOrchestrator",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 11,
-      "languages": {
-        "Rust": 843851,
-        "Shell": 8877,
-        "Batchfile": 6384,
-        "Dockerfile": 1951
-      },
-      "linesOfCode": 43054,
-      "commits": 257,
-      "contributors": 2
-    },
-    {
-      "name": "Omni-CLI",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 1,
-      "languages": {
-        "Rust": 104166
-      },
-      "linesOfCode": 5208,
-      "commits": 74,
-      "contributors": 3
     },
     {
       "name": "OmniDirector",
@@ -361,8 +331,38 @@
         "Python": 267
       },
       "linesOfCode": 8621,
-      "commits": 130,
+      "commits": 131,
       "contributors": 2
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 89,
+      "contributors": 2
+    },
+    {
+      "name": "Omni-CLI",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 104166
+      },
+      "linesOfCode": 5208,
+      "commits": 74,
+      "contributors": 3
     },
     {
       "name": "Lodestone",
@@ -511,6 +511,21 @@
       "contributors": 1
     },
     {
+      "name": "Linguist-RS",
+      "description": "A Rewrite of GitHub Linguist in Rust",
+      "url": "https://github.com/OmniCloudOrg/Linguist-RS",
+      "stars": 5,
+      "forks": 1,
+      "watchers": 5,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 154110
+      },
+      "linesOfCode": 7706,
+      "commits": 20,
+      "contributors": 1
+    },
+    {
       "name": "OmniEditor",
       "description": null,
       "url": "https://github.com/OmniCloudOrg/OmniEditor",
@@ -561,21 +576,6 @@
       },
       "linesOfCode": 811,
       "commits": 17,
-      "contributors": 1
-    },
-    {
-      "name": "Linguist-RS",
-      "description": "A Rewrite of GitHub Linguist in Rust",
-      "url": "https://github.com/OmniCloudOrg/Linguist-RS",
-      "stars": 4,
-      "forks": 1,
-      "watchers": 4,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 154110
-      },
-      "linesOfCode": 7706,
-      "commits": 20,
       "contributors": 1
     },
     {
