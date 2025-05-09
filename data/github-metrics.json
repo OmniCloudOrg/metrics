@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-05-08T01:56:39.877Z",
+  "timestamp": "2025-05-09T01:55:28.508Z",
   "stats": {
-    "repositories": 26,
+    "repositories": 31,
     "stars": 33,
-    "forks": 7,
+    "forks": 12,
     "watchers": 33,
     "openIssues": 19,
-    "totalCommits": 1399,
-    "linesOfCode": 249529,
+    "totalCommits": 1435,
+    "linesOfCode": 258077,
     "contributors": {
       "total": 14,
       "top": [
@@ -16,16 +16,21 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2362,
+          "contributions": 2428,
           "lines_contributed": 0,
           "repositories": [
+            "CPI-Detee",
             "OmniCloud-Full",
+            "OmniDirector",
+            "CPI-EC2",
+            "CPI-HyperV",
+            "CPI-VirtualBox",
+            "Omni-CLI",
+            "Lib-CPIs",
+            "metrics",
             "OmniCloud-Dashboard",
             "LibOmni",
-            "metrics",
             "OmniOrchestrator",
-            "OmniDirector",
-            "Omni-CLI",
             "Lodestone",
             "OmniForge",
             "Harbr-Router",
@@ -62,7 +67,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 142,
+          "contributions": 144,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -76,11 +81,11 @@
           "lines_contributed": 0,
           "repositories": [
             "OmniCloud-Full",
+            "OmniDirector",
+            "Omni-CLI",
             "OmniCloud-Dashboard",
             "LibOmni",
             "OmniOrchestrator",
-            "OmniDirector",
-            "Omni-CLI",
             "Lodestone",
             "OmniForge",
             "Harbr-Router"
@@ -99,8 +104,8 @@
             "abuelo",
             "MegaTrix",
             "OmniCloud-Full",
-            "OmniOrchestrator",
             "OmniDirector",
+            "OmniOrchestrator",
             "Harbr-Router"
           ],
           "aliases": [
@@ -109,8 +114,8 @@
               "contributions": 4,
               "repositories": [
                 "OmniCloud-Full",
-                "OmniOrchestrator",
                 "OmniDirector",
+                "OmniOrchestrator",
                 "Harbr-Router"
               ]
             }
@@ -129,8 +134,8 @@
             "Lodestone",
             "Harbr-Router",
             "OmniCloud-Full",
-            "OmniOrchestrator",
-            "OmniDirector"
+            "OmniDirector",
+            "OmniOrchestrator"
           ],
           "aliases": [
             {
@@ -138,8 +143,8 @@
               "contributions": 6,
               "repositories": [
                 "OmniCloud-Full",
-                "OmniOrchestrator",
                 "OmniDirector",
+                "OmniOrchestrator",
                 "Lodestone",
                 "Harbr-Router"
               ]
@@ -174,13 +179,13 @@
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade-2.png",
           "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
           "contributions": 5,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Dashboard",
-            "OmniDirector"
+            "OmniDirector",
+            "OmniCloud-Dashboard"
           ]
         },
         {
@@ -221,7 +226,7 @@
         },
         {
           "login": "Maxine DeAndrade",
-          "avatar_url": "https://github.com/identicons/maxinedeandrade-2.png",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
           "html_url": "mailto:md@meow.esq",
           "contributions": 1,
           "lines_contributed": 0,
@@ -256,15 +261,15 @@
       ]
     },
     "languages": {
+      "Rust": 1917534,
       "Makefile": 13189,
       "Shell": 25847,
+      "Batchfile": 9648,
+      "Dockerfile": 21219,
+      "Python": 267,
       "JavaScript": 2519103,
       "TypeScript": 464054,
-      "Dockerfile": 21219,
       "CSS": 12515,
-      "Rust": 1746553,
-      "Batchfile": 9648,
-      "Python": 267,
       "HCL": 19638,
       "Nix": 1276,
       "Elixir": 4130,
@@ -282,6 +287,21 @@
   },
   "repositories": [
     {
+      "name": "CPI-Detee",
+      "description": "The official OmniCloud Detee CPI",
+      "url": "https://github.com/OmniCloudOrg/CPI-Detee",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 28923
+      },
+      "linesOfCode": 1446,
+      "commits": 3,
+      "contributors": 1
+    },
+    {
       "name": "OmniCloud-Full",
       "description": null,
       "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
@@ -294,8 +314,117 @@
         "Shell": 327
       },
       "linesOfCode": 669,
-      "commits": 308,
+      "commits": 311,
       "contributors": 1
+    },
+    {
+      "name": "OmniDirector",
+      "description": "OmniDirector is the OmniCloud service that is responsible from managing VMs across any number of cloud providers",
+      "url": "https://github.com/OmniCloudOrg/OmniDirector",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 169108,
+        "Shell": 10083,
+        "Batchfile": 4022,
+        "Dockerfile": 2533,
+        "Python": 267
+      },
+      "linesOfCode": 9300,
+      "commits": 135,
+      "contributors": 2
+    },
+    {
+      "name": "CPI-EC2",
+      "description": "The Official OmniCloud CPI for AWS EC2",
+      "url": "https://github.com/OmniCloudOrg/CPI-EC2",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 37163
+      },
+      "linesOfCode": 1858,
+      "commits": 5,
+      "contributors": 1
+    },
+    {
+      "name": "CPI-HyperV",
+      "description": "HyperV CPI for OmniCloud",
+      "url": "https://github.com/OmniCloudOrg/CPI-HyperV",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 35703
+      },
+      "linesOfCode": 1785,
+      "commits": 3,
+      "contributors": 1
+    },
+    {
+      "name": "CPI-VirtualBox",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/CPI-VirtualBox",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 33977
+      },
+      "linesOfCode": 1699,
+      "commits": 12,
+      "contributors": 1
+    },
+    {
+      "name": "Omni-CLI",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
+      "stars": 0,
+      "forks": 2,
+      "watchers": 0,
+      "openIssues": 1,
+      "languages": {
+        "Rust": 104166
+      },
+      "linesOfCode": 5208,
+      "commits": 75,
+      "contributors": 3
+    },
+    {
+      "name": "Lib-CPIs",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Lib-CPIs",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 21623
+      },
+      "linesOfCode": 1081,
+      "commits": 4,
+      "contributors": 1
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 91,
+      "contributors": 2
     },
     {
       "name": "OmniCloud-Dashboard",
@@ -331,21 +460,6 @@
       "contributors": 2
     },
     {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 90,
-      "contributors": 2
-    },
-    {
       "name": "OmniOrchestrator",
       "description": null,
       "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
@@ -361,40 +475,6 @@
       "linesOfCode": 42489,
       "commits": 269,
       "contributors": 2
-    },
-    {
-      "name": "OmniDirector",
-      "description": "OmniDirector is the OmniCloud service that is responsible from managing VMs across any number of cloud providers",
-      "url": "https://github.com/OmniCloudOrg/OmniDirector",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 155516,
-        "Shell": 10083,
-        "Batchfile": 4022,
-        "Dockerfile": 2533,
-        "Python": 267
-      },
-      "linesOfCode": 8621,
-      "commits": 131,
-      "contributors": 2
-    },
-    {
-      "name": "Omni-CLI",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/Omni-CLI",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 1,
-      "languages": {
-        "Rust": 104166
-      },
-      "linesOfCode": 5208,
-      "commits": 74,
-      "contributors": 3
     },
     {
       "name": "Lodestone",
