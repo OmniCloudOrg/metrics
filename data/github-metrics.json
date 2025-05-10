@@ -1,33 +1,33 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-05-09T01:55:28.508Z",
+  "timestamp": "2025-05-10T01:50:50.169Z",
   "stats": {
     "repositories": 31,
     "stars": 33,
-    "forks": 12,
+    "forks": 15,
     "watchers": 33,
     "openIssues": 19,
-    "totalCommits": 1435,
-    "linesOfCode": 258077,
+    "totalCommits": 1441,
+    "linesOfCode": 258056,
     "contributors": {
-      "total": 14,
+      "total": 15,
       "top": [
         {
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2428,
+          "contributions": 2435,
           "lines_contributed": 0,
           "repositories": [
-            "CPI-Detee",
+            "CPI-EC2",
             "OmniCloud-Full",
             "OmniDirector",
-            "CPI-EC2",
-            "CPI-HyperV",
             "CPI-VirtualBox",
+            "metrics",
+            "CPI-Detee",
+            "CPI-HyperV",
             "Omni-CLI",
             "Lib-CPIs",
-            "metrics",
             "OmniCloud-Dashboard",
             "LibOmni",
             "OmniOrchestrator",
@@ -67,7 +67,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 144,
+          "contributions": 146,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -213,6 +213,16 @@
           "display_name": "Tyler Poland"
         },
         {
+          "login": "CharlieStrachan",
+          "avatar_url": "https://avatars.githubusercontent.com/u/209285849?v=4",
+          "html_url": "https://github.com/CharlieStrachan",
+          "contributions": 2,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniCloud-Full"
+          ]
+        },
+        {
           "login": "haywoodspartan",
           "avatar_url": "https://avatars.githubusercontent.com/u/6591811?v=4",
           "html_url": "https://github.com/haywoodspartan",
@@ -261,7 +271,7 @@
       ]
     },
     "languages": {
-      "Rust": 1917534,
+      "Rust": 1917114,
       "Makefile": 13189,
       "Shell": 25847,
       "Batchfile": 9648,
@@ -287,18 +297,18 @@
   },
   "repositories": [
     {
-      "name": "CPI-Detee",
-      "description": "The official OmniCloud Detee CPI",
-      "url": "https://github.com/OmniCloudOrg/CPI-Detee",
+      "name": "CPI-EC2",
+      "description": "The Official OmniCloud CPI for AWS EC2",
+      "url": "https://github.com/OmniCloudOrg/CPI-EC2",
       "stars": 0,
-      "forks": 0,
+      "forks": 1,
       "watchers": 0,
       "openIssues": 0,
       "languages": {
-        "Rust": 28923
+        "Rust": 36743
       },
-      "linesOfCode": 1446,
-      "commits": 3,
+      "linesOfCode": 1837,
+      "commits": 6,
       "contributors": 1
     },
     {
@@ -306,7 +316,7 @@
       "description": null,
       "url": "https://github.com/OmniCloudOrg/OmniCloud-Full",
       "stars": 5,
-      "forks": 1,
+      "forks": 2,
       "watchers": 5,
       "openIssues": 1,
       "languages": {
@@ -314,8 +324,8 @@
         "Shell": 327
       },
       "linesOfCode": 669,
-      "commits": 311,
-      "contributors": 1
+      "commits": 313,
+      "contributors": 2
     },
     {
       "name": "OmniDirector",
@@ -333,22 +343,52 @@
         "Python": 267
       },
       "linesOfCode": 9300,
-      "commits": 135,
+      "commits": 136,
       "contributors": 2
     },
     {
-      "name": "CPI-EC2",
-      "description": "The Official OmniCloud CPI for AWS EC2",
-      "url": "https://github.com/OmniCloudOrg/CPI-EC2",
+      "name": "CPI-VirtualBox",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/CPI-VirtualBox",
       "stars": 0,
       "forks": 1,
       "watchers": 0,
       "openIssues": 0,
       "languages": {
-        "Rust": 37163
+        "Rust": 33977
       },
-      "linesOfCode": 1858,
-      "commits": 5,
+      "linesOfCode": 1699,
+      "commits": 13,
+      "contributors": 1
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 92,
+      "contributors": 2
+    },
+    {
+      "name": "CPI-Detee",
+      "description": "The official OmniCloud Detee CPI",
+      "url": "https://github.com/OmniCloudOrg/CPI-Detee",
+      "stars": 0,
+      "forks": 1,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 28923
+      },
+      "linesOfCode": 1446,
+      "commits": 3,
       "contributors": 1
     },
     {
@@ -364,21 +404,6 @@
       },
       "linesOfCode": 1785,
       "commits": 3,
-      "contributors": 1
-    },
-    {
-      "name": "CPI-VirtualBox",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/CPI-VirtualBox",
-      "stars": 0,
-      "forks": 1,
-      "watchers": 0,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 33977
-      },
-      "linesOfCode": 1699,
-      "commits": 12,
       "contributors": 1
     },
     {
@@ -410,21 +435,6 @@
       "linesOfCode": 1081,
       "commits": 4,
       "contributors": 1
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 91,
-      "contributors": 2
     },
     {
       "name": "OmniCloud-Dashboard",
@@ -464,7 +474,7 @@
       "description": null,
       "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
       "stars": 1,
-      "forks": 0,
+      "forks": 1,
       "watchers": 1,
       "openIssues": 11,
       "languages": {

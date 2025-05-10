@@ -3,18 +3,18 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2428,
+    "contributions": 2435,
     "lines_contributed": 0,
     "repositories": [
-      "CPI-Detee",
+      "CPI-EC2",
       "OmniCloud-Full",
       "OmniDirector",
-      "CPI-EC2",
-      "CPI-HyperV",
       "CPI-VirtualBox",
+      "metrics",
+      "CPI-Detee",
+      "CPI-HyperV",
       "Omni-CLI",
       "Lib-CPIs",
-      "metrics",
       "OmniCloud-Dashboard",
       "LibOmni",
       "OmniOrchestrator",
@@ -55,7 +55,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 144,
+    "contributions": 146,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -213,6 +213,17 @@
     "github_login": "tpoland",
     "matched_by_email": true,
     "display_name": "Tyler Poland"
+  },
+  {
+    "login": "CharlieStrachan",
+    "avatar_url": "https://avatars.githubusercontent.com/u/209285849?v=4",
+    "html_url": "https://github.com/CharlieStrachan",
+    "contributions": 2,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniCloud-Full"
+    ],
+    "email": null
   },
   {
     "login": "haywoodspartan",
