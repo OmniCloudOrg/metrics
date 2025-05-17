@@ -3,12 +3,12 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2493,
+    "contributions": 2495,
     "lines_contributed": 0,
     "repositories": [
       "OmniCloud-Full",
-      "OmniOrchestrator",
       "metrics",
+      "OmniOrchestrator",
       "OmniCloud-Dashboard",
       "Lib-CPIs",
       "OmniDirector",
@@ -55,7 +55,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 158,
+    "contributions": 160,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
