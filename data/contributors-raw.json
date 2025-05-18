@@ -6,8 +6,8 @@
     "contributions": 2495,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
       "metrics",
+      "OmniCloud-Full",
       "OmniOrchestrator",
       "OmniCloud-Dashboard",
       "Lib-CPIs",
@@ -55,7 +55,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 160,
+    "contributions": 162,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
