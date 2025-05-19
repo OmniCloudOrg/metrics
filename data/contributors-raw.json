@@ -3,13 +3,13 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2495,
+    "contributions": 2494,
     "lines_contributed": 0,
     "repositories": [
+      "OmniCloud-Dashboard",
       "metrics",
       "OmniCloud-Full",
       "OmniOrchestrator",
-      "OmniCloud-Dashboard",
       "Lib-CPIs",
       "OmniDirector",
       "CPI-EC2",
@@ -55,7 +55,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 162,
+    "contributions": 164,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -64,25 +64,37 @@
   },
   {
     "login": "Caznix",
-    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 63,
     "lines_contributed": 0,
     "repositories": [
-      "OmniCloud-Full",
-      "OmniOrchestrator",
       "OmniCloud-Dashboard",
+      "OmniOrchestrator",
       "OmniDirector",
       "Omni-CLI",
-      "Lodestone",
       "OmniForge",
-      "Harbr-Router",
-      "LibOmni"
+      "LibOmni",
+      "OmniCloud-Full",
+      "Lodestone",
+      "Harbr-Router"
     ],
+    "aliases": [
+      {
+        "login": "caznix-1",
+        "contributions": 26,
+        "repositories": [
+          "OmniCloud-Full",
+          "OmniDirector",
+          "Lodestone",
+          "OmniForge",
+          "Harbr-Router"
+        ]
+      }
+    ],
+    "display_name": "Caznix",
     "github_login": "Caznix",
-    "matched_by_email": true,
-    "display_name": "Caznix"
+    "email": null
   },
   {
     "login": "AbleTheAbove",
@@ -128,7 +140,7 @@
     ],
     "aliases": [
       {
-        "login": "maxinedeandrade",
+        "login": "maxinedeandrade-1",
         "contributions": 5,
         "repositories": [
           "OmniCloud-Full",
@@ -170,6 +182,18 @@
     "matched_by_email": true
   },
   {
+    "login": "Maxine DeAndrade",
+    "email": "163779298+maxinedeandrade@users.noreply.github.com",
+    "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
+    "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
+    "contributions": 4,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniCloud-Dashboard"
+    ],
+    "pending_github_lookup": true
+  },
+  {
     "login": "Copilot",
     "email": "175728472+Copilot@users.noreply.github.com",
     "avatar_url": "https://github.com/identicons/copilot.png",
@@ -179,18 +203,6 @@
     "repositories": [
       "OmniOrchestrator",
       "Harbr-Router"
-    ],
-    "pending_github_lookup": true
-  },
-  {
-    "login": "Maxine DeAndrade",
-    "email": "163779298+maxinedeandrade@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/maxinedeandrade-1.png",
-    "html_url": "mailto:163779298+maxinedeandrade@users.noreply.github.com",
-    "contributions": 4,
-    "lines_contributed": 0,
-    "repositories": [
-      "OmniCloud-Dashboard"
     ],
     "pending_github_lookup": true
   },
