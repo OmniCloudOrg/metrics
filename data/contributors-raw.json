@@ -3,9 +3,10 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2501,
+    "contributions": 2524,
     "lines_contributed": 0,
     "repositories": [
+      "OmniCloudOrg.github.io",
       "metrics",
       "Lib-CPIs",
       "TimberDB",
@@ -23,7 +24,6 @@
       "LibOmni",
       "Linguist-RS",
       "Harbr-Router",
-      "OmniCloudOrg.github.io",
       "OmniAgent",
       "OmniEditor",
       "demo",
@@ -56,7 +56,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 180,
+    "contributions": 182,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
