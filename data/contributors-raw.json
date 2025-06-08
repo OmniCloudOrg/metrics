@@ -3,7 +3,7 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2640,
+    "contributions": 2639,
     "lines_contributed": 0,
     "repositories": [
       "metrics",
@@ -21,6 +21,7 @@
       "Lib-CPIs",
       "CPI-EC2",
       "CPI-VirtualBox",
+      "OmniSchema",
       "CPI-Detee",
       "CPI-HyperV",
       "Linguist-RS",
@@ -35,7 +36,6 @@
       ".github",
       "Omni-Cosmos",
       "get",
-      "OmniSchema",
       "OmniMicro",
       "OmniTesting"
     ],
@@ -57,7 +57,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 195,
+    "contributions": 197,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
