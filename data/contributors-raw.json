@@ -19,9 +19,9 @@
       "TimberDB",
       "OmniCloudOrg.github.io",
       "Lib-CPIs",
+      "OmniSchema",
       "CPI-EC2",
       "CPI-VirtualBox",
-      "OmniSchema",
       "CPI-Detee",
       "CPI-HyperV",
       "Linguist-RS",
@@ -57,7 +57,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 197,
+    "contributions": 198,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
