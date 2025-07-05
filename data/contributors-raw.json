@@ -6,9 +6,9 @@
     "contributions": 2641,
     "lines_contributed": 0,
     "repositories": [
+      "metrics",
       "OmniDirector",
       "OmniCloud-Full",
-      "metrics",
       "Linguist-RS",
       "OmniSchema",
       "LibOmni",
@@ -57,7 +57,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 228,
+    "contributions": 229,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
