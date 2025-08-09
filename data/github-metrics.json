@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-08-08T02:18:38.608Z",
+  "timestamp": "2025-08-09T02:01:02.200Z",
   "stats": {
-    "repositories": 33,
-    "stars": 38,
+    "repositories": 34,
+    "stars": 39,
     "forks": 20,
-    "watchers": 38,
+    "watchers": 39,
     "openIssues": 27,
-    "totalCommits": 1688,
-    "linesOfCode": 293537,
+    "totalCommits": 1699,
+    "linesOfCode": 296031,
     "contributors": {
       "total": 12,
       "top": [
@@ -16,9 +16,11 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2659,
+          "contributions": 2679,
           "lines_contributed": 0,
           "repositories": [
+            "Isotope",
+            "Isotope-VSC",
             "metrics",
             "OmniCloud-Full",
             "OmniDirector",
@@ -44,7 +46,6 @@
             "demo",
             "abuelo",
             "Docker-Helices",
-            "Isotope",
             "MegaTrix",
             ".github",
             "Omni-Cosmos",
@@ -69,7 +70,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 263,
+          "contributions": 264,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -235,15 +236,15 @@
       ]
     },
     "languages": {
+      "Rust": 2251104,
+      "TypeScript": 795268,
       "JavaScript": 2598801,
-      "Rust": 2231788,
       "Makefile": 13189,
       "Shell": 37837,
       "Batchfile": 9648,
       "Dockerfile": 21310,
       "Python": 267,
       "HCL": 19638,
-      "TypeScript": 764714,
       "CSS": 14971,
       "Nix": 1276,
       "Elixir": 4130,
@@ -261,6 +262,36 @@
   },
   "repositories": [
     {
+      "name": "Isotope",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Isotope",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 147482
+      },
+      "linesOfCode": 7374,
+      "commits": 17,
+      "contributors": 1
+    },
+    {
+      "name": "Isotope-VSC",
+      "description": "Isotope support for VSCode",
+      "url": "https://github.com/OmniCloudOrg/Isotope-VSC",
+      "stars": 1,
+      "forks": 0,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "TypeScript": 30554
+      },
+      "linesOfCode": 1528,
+      "commits": 5,
+      "contributors": 1
+    },
+    {
       "name": "metrics",
       "description": null,
       "url": "https://github.com/OmniCloudOrg/metrics",
@@ -272,7 +303,7 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 182,
+      "commits": 183,
       "contributors": 2
     },
     {
@@ -674,21 +705,6 @@
       },
       "linesOfCode": 811,
       "commits": 17,
-      "contributors": 1
-    },
-    {
-      "name": "Isotope",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/Isotope",
-      "stars": 1,
-      "forks": 0,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 128166
-      },
-      "linesOfCode": 6408,
-      "commits": 12,
       "contributors": 1
     },
     {
