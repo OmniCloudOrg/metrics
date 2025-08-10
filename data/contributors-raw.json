@@ -3,12 +3,12 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2679,
+    "contributions": 2725,
     "lines_contributed": 0,
     "repositories": [
       "Isotope",
-      "Isotope-VSC",
       "metrics",
+      "Isotope-VSC",
       "OmniCloud-Full",
       "OmniDirector",
       "Linguist-RS",
@@ -58,7 +58,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 264,
+    "contributions": 265,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
