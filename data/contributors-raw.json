@@ -3,16 +3,18 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 2866,
+    "contributions": 2981,
     "lines_contributed": 0,
     "repositories": [
+      "Tell-Me-When",
       "GalleonFS",
+      "OmniCloudOrg.github.io",
+      "galleon",
+      "metrics",
       "Lighthouse",
       "OmniOrchestrator",
-      "metrics",
       "OmniCloud-Full",
       "OmniCloud-Dashboard",
-      "OmniCloudOrg.github.io",
       ".github",
       "LibOmni",
       "Isotope",
@@ -44,8 +46,9 @@
     "aliases": [
       {
         "login": "tristanpoland-1",
-        "contributions": 4,
+        "contributions": 13,
         "repositories": [
+          "GalleonFS",
           "Isotope"
         ]
       },
@@ -66,7 +69,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 270,
+    "contributions": 271,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -137,6 +140,18 @@
     "email": null
   },
   {
+    "login": "Copilot",
+    "avatar_url": "https://avatars.githubusercontent.com/in/1143301?v=4",
+    "html_url": "https://github.com/apps/copilot-swe-agent",
+    "contributions": 32,
+    "lines_contributed": 0,
+    "repositories": [
+      "GalleonFS",
+      "Isotope"
+    ],
+    "email": null
+  },
+  {
     "login": "meowesque",
     "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
     "html_url": "https://github.com/meowesque",
@@ -168,20 +183,6 @@
     "email": null
   },
   {
-    "login": "Copilot",
-    "email": "175728472+Copilot@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/copilot.png",
-    "html_url": "mailto:175728472+Copilot@users.noreply.github.com",
-    "contributions": 14,
-    "lines_contributed": 0,
-    "repositories": [
-      "OmniOrchestrator",
-      "Isotope",
-      "Harbr-Router"
-    ],
-    "pending_github_lookup": true
-  },
-  {
     "login": "Gamer-Kold",
     "avatar_url": "https://avatars.githubusercontent.com/u/84700933?v=4",
     "html_url": "https://github.com/Gamer-Kold",
@@ -207,6 +208,20 @@
     ],
     "github_login": "ghostedgaming",
     "matched_by_email": true
+  },
+  {
+    "login": "Copilot",
+    "email": "175728472+Copilot@users.noreply.github.com",
+    "avatar_url": "https://github.com/identicons/copilot-1.png",
+    "html_url": "mailto:175728472+Copilot@users.noreply.github.com",
+    "contributions": 4,
+    "lines_contributed": 0,
+    "repositories": [
+      "GalleonFS",
+      "OmniOrchestrator",
+      "Harbr-Router"
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "CharlieStrachan",
