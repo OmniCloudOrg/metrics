@@ -1,14 +1,14 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-08-16T01:57:12.961Z",
+  "timestamp": "2025-08-17T02:08:57.089Z",
   "stats": {
     "repositories": 37,
     "stars": 42,
     "forks": 22,
     "watchers": 42,
     "openIssues": 26,
-    "totalCommits": 1871,
-    "linesOfCode": 347330,
+    "totalCommits": 1897,
+    "linesOfCode": 332539,
     "contributors": {
       "total": 13,
       "top": [
@@ -16,21 +16,21 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 2981,
+          "contributions": 3030,
           "lines_contributed": 0,
           "repositories": [
-            "Tell-Me-When",
             "GalleonFS",
+            "OmniOrchestrator",
+            "Isotope",
+            "Lighthouse",
+            "metrics",
+            "Tell-Me-When",
             "OmniCloudOrg.github.io",
             "galleon",
-            "metrics",
-            "Lighthouse",
-            "OmniOrchestrator",
             "OmniCloud-Full",
             "OmniCloud-Dashboard",
             ".github",
             "LibOmni",
-            "Isotope",
             "Isotope-VSC",
             "OmniDirector",
             "Linguist-RS",
@@ -81,7 +81,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 271,
+          "contributions": 272,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -272,14 +272,15 @@
       ]
     },
     "languages": {
-      "Rust": 2964558,
-      "Shell": 53879,
-      "TypeScript": 1085676,
-      "CSS": 21325,
-      "JavaScript": 2598515,
+      "Rust": 2655816,
+      "PowerShell": 28967,
       "Batchfile": 9648,
       "Dockerfile": 21310,
+      "JavaScript": 2598515,
+      "TypeScript": 1085676,
+      "CSS": 21325,
       "Makefile": 13189,
+      "Shell": 37837,
       "Python": 267,
       "HCL": 19638,
       "Nix": 1276,
@@ -298,6 +299,84 @@
   },
   "repositories": [
     {
+      "name": "GalleonFS",
+      "description": "Navigate vast oceans of data with speed and security",
+      "url": "https://github.com/OmniCloudOrg/GalleonFS",
+      "stars": 2,
+      "forks": 1,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 37789,
+        "PowerShell": 28967
+      },
+      "linesOfCode": 3337,
+      "commits": 57,
+      "contributors": 2
+    },
+    {
+      "name": "OmniOrchestrator",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 13,
+      "languages": {
+        "Rust": 910138,
+        "Batchfile": 5467,
+        "Dockerfile": 2010
+      },
+      "linesOfCode": 45881,
+      "commits": 303,
+      "contributors": 2
+    },
+    {
+      "name": "Isotope",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/Isotope",
+      "stars": 1,
+      "forks": 1,
+      "watchers": 1,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 231546
+      },
+      "linesOfCode": 11577,
+      "commits": 76,
+      "contributors": 2
+    },
+    {
+      "name": "Lighthouse",
+      "description": "A generic, easy to use scaling engine implemented in Rust",
+      "url": "https://github.com/OmniCloudOrg/Lighthouse",
+      "stars": 0,
+      "forks": 0,
+      "watchers": 0,
+      "openIssues": 0,
+      "languages": {
+        "Rust": 152614
+      },
+      "linesOfCode": 7631,
+      "commits": 26,
+      "contributors": 1
+    },
+    {
+      "name": "metrics",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/metrics",
+      "stars": 2,
+      "forks": 0,
+      "watchers": 2,
+      "openIssues": 0,
+      "languages": {
+        "JavaScript": 41380
+      },
+      "linesOfCode": 2069,
+      "commits": 191,
+      "contributors": 2
+    },
+    {
       "name": "Tell-Me-When",
       "description": "Callback based cross-platform event system",
       "url": "https://github.com/OmniCloudOrg/Tell-Me-When",
@@ -311,22 +390,6 @@
       "linesOfCode": 7440,
       "commits": 28,
       "contributors": 1
-    },
-    {
-      "name": "GalleonFS",
-      "description": "Navigate vast oceans of data with speed and security",
-      "url": "https://github.com/OmniCloudOrg/GalleonFS",
-      "stars": 2,
-      "forks": 1,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 346539,
-        "Shell": 16042
-      },
-      "linesOfCode": 18129,
-      "commits": 35,
-      "contributors": 2
     },
     {
       "name": "OmniCloudOrg.github.io",
@@ -361,53 +424,6 @@
       "linesOfCode": 14867,
       "commits": 7,
       "contributors": 1
-    },
-    {
-      "name": "metrics",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/metrics",
-      "stars": 2,
-      "forks": 0,
-      "watchers": 2,
-      "openIssues": 0,
-      "languages": {
-        "JavaScript": 41380
-      },
-      "linesOfCode": 2069,
-      "commits": 190,
-      "contributors": 2
-    },
-    {
-      "name": "Lighthouse",
-      "description": "A generic, easy to use scaling engine implemented in Rust",
-      "url": "https://github.com/OmniCloudOrg/Lighthouse",
-      "stars": 0,
-      "forks": 0,
-      "watchers": 0,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 152606
-      },
-      "linesOfCode": 7630,
-      "commits": 25,
-      "contributors": 1
-    },
-    {
-      "name": "OmniOrchestrator",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniOrchestrator",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 13,
-      "languages": {
-        "Rust": 910138,
-        "Batchfile": 5467,
-        "Dockerfile": 2010
-      },
-      "linesOfCode": 45881,
-      "commits": 302,
-      "contributors": 2
     },
     {
       "name": "OmniCloud-Full",
@@ -470,21 +486,6 @@
       },
       "linesOfCode": 2831,
       "commits": 22,
-      "contributors": 2
-    },
-    {
-      "name": "Isotope",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/Isotope",
-      "stars": 1,
-      "forks": 1,
-      "watchers": 1,
-      "openIssues": 0,
-      "languages": {
-        "Rust": 231546
-      },
-      "linesOfCode": 11577,
-      "commits": 75,
       "contributors": 2
     },
     {
