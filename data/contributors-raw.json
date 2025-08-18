@@ -3,28 +3,28 @@
     "login": "tristanpoland",
     "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
     "html_url": "https://github.com/tristanpoland",
-    "contributions": 3030,
+    "contributions": 3065,
     "lines_contributed": 0,
     "repositories": [
-      "GalleonFS",
+      "OmniCloud-Full",
+      "OmniAgent",
+      "OmniForge",
       "OmniOrchestrator",
+      "OmniCloud-Dashboard",
+      "GalleonFS",
+      "metrics",
       "Isotope",
       "Lighthouse",
-      "metrics",
       "Tell-Me-When",
       "OmniCloudOrg.github.io",
       "galleon",
-      "OmniCloud-Full",
-      "OmniCloud-Dashboard",
       ".github",
       "LibOmni",
       "Isotope-VSC",
       "OmniDirector",
       "Linguist-RS",
       "OmniSchema",
-      "OmniForge",
       "Omni-CLI",
-      "OmniAgent",
       "TimberDB",
       "Lib-CPIs",
       "CPI-EC2",
@@ -45,19 +45,19 @@
     ],
     "aliases": [
       {
-        "login": "tristanpoland-1",
-        "contributions": 13,
-        "repositories": [
-          "GalleonFS",
-          "Isotope"
-        ]
-      },
-      {
         "login": "tristanpolandtridentforu",
         "contributions": 3,
         "repositories": [
           "OmniForge",
           "Omni-CLI"
+        ]
+      },
+      {
+        "login": "tristanpoland-1",
+        "contributions": 13,
+        "repositories": [
+          "GalleonFS",
+          "Isotope"
         ]
       }
     ],
@@ -69,7 +69,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 272,
+    "contributions": 273,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -78,37 +78,40 @@
   },
   {
     "login": "Caznix",
+    "email": "Caznix01@gmail.com",
     "avatar_url": "https://avatars.githubusercontent.com/u/131402549?v=4",
     "html_url": "https://github.com/Caznix",
     "contributions": 62,
     "lines_contributed": 0,
     "repositories": [
+      "OmniCloud-Full",
+      "OmniForge",
       "OmniOrchestrator",
       "OmniCloud-Dashboard",
       "LibOmni",
       "OmniDirector",
-      "OmniForge",
       "Omni-CLI",
-      "OmniCloud-Full",
       "Lodestone",
       "Harbr-Router"
     ],
-    "aliases": [
-      {
-        "login": "caznix-1",
-        "contributions": 26,
-        "repositories": [
-          "OmniCloud-Full",
-          "OmniDirector",
-          "OmniForge",
-          "Lodestone",
-          "Harbr-Router"
-        ]
-      }
-    ],
-    "display_name": "Caznix",
     "github_login": "Caznix",
-    "email": null
+    "matched_by_email": true,
+    "display_name": "Caznix"
+  },
+  {
+    "login": "Copilot",
+    "email": "175728472+Copilot@users.noreply.github.com",
+    "avatar_url": "https://github.com/identicons/copilot.png",
+    "html_url": "mailto:175728472+Copilot@users.noreply.github.com",
+    "contributions": 36,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniOrchestrator",
+      "GalleonFS",
+      "Isotope",
+      "Harbr-Router"
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "AbleTheAbove",
@@ -140,18 +143,6 @@
     "email": null
   },
   {
-    "login": "Copilot",
-    "avatar_url": "https://avatars.githubusercontent.com/in/1143301?v=4",
-    "html_url": "https://github.com/apps/copilot-swe-agent",
-    "contributions": 32,
-    "lines_contributed": 0,
-    "repositories": [
-      "GalleonFS",
-      "Isotope"
-    ],
-    "email": null
-  },
-  {
     "login": "meowesque",
     "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
     "html_url": "https://github.com/meowesque",
@@ -161,8 +152,8 @@
       "Omni-CLI",
       "Lodestone",
       "Harbr-Router",
-      "OmniOrchestrator",
       "OmniCloud-Full",
+      "OmniOrchestrator",
       "OmniDirector"
     ],
     "aliases": [
@@ -170,8 +161,8 @@
         "login": "maxinedeandrade",
         "contributions": 6,
         "repositories": [
-          "OmniOrchestrator",
           "OmniCloud-Full",
+          "OmniOrchestrator",
           "OmniDirector",
           "Lodestone",
           "Harbr-Router"
@@ -208,20 +199,6 @@
     ],
     "github_login": "ghostedgaming",
     "matched_by_email": true
-  },
-  {
-    "login": "Copilot",
-    "email": "175728472+Copilot@users.noreply.github.com",
-    "avatar_url": "https://github.com/identicons/copilot-1.png",
-    "html_url": "mailto:175728472+Copilot@users.noreply.github.com",
-    "contributions": 4,
-    "lines_contributed": 0,
-    "repositories": [
-      "GalleonFS",
-      "OmniOrchestrator",
-      "Harbr-Router"
-    ],
-    "pending_github_lookup": true
   },
   {
     "login": "CharlieStrachan",

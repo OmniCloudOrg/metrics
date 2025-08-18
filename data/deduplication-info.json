@@ -1,14 +1,12 @@
 [
   {
-    "display_name": "Tristan Poland (Trident_For_U)",
+    "display_name": "Able",
     "github_usernames": [
-      "tristanpoland",
-      "tristanpoland"
+      "abletheabove"
     ],
     "logins": [
-      "tristanpoland",
-      "tristanpoland-1",
-      "tristanpolandtridentforu"
+      "able",
+      "abletheabove"
     ]
   },
   {
@@ -22,23 +20,15 @@
     ]
   },
   {
-    "display_name": "Able",
+    "display_name": "Tristan Poland (Trident_For_U)",
     "github_usernames": [
-      "abletheabove"
+      "tristanpoland",
+      "tristanpoland"
     ],
     "logins": [
-      "able",
-      "abletheabove"
-    ]
-  },
-  {
-    "display_name": "Caznix",
-    "github_usernames": [
-      "caznix"
-    ],
-    "logins": [
-      "caznix",
-      "caznix-1"
+      "tristanpoland",
+      "tristanpolandtridentforu",
+      "tristanpoland-1"
     ]
   }
 ]
