@@ -1,14 +1,5 @@
 [
   {
-    "timestamp": "2025-05-17T01:53:43.916Z",
-    "repositories": 31,
-    "stars": 33,
-    "forks": 14,
-    "contributors": 13,
-    "commits": 1489,
-    "linesOfCode": 265276
-  },
-  {
     "timestamp": "2025-05-18T02:03:11.282Z",
     "repositories": 31,
     "stars": 33,
@@ -897,6 +888,15 @@
     "forks": 23,
     "contributors": 13,
     "commits": 1936,
+    "linesOfCode": 339977
+  },
+  {
+    "timestamp": "2025-08-25T01:58:48.566Z",
+    "repositories": 37,
+    "stars": 42,
+    "forks": 23,
+    "contributors": 13,
+    "commits": 1937,
     "linesOfCode": 339977
   }
 ]
