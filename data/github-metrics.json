@@ -1,16 +1,16 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2025-10-10T01:48:32.247Z",
+  "timestamp": "2025-10-11T01:43:58.278Z",
   "stats": {
     "repositories": 37,
     "stars": 43,
     "forks": 23,
     "watchers": 43,
     "openIssues": 27,
-    "totalCommits": 1984,
+    "totalCommits": 1985,
     "linesOfCode": 339977,
     "contributors": {
-      "total": 13,
+      "total": 14,
       "top": [
         {
           "login": "tristanpoland",
@@ -81,7 +81,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 326,
+          "contributions": 327,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -149,36 +149,6 @@
           "github_login": "abletheabove"
         },
         {
-          "login": "meowesque",
-          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
-          "html_url": "https://github.com/meowesque",
-          "contributions": 16,
-          "lines_contributed": 0,
-          "repositories": [
-            "Omni-CLI",
-            "Lodestone",
-            "Harbr-Router",
-            "OmniCloud-Full",
-            "OmniOrchestrator",
-            "OmniDirector"
-          ],
-          "aliases": [
-            {
-              "login": "maxinedeandrade",
-              "contributions": 6,
-              "repositories": [
-                "OmniCloud-Full",
-                "OmniOrchestrator",
-                "OmniDirector",
-                "Lodestone",
-                "Harbr-Router"
-              ]
-            }
-          ],
-          "display_name": "Maxine DeAndrade",
-          "github_login": "meowesque"
-        },
-        {
           "login": "Gamer-Kold",
           "avatar_url": "https://avatars.githubusercontent.com/u/84700933?v=4",
           "html_url": "https://github.com/Gamer-Kold",
@@ -186,6 +156,18 @@
           "lines_contributed": 0,
           "repositories": [
             "abuelo"
+          ]
+        },
+        {
+          "login": "mdeand",
+          "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
+          "html_url": "https://github.com/mdeand",
+          "contributions": 10,
+          "lines_contributed": 0,
+          "repositories": [
+            "Omni-CLI",
+            "Lodestone",
+            "Harbr-Router"
           ]
         },
         {
@@ -201,6 +183,20 @@
             "Lodestone"
           ],
           "github_login": "ghostedgaming"
+        },
+        {
+          "login": "Maxine DeAndrade",
+          "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
+          "html_url": "mailto:163779298+meowesque@users.noreply.github.com",
+          "contributions": 6,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniCloud-Full",
+            "OmniOrchestrator",
+            "OmniDirector",
+            "Lodestone",
+            "Harbr-Router"
+          ]
         },
         {
           "login": "CharlieStrachan",
@@ -277,11 +273,11 @@
     },
     "coauthor_processing": {
       "total_coauthor_emails": 10,
-      "github_users_found": 8,
-      "duplicates_merged": 3,
+      "github_users_found": 7,
+      "duplicates_merged": 2,
       "noreply_github_emails": 8,
-      "display_names_found": 5,
-      "total_aliases_merged": 4
+      "display_names_found": 4,
+      "total_aliases_merged": 3
     }
   },
   "repositories": [
@@ -297,7 +293,7 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 245,
+      "commits": 246,
       "contributors": 2
     },
     {

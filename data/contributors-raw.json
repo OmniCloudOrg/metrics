@@ -69,7 +69,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 326,
+    "contributions": 327,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -143,37 +143,6 @@
     "email": null
   },
   {
-    "login": "meowesque",
-    "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
-    "html_url": "https://github.com/meowesque",
-    "contributions": 16,
-    "lines_contributed": 0,
-    "repositories": [
-      "Omni-CLI",
-      "Lodestone",
-      "Harbr-Router",
-      "OmniCloud-Full",
-      "OmniOrchestrator",
-      "OmniDirector"
-    ],
-    "aliases": [
-      {
-        "login": "maxinedeandrade",
-        "contributions": 6,
-        "repositories": [
-          "OmniCloud-Full",
-          "OmniOrchestrator",
-          "OmniDirector",
-          "Lodestone",
-          "Harbr-Router"
-        ]
-      }
-    ],
-    "display_name": "Maxine DeAndrade",
-    "github_login": "meowesque",
-    "email": null
-  },
-  {
     "login": "Gamer-Kold",
     "avatar_url": "https://avatars.githubusercontent.com/u/84700933?v=4",
     "html_url": "https://github.com/Gamer-Kold",
@@ -181,6 +150,19 @@
     "lines_contributed": 0,
     "repositories": [
       "abuelo"
+    ],
+    "email": null
+  },
+  {
+    "login": "mdeand",
+    "avatar_url": "https://avatars.githubusercontent.com/u/163779298?v=4",
+    "html_url": "https://github.com/mdeand",
+    "contributions": 10,
+    "lines_contributed": 0,
+    "repositories": [
+      "Omni-CLI",
+      "Lodestone",
+      "Harbr-Router"
     ],
     "email": null
   },
@@ -199,6 +181,22 @@
     ],
     "github_login": "ghostedgaming",
     "matched_by_email": true
+  },
+  {
+    "login": "Maxine DeAndrade",
+    "email": "163779298+meowesque@users.noreply.github.com",
+    "avatar_url": "https://github.com/identicons/maxinedeandrade.png",
+    "html_url": "mailto:163779298+meowesque@users.noreply.github.com",
+    "contributions": 6,
+    "lines_contributed": 0,
+    "repositories": [
+      "OmniCloud-Full",
+      "OmniOrchestrator",
+      "OmniDirector",
+      "Lodestone",
+      "Harbr-Router"
+    ],
+    "pending_github_lookup": true
   },
   {
     "login": "CharlieStrachan",
