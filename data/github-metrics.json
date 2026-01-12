@@ -1,13 +1,13 @@
 {
   "organization": "OmniCloudOrg",
-  "timestamp": "2026-01-11T02:23:48.414Z",
+  "timestamp": "2026-01-12T02:19:26.236Z",
   "stats": {
     "repositories": 37,
     "stars": 43,
-    "forks": 23,
+    "forks": 24,
     "watchers": 43,
     "openIssues": 27,
-    "totalCommits": 2077,
+    "totalCommits": 2079,
     "linesOfCode": 339977,
     "contributors": {
       "total": 14,
@@ -16,13 +16,13 @@
           "login": "tristanpoland",
           "avatar_url": "https://avatars.githubusercontent.com/u/34868944?v=4",
           "html_url": "https://github.com/tristanpoland",
-          "contributions": 3081,
+          "contributions": 3082,
           "lines_contributed": 0,
           "repositories": [
+            "OmniCloud-Dashboard",
             "metrics",
             "OmniCloud-Full",
             "OmniForge",
-            "OmniCloud-Dashboard",
             "OmniOrchestrator",
             "OmniAgent",
             "GalleonFS",
@@ -81,7 +81,7 @@
           "login": "actions-user",
           "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
           "html_url": "https://github.com/actions-user",
-          "contributions": 419,
+          "contributions": 420,
           "lines_contributed": 0,
           "repositories": [
             "metrics"
@@ -94,18 +94,31 @@
           "contributions": 62,
           "lines_contributed": 0,
           "repositories": [
-            "OmniCloud-Full",
-            "OmniForge",
             "OmniCloud-Dashboard",
+            "OmniForge",
             "OmniOrchestrator",
             "LibOmni",
             "OmniDirector",
             "Omni-CLI",
+            "OmniCloud-Full",
             "Lodestone",
             "Harbr-Router"
           ],
-          "github_login": "Caznix",
-          "display_name": "Caznix"
+          "aliases": [
+            {
+              "login": "caznix-1",
+              "contributions": 26,
+              "repositories": [
+                "OmniCloud-Full",
+                "OmniForge",
+                "OmniDirector",
+                "Lodestone",
+                "Harbr-Router"
+              ]
+            }
+          ],
+          "display_name": "Caznix",
+          "github_login": "Caznix"
         },
         {
           "login": "Copilot",
@@ -199,6 +212,16 @@
           ]
         },
         {
+          "login": "Tuafo",
+          "avatar_url": "https://avatars.githubusercontent.com/u/92756806?v=4",
+          "html_url": "https://github.com/Tuafo",
+          "contributions": 2,
+          "lines_contributed": 0,
+          "repositories": [
+            "OmniCloud-Dashboard"
+          ]
+        },
+        {
           "login": "CharlieStrachan",
           "avatar_url": "https://avatars.githubusercontent.com/u/209285849?v=4",
           "html_url": "https://github.com/CharlieStrachan",
@@ -220,16 +243,6 @@
           ],
           "github_login": "tpoland",
           "display_name": "Tyler Poland"
-        },
-        {
-          "login": "Tuafo",
-          "avatar_url": "https://avatars.githubusercontent.com/u/92756806?v=4",
-          "html_url": "https://github.com/Tuafo",
-          "contributions": 2,
-          "lines_contributed": 0,
-          "repositories": [
-            "OmniCloud-Dashboard"
-          ]
         },
         {
           "login": "haywoodspartan",
@@ -256,13 +269,13 @@
     },
     "languages": {
       "JavaScript": 2662167,
+      "TypeScript": 1227126,
+      "CSS": 21325,
+      "Dockerfile": 21306,
       "Makefile": 13189,
       "Shell": 37837,
       "Rust": 2599478,
       "HCL": 19638,
-      "Dockerfile": 21306,
-      "TypeScript": 1227126,
-      "CSS": 21325,
       "Batchfile": 9648,
       "PowerShell": 28967,
       "Python": 267,
@@ -274,13 +287,31 @@
     "coauthor_processing": {
       "total_coauthor_emails": 10,
       "github_users_found": 7,
-      "duplicates_merged": 2,
+      "duplicates_merged": 3,
       "noreply_github_emails": 8,
       "display_names_found": 4,
-      "total_aliases_merged": 3
+      "total_aliases_merged": 4
     }
   },
   "repositories": [
+    {
+      "name": "OmniCloud-Dashboard",
+      "description": null,
+      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
+      "stars": 4,
+      "forks": 3,
+      "watchers": 4,
+      "openIssues": 5,
+      "languages": {
+        "JavaScript": 1291663,
+        "TypeScript": 455793,
+        "CSS": 5094,
+        "Dockerfile": 2752
+      },
+      "linesOfCode": 87766,
+      "commits": 150,
+      "contributors": 3
+    },
     {
       "name": "metrics",
       "description": null,
@@ -293,7 +324,7 @@
         "JavaScript": 41380
       },
       "linesOfCode": 2069,
-      "commits": 338,
+      "commits": 339,
       "contributors": 2
     },
     {
@@ -328,24 +359,6 @@
       "linesOfCode": 3684,
       "commits": 52,
       "contributors": 2
-    },
-    {
-      "name": "OmniCloud-Dashboard",
-      "description": null,
-      "url": "https://github.com/OmniCloudOrg/OmniCloud-Dashboard",
-      "stars": 4,
-      "forks": 2,
-      "watchers": 4,
-      "openIssues": 5,
-      "languages": {
-        "JavaScript": 1291663,
-        "TypeScript": 455793,
-        "CSS": 5094,
-        "Dockerfile": 2752
-      },
-      "linesOfCode": 87766,
-      "commits": 149,
-      "contributors": 3
     },
     {
       "name": "OmniOrchestrator",
