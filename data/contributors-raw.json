@@ -8,6 +8,7 @@
     "repositories": [
       "metrics",
       "OmniCloud-Full",
+      "OmniDirector",
       "Linguist-RS",
       "OmniEditor",
       "OmniCloud-Dashboard",
@@ -23,7 +24,6 @@
       ".github",
       "LibOmni",
       "Isotope-VSC",
-      "OmniDirector",
       "OmniSchema",
       "Omni-CLI",
       "TimberDB",
@@ -69,7 +69,7 @@
     "login": "actions-user",
     "avatar_url": "https://avatars.githubusercontent.com/u/65916846?v=4",
     "html_url": "https://github.com/actions-user",
-    "contributions": 549,
+    "contributions": 550,
     "lines_contributed": 0,
     "repositories": [
       "metrics"
@@ -85,11 +85,11 @@
     "lines_contributed": 0,
     "repositories": [
       "OmniCloud-Full",
+      "OmniDirector",
       "OmniCloud-Dashboard",
       "OmniForge",
       "OmniOrchestrator",
       "LibOmni",
-      "OmniDirector",
       "Omni-CLI",
       "Lodestone",
       "Harbr-Router"
@@ -191,8 +191,8 @@
     "lines_contributed": 0,
     "repositories": [
       "OmniCloud-Full",
-      "OmniOrchestrator",
       "OmniDirector",
+      "OmniOrchestrator",
       "Lodestone",
       "Harbr-Router"
     ],
